@@ -28,8 +28,8 @@ body {
 }
 #site-main {
   position: relative;
-  width: 50%;
-  margin: 1rem auto;
+  width: 80%;
+  margin: 2rem auto;
 }
 @media (max-width: 450px){
   #site-main {
@@ -62,7 +62,7 @@ body {
 .color-0 { background: var(--darkblue); }
 
 #square-1, #square-2, #square-3, #square-4, #square-5, 
-#square-6, #square-7, #square-8, #square-9, #square-10 {
+#square-6, #square-7, #square-8, #square-9, #square-0 {
   position: absolute;
   bottom: 0;
   &::after {
@@ -107,7 +107,7 @@ body {
   width: 90%;
   z-index: 12;
 }
-#square-10 {
+#square-0 {
   width: 100%;
   z-index: 11;
 }
