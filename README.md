@@ -4,3 +4,4 @@
 
 - Squares animation
 - Dictation App
+- Browser Notepad
