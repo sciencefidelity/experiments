@@ -1,0 +1,3 @@
+# Animated Counter
+
+Simple counter.
