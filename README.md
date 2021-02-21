@@ -5,3 +5,4 @@
 - Squares animation
 - Dictation App
 - Browser Notepad
+- Animated Counter
