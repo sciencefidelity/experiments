@@ -7,3 +7,4 @@
 - Browser Notepad
 - Animated Counter
 - Geolmetric Tunting Circles
+- Strobing Colors
