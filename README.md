@@ -1,4 +1,4 @@
-# Collection of Javascript experiments
+# Collection of Javascript and css experiments
 
 ## Some in progress projects
 
@@ -6,3 +6,4 @@
 - Dictation App
 - Browser Notepad
 - Animated Counter
+- Geolmetric Tunting Circles
