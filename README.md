@@ -8,3 +8,4 @@
 - Animated Counter
 - Geolmetric Tunting Circles
 - Strobing Colors
+- Random Color Gernerator
