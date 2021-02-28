@@ -9,3 +9,4 @@
 - Geolmetric Tunting Circles
 - Strobing Colors
 - Random Color Gernerator
+- Animated Font
