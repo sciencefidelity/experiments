@@ -1,0 +1,93 @@
+*
+*::after
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: Recursive; /* font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0 */
+  src:local(Recursive),
+      url(fonts/recursive.woff2) format("woff supports variations"),
+      url(fonts/recursive.woff2) format("woff2-variations");
+  font-weight: normal;
+  font-size: normal;
+  font-optical-sizing: auto;
+  /* unicode-range: U+0074, U+0079, U+0070, U+006F, U+0067, U+0072, U+0061, U+0070, U+0068; /* "typeography" glyphs */
+  font-display: swap;
+}
+
+@keyframes grapefruit {
+  0%  {font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; color: #F3B945;}
+  50% {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: white;}
+  100%{font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; color: #F3B945;}
+}
+@keyframes watermelon {
+  0%  {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: white;}
+  50% {font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; color: #F3B945;}
+  100%{font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: white;}
+}
+
+html {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+body {
+  font-family: Recursive, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #1B1C1D;
+  color: #fff;
+}
+section {
+  width: 100vw;
+  height: 100vh;
+}
+.variable {
+  font-size: 5rem;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* font-variation-settings: "MONO" 0, "CASL" 0, "wght" 400, "slnt" 0; */
+  color: darkcyan;
+}
+.grapefruit {
+  animation: grapefruit 15s infinite;
+  /* font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; */
+  /* color: #fafafa; */
+}
+.watermelon {
+  animation: watermelon 15s infinite;
+  /* color: #fafafa; */
+}
+.text-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0 */
+/*
+.f1 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f2 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f3 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f4 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f5 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f6 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f7 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f8 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f9 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+.f0 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;} */
+
+.f1 {font-variation-settings: "MONO" 1, "CASL" 0.00, "wght" 300,  "slnt" -0;}
+.f2 {font-variation-settings: "MONO" 1, "CASL" 0.11, "wght" 378,  "slnt" -1.5;}
+.f3 {font-variation-settings: "MONO" 1, "CASL" 0.22, "wght" 456,  "slnt" -3;}
+.f4 {font-variation-settings: "MONO" 1, "CASL" 0.33, "wght" 533,  "slnt" -4.5;}
+.f5 {font-variation-settings: "MONO" 1, "CASL" 0.44, "wght" 611,  "slnt" -6;}
+.f6 {font-variation-settings: "MONO" 1, "CASL" 0.55, "wght" 689,  "slnt" -7.5;}
+.f7 {font-variation-settings: "MONO" 1, "CASL" 0.66, "wght" 767,  "slnt" -9;}
+.f8 {font-variation-settings: "MONO" 1, "CASL" 0.77, "wght" 844,  "slnt" -10.5;}
+.f9 {font-variation-settings: "MONO" 1, "CASL" 0.88, "wght" 922,  "slnt" -12;}
+.f0 {font-variation-settings: "MONO" 1, "CASL" 1.00, "wght" 1000, "slnt" -15}
