@@ -1,0 +1,226 @@
+// ***************  Variables  *********************
+$background: #232425;
+$bright1: #F9C80E;
+$bright2: #F86624;
+$bright3: #EA3546;
+$bright4: #662E9B;
+$bright5: #43BCCD;
+
+// ***************  Animation  *********************
+@keyframes turntable {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+// ***************  Base  **************************
+* {
+  box-sizing: border-box;
+  &::before {
+    box-sizing: border-box;
+  }
+  &::after {
+    box-sizing: border-box;
+  }
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: $background;
+}
+section {
+  width: 50vw;
+  margin: 10px auto;
+}
+.container {
+  position: relative;
+  width: 100%;
+  &::after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+}
+
+// ***************  Spinning Layers  ***************
+
+%layer-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.layer-container-2 {
+  @extend %layer-container;
+  animation: turntable 32s linear infinite;
+}
+.layer-container-3 {
+  @extend %layer-container;
+  animation: turntable 24s linear infinite;
+}
+.layer-container-4 {
+  @extend %layer-container;
+  animation: turntable 16s linear infinite;
+}
+.layer-container-5 {
+  @extend %layer-container;
+  animation: turntable 8s linear infinite;
+}
+
+// ***************  Circles  ***********************
+
+%circles1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: $bright1;
+}
+.circle-1 {
+  @extend %circles1;
+  top: 0;
+  left: 0;
+}
+
+%circles2 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+  background: $bright2;
+}
+.circle-2 {
+  @extend %circles2;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.circle-3 {
+  @extend %circles2;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+%circles3 {
+  position: absolute;
+  width: 33.333%;
+  height: 33.333%;
+  border-radius: 100%;
+  background: $bright3;
+}
+.circle-4 {
+  @extend %circles3;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.circle-5 {
+  @extend %circles3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle-6 {
+  @extend %circles3;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+%circles4 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 100%;
+  background: $bright4;
+}
+.circle-7 {
+  @extend %circles4;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.circle-8 {
+  @extend %circles4;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+}
+.circle-9 {
+  @extend %circles4;
+  top: 50%;
+  right: 25%;
+  transform: translateY(-50%);
+}
+.circle-10 {
+  @extend %circles4;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+%circles5 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-radius: 100%;
+  background: $bright5;
+}
+.circle-11 {
+  @extend %circles5;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.circle-12 {
+  @extend %circles5;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+.circle-13 {
+  @extend %circles5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle-14 {
+  @extend %circles5;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+.circle-15 {
+  @extend %circles5;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+// ***************  Media Queries  *****************
+ 
+@media (max-width: 1280px) {
+  section {
+    width: 60vw;
+  }
+}
+@media (max-width: 1100px) {
+  section {
+    width: 70vw;
+  }
+}
+@media (max-width: 800px) {
+  section {
+    width: 80vw;
+  }
+}
+@media (max-width: 600px) {
+  section {
+    width: 90vw;
+  }
+}
