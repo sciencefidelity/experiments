@@ -27,9 +27,9 @@ body {
   background: #232425;
 }
 
-section {
+main {
   width: 50vw;
-  margin: 10px auto;
+  margin: 30px auto;
 }
 
 .container {
@@ -51,11 +51,11 @@ section {
 }
 
 .layer-container-2 {
-  animation: turntable 32s linear infinite;
+  animation: turntable 64s linear infinite;
 }
 
 .layer-container-3 {
-  animation: turntable 24s linear infinite;
+  animation: turntable 32s linear infinite;
 }
 
 .layer-container-4 {
@@ -63,7 +63,7 @@ section {
 }
 
 .layer-container-5 {
-  animation: turntable 8s linear infinite;
+  animation: turntable 7s linear infinite;
 }
 
 .circle-1 {
