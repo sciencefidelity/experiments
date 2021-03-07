@@ -31,9 +31,9 @@ body {
   margin: 0;
   background: $background;
 }
-section {
+main {
   width: 50vw;
-  margin: 10px auto;
+  margin: 30px auto;
 }
 .container {
   position: relative;
@@ -56,11 +56,11 @@ section {
 }
 .layer-container-2 {
   @extend %layer-container;
-  animation: turntable 32s linear infinite;
+  animation: turntable 64s linear infinite;
 }
 .layer-container-3 {
   @extend %layer-container;
-  animation: turntable 24s linear infinite;
+  animation: turntable 32s linear infinite;
 }
 .layer-container-4 {
   @extend %layer-container;
@@ -68,7 +68,7 @@ section {
 }
 .layer-container-5 {
   @extend %layer-container;
-  animation: turntable 8s linear infinite;
+  animation: turntable 7s linear infinite;
 }
 
 // ***************  Circles  ***********************
