@@ -17,8 +17,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 #main {
+  position: relative;
   width: 100vw;
   height: 100vh;
+  cursor: pointer;
 }
 #rgb-container {
   padding: 2rem 2rem;
