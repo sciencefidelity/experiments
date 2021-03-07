@@ -6,6 +6,10 @@ Simple script to generate a random hex color when you tap or click anywhere on t
 
 It would be cool if this generated a colour scheme with a several colours that complement each other. Maybe a little like the Coolors app.
 
-- Choose athe number of colours generated.
+- Choose the number of colours generated.
+- Display selection of colours in grid.
 - Animate it.
 - Have complementary colours.
+- Option to copy the colour code.
+- choose format of the displayed colour code.
+- Bring up colour picker to refine the colour.
