@@ -1,10 +1,11 @@
 // ***************  Variables  *********************
 $background: #232425;
-$bright1: #F9C80E;
-$bright2: #F86624;
-$bright3: #EA3546;
-$bright4: #662E9B;
-$bright5: #43BCCD;
+//$background: #fff;
+$bright1: rgba(249, 54, 14, 0.8);
+$bright2: rgba(249, 93, 14, 0.8);
+$bright3: rgba(249, 132, 14, 0.8);
+$bright4: rgba(249, 171, 14, 0.8);
+$bright5: rgba(249, 210, 14, 0.8);
 
 // ***************  Animation  *********************
 @keyframes turntable {
@@ -56,11 +57,11 @@ main {
 }
 .layer-container-2 {
   @extend %layer-container;
-  animation: turntable 64s linear infinite;
+  animation: turntable 72s linear infinite;
 }
 .layer-container-3 {
   @extend %layer-container;
-  animation: turntable 32s linear infinite;
+  animation: turntable 36s linear infinite;
 }
 .layer-container-4 {
   @extend %layer-container;
