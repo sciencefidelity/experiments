@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+*::after {
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #272829;
+  color: #fafafa;
+}
+
+#shape {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.c0 {
+  background: #007F00;
+}
+
+.c1 {
+  background: #F9C80E;
+}
+
+.c2 {
+  background: #F86624;
+}
+
+.c3 {
+  background: #EA3546;
+}
+
+.c4 {
+  background: #662E9B;
+}
+
+.c5 {
+  background: #43BCCD;
+}
+
+/*# sourceMappingURL=style.css.map */
