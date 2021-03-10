@@ -15,6 +15,14 @@
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  &::after {
+    box-sizing: border-box;
+  }
+  &::before {
+    box-sizing: border-box;
+  }
 }
 html {
   -webkit-font-smoothing: antialiased;
@@ -50,16 +58,36 @@ body {
   display: block;
 }
 
-.color-1 { background: var(--darkgreen); } 
-.color-2 { background: var(--lightgreen); }
-.color-3 { background: var(--yellow); }
-.color-4 { background: var(--lightorange); }
-.color-5 { background: var(--darkorange); }
-.color-6 { background: var(--red); }
-.color-7 { background: var(--pink); }
-.color-8 { background: var(--lilac); }
-.color-9 { background: var(--lightblue); }
-.color-0 { background: var(--darkblue); }
+.color-1 {
+  background: var(--darkgreen);
+} 
+.color-2 {
+  background: var(--lightgreen);
+}
+.color-3 {
+  background: var(--yellow);
+}
+.color-4 {
+  background: var(--lightorange);
+}
+.color-5 {
+  background: var(--darkorange);
+}
+.color-6 {
+  background: var(--red);
+}
+.color-7 {
+  background: var(--pink);
+}
+.color-8 {
+  background: var(--lilac);
+}
+.color-9 {
+  background: var(--lightblue);
+}
+.color-0 {
+  background: var(--darkblue);
+}
 
 #square-1, #square-2, #square-3, #square-4, #square-5, 
 #square-6, #square-7, #square-8, #square-9, #square-0 {
