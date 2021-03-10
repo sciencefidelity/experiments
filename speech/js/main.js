@@ -1,5 +1,5 @@
-"use strict";
+"use strict"
 
-let a = "Hello world!";
+let a = "Hello world!"
 
-console.log(a);
+console.log(a)
