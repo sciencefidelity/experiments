@@ -18,7 +18,7 @@ function draw (imgURL) {
     canvas.width = img.width/4
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
     pixelate()
-  };
+  }
 }
 function pixelate(v) {
   canvas.height = img.height
@@ -39,14 +39,14 @@ function pixelate(v) {
 
 function toggleAnim() {
   let v = Math.min(20, parseInt(blocks.value, 10)),
-      dx = 0.0001 // "speed"
+      dx = 0.0001; // "speed"
   play = !play;
   animate.value = play ? 'stop' : 'Animate'
   
   if (play === true) anim()
   
   function anim() {
-    v += dx;
+    v += dx
     if (v <= 1 || v > 20) dx = -dx
     pixelate(v)
     if (play) requestAnimationFrame(anim)

@@ -6,7 +6,7 @@ ctx.mozImageSmoothingEnabled = false
 ctx.webkitImageSmoothingEnabled = false
 ctx.imageSmoothingEnabled = false
 
-img.onload = pixelate;
+img.onload = pixelate
 
 img.src = './images/mops-lg.jpg'
 
@@ -30,7 +30,7 @@ function toggleAnim() {
   if (play === true) anim()
   
   function anim() {
-    v += dx;
+    v += dx
     if (v <= 1 || v > 25) dx = -dx
     pixelate(v)
     if (play) requestAnimationFrame(anim)
