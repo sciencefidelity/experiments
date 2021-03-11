@@ -54,8 +54,6 @@ html {
 
 body {
   font-family: Recursive, sans-serif;
-  padding: 0;
-  margin: 0;
   background: #1B1C1D;
   color: #fff;
 }
@@ -65,28 +63,23 @@ section {
   height: 100vh;
 }
 
-.variable {
+.watermelon, .grapefruit, .typography {
   font-size: 5rem;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.typography {
   color: darkcyan;
+  margin-top: 1rem;
 }
 
 .grapefruit {
+  margin-top: 5rem;
   animation: grapefruit 15s infinite;
 }
 
 .watermelon {
   animation: watermelon 15s infinite;
-}
-
-.text-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .f1 {
