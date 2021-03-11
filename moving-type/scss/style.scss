@@ -9,9 +9,8 @@ $darkcyan: darkcyan;
 
 @font-face {
   font-family: Recursive; // font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0
-  src:local(Recursive),
-      url(../fonts/recursive.woff2) format("woff supports variations"),
-      url(../fonts/recursive.woff2) format("woff2-variations");
+  src:  url(../fonts/recursive.woff2) format("woff supports variations"),
+        url(../fonts/recursive.woff2) format("woff2-variations");
   font-weight: normal;
   font-size: normal;
   font-optical-sizing: auto;
