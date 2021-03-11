@@ -1,49 +1,72 @@
-*
-*::after
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// ********** Variables **************************
+
+$background: #1B1C1D;
+$foreground: #fff;
+$orange: #F3B945;
+$darkcyan: darkcyan;
+
+// ********** Fonts ******************************
+
 @font-face {
-  font-family: Recursive; /* font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0 */
+  font-family: Recursive; // font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0
   src:local(Recursive),
-      url(fonts/recursive.woff2) format("woff supports variations"),
-      url(fonts/recursive.woff2) format("woff2-variations");
+      url(../fonts/recursive.woff2) format("woff supports variations"),
+      url(../fonts/recursive.woff2) format("woff2-variations");
   font-weight: normal;
   font-size: normal;
   font-optical-sizing: auto;
-  /* unicode-range: U+0074, U+0079, U+0070, U+006F, U+0067, U+0072, U+0061, U+0070, U+0068; /* "typeography" glyphs */
+  // unicode-range: U+0074, U+0079, U+0070, U+006F, U+0067, U+0072, U+0061, U+0070, U+0068; // "typography" glyphs
   font-display: swap;
 }
 
+// ********** Animation **************************
+
 @keyframes grapefruit {
-  0%  {font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; color: #F3B945;}
-  50% {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: white;}
-  100%{font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; color: #F3B945;}
+  0%  {font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $orange;}
+  50% {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $foreground;}
+  100%{font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $orange;}
 }
 @keyframes watermelon {
-  0%  {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: white;}
-  50% {font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; color: #F3B945;}
-  100%{font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: white;}
+  0%  {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $foreground;;}
+  50% {font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $orange;}
+  100%{font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $foreground;}
+}
+
+// ********** Base *******************************
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  &::after {
+    box-sizing: border-box;
+  }
+  &::before {
+    box-sizing: border-box;
+  }
 }
 
 html {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   font-family: Recursive, sans-serif;
   padding: 0;
   margin: 0;
-  background: #1B1C1D;
-  color: #fff;
+  background: $background;
+  color: $foreground;
 }
+
 section {
   width: 100vw;
   height: 100vh;
 }
+
+// ********** Font Variations ********************
+
 .variable {
   font-size: 5rem;
   position: absolute;
@@ -51,35 +74,39 @@ section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  /* font-variation-settings: "MONO" 0, "CASL" 0, "wght" 400, "slnt" 0; */
-  color: darkcyan;
+  // font-variation-settings: "MONO" 0, "CASL" 0, "wght" 400, "slnt" 0; // default variations
+  color: $darkcyan;
 }
 .grapefruit {
   animation: grapefruit 15s infinite;
-  /* font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; */
-  /* color: #fafafa; */
+  // font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; // default variations
 }
 .watermelon {
   animation: watermelon 15s infinite;
-  /* color: #fafafa; */
 }
 .text-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
-/* font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0 */
-/*
-.f1 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f2 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f3 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f4 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f5 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f6 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f7 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f8 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f9 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-.f0 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;} */
+
+// Change the font letter-by-letter 
+
+// These figures are the rang for the Recursive variable font...
+// font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0
+
+// Reset all variations
+// .f1 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f2 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f3 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f4 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f5 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f6 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f7 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f8 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f9 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+// .f0 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
+
 
 .f1 {font-variation-settings: "MONO" 1, "CASL" 0.00, "wght" 300,  "slnt" -0;}
 .f2 {font-variation-settings: "MONO" 1, "CASL" 0.11, "wght" 378,  "slnt" -1.5;}
