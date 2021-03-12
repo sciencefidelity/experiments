@@ -8,7 +8,7 @@ ctx.imageSmoothingEnabled = false
 
 img.onload = pixelate
 
-img.src = './images/mops-lg.jpg'
+img.src = './images/umbrella-lg.jpg'
 
 function pixelate(v) {
   
@@ -23,7 +23,7 @@ function pixelate(v) {
 
 function toggleAnim() {
   let v = Math.min(25, parseInt(blocks.value, 10)),
-      dx = 0.5 // "speed"
+      dx = 0.1 // "speed"
   play = !play
   animate.value = play ? 'stop' : 'Animate'
   

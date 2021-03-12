@@ -5,16 +5,20 @@
 	<title>Pixelate</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="pixelate3.css" rel="stylesheet" />
+	<link href="./css/style.css" rel="stylesheet" />
 
 </head>
 <body>
 	<div class="container">
-		<canvas id="canvas" style="width: 100%; height: 100%;"></canvas>
+		<div id="crop">
+      <div id="scale">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
 		<br>
 		<input id="blocks" type="range" min="1" max="50" value="1" />
 		<input id="animate" type="button" value="animate" />
 	</div>
-	<script src="pixelate3x.js"></script>
+	<script src="./js/app2.js"></script>
 </body>
 </html>

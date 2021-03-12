@@ -1,11 +1,15 @@
 * {
+  box-sizing: border-box;
 	margin:0;
 	padding:0;
+  &::before {
+    box-sizing: border-box;
+  }
+  &::after {
+    box-sizing: border-box;
+  }
 }
 body {
-  padding:0;
-  margin:0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   text-align: center;
 }
 canvas {
@@ -16,3 +20,28 @@ canvas {
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
 }
+#crop {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  background: red;
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 66%;
+     
+  }
+}
+//#scale {
+  //width: 110%;
+  //transform: scale(150%);
+//}
+//#canvas {
+//  width: 100%;
+//  transform: scale(150%);
+//}
+//@media (max-width: 1000px) {
+//  #canvas {
+//    width: 100%;
+//  }
+//}

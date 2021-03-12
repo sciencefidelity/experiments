@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+canvas {
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-crisp-edges;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+#crop {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  background: red;
+}
+#crop::after {
+  content: "";
+  display: block;
+  padding-bottom: 66%;
+}
+
+/*# sourceMappingURL=style.css.map */

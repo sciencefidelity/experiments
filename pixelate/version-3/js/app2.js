@@ -6,7 +6,7 @@ let canvas = document.getElementById('canvas'),
 window.onload = firstDraw()
 
 function firstDraw() {
-  let initialImageURL = './images/mops-lg.jpg'
+  let initialImageURL = './images/umbrella-lg.jpg'
   draw(initialImageURL)
 }
 function draw (imgURL) {
@@ -39,7 +39,7 @@ function pixelate(v) {
 
 function toggleAnim() {
   let v = Math.min(20, parseInt(blocks.value, 10)),
-      dx = 0.0001; // "speed"
+      dx = 0.01; // "speed"
   play = !play;
   animate.value = play ? 'stop' : 'Animate'
   
