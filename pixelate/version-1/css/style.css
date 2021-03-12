@@ -16,13 +16,22 @@ html {
 }
 
 body {
+  display: flex;
   width: 100vw;
   height: 100vh;
-  text-align: center;
+  margin: auto;
 }
 
-#image1 {
-  width: 100%;
+#container {
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  #container {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
