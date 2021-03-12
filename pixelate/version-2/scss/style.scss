@@ -1,10 +1,15 @@
 * {
-	margin:0;
-	padding:0;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  &::before {
+    box-sizing: border-box;
+  }
+  &::after {
+    box-sizing: border-box;
+  }
 }
 body {
-  padding:0;
-  margin:0;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   text-align: center;
 }
@@ -15,4 +20,7 @@ canvas {
   image-rendering: -o-crisp-edges;
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
+}
+#canvas {
+  width: 80%;
 }
