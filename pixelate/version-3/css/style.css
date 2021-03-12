@@ -24,7 +24,8 @@ canvas {
 }
 
 #crop {
-  width: 80%;
+  position: relative;
+  width: 70%;
   margin: auto;
   overflow: hidden;
   background: red;
@@ -33,6 +34,19 @@ canvas {
   content: "";
   display: block;
   padding-bottom: 66%;
+}
+
+#canvas {
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  top: -5%;
+}
+
+@media (max-width: 1000px) {
+  #canvas {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
