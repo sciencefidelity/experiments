@@ -10,17 +10,22 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-textarea {
+.left-text,
+.right-text {
+  box-sizing: border-box;
   border: none;
   min-height: 100vh;
-  line-height: 1.67;
-  font-size: 1em;
-  font-family: Monolisa, sans-serif;
-  color: rgba(0, 0, 0, 0.75);
-  resize: none;
   padding: 20px 30px;
   width: 100%;
-  box-sizing: border-box;
+  font-family: Monolisa, sans-serif;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.67;
+  resize: none;
+}
+.left-text:focus,
+.right-text:focus {
+  outline: 0px;
 }
 
 ::selection {
@@ -32,8 +37,21 @@ textarea {
   background-color: #f3f3f3;
 }
 
-textarea:focus {
-  outline: 0px;
+@media (max-width: 1024px) {
+  .left-text,
+.right-text {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .left-text,
+.right-text {
+    font-size: 0.8rem;
+  }
+
+  .right {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
