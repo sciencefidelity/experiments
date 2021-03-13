@@ -1,3 +1,6 @@
+
+// ********** Variables ****************
+
 :root {
   --text-light: rgba(0,0,0,.75);
   --background-light-left: rgb(255, 255, 255);
@@ -9,6 +12,9 @@
   --selection-dark: rgb(74, 82, 87);
   --mode-switch: rgb(109, 121, 128);
 }
+
+// ********** Base *********************
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +25,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// ********** Text areas ***************
+
 .wrapper {
   display: grid;
   position: relative;
@@ -73,6 +82,9 @@ body {
     background: var(--selection-dark);
   }
 }
+
+// ********** Control icons ************
+
 .fa-adjust {
   position: absolute;
   bottom: 1rem;
@@ -89,7 +101,10 @@ body {
   cursor: pointer;
   color: var(--mode-switch);
 }
-@media (max-width: 1024px) {
+
+// ********** Responsive ***************
+
+@media (max-width: 1024px) { // iPad
   .light-mode-left,
   .light-mode-right,
   .dark-mode-left,
@@ -97,7 +112,7 @@ body {
     font-size: 0.9rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) { //iPhone
   .light-mode-left,
   .light-mode-right,
   .dark-mode-left,

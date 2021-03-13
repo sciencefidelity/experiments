@@ -15,28 +15,24 @@ modeSwitch.onclick = () => {
     textLeft.className = "light-mode-left"
     textRight.className = "light-mode-right"
   }
-
 }
 
 // Download notes to a markdown file.
 
+const save = document.getElementById("save")
+const text = document.getElementById("textLeft")
+
 const fileDownload = (content, filename, contentType) => {
   const a = document.createElement("a")
   const file = new Blob([content], {type: contentType})
-  
+
   a.href= URL.createObjectURL(file)
   a.download = filename
   a.click()
-
   URL.revokeObjectURL(a.href)
-};
-
-const save = document.getElementById("save")
-const text = document.getElementById("textLeft")
+}
 
 save.onclick = () => {
   fileDownload(text.value, "browser-note.md", "text/markdown")
 }
-
-
 
