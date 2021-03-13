@@ -33,7 +33,7 @@ body {
   min-height: 100vh;
   padding: 20px 30px;
   width: 100%;
-  font-family: Monolisa, sans-serif;
+  font-family: Monolisa, monospace;
   font-size: 1rem;
   line-height: 1.67;
   resize: none;
@@ -83,6 +83,15 @@ body {
   bottom: 1rem;
   right: 1rem;
   width: 2rem;
+  cursor: pointer;
+  color: var(--mode-switch);
+}
+
+.fa-file-download {
+  position: absolute;
+  bottom: 1rem;
+  right: 4rem;
+  height: 2rem;
   cursor: pointer;
   color: var(--mode-switch);
 }
