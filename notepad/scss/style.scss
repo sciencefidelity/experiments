@@ -1,17 +1,21 @@
 body {
   margin: 0px;
   overflow: hidden;
+  font-family: Monolisa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 textarea {
   border: none;
   min-height: 100vh;
   line-height: 1.67;
   font-size: 1em;
-  font-family: Lato, sans-serif;
+  font-family: Monolisa, sans-serif;
   color: rgba(0,0,0,.75);
   resize: none;
   padding: 20px 30px;
-  /*min-width: -webkit-fill-available;*/
+  // min-width: -webkit-fill-available;
   width: 100%;
   box-sizing: border-box;
 }
@@ -20,13 +24,11 @@ textarea {
   background-color: rgba(0,0,0,.2);
 }
 .left {
-  width: 25%; float: left;
+  width: 50%; float: left;
 }
 .right {
-  background-color: #f3f3f3; width: 75%; float: left;
-}
-.left-text {
-  
+  width: 50%;
+  float: left;
 }
 .right-text {
   background-color: #f3f3f3;
