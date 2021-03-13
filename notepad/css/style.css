@@ -2,11 +2,12 @@
   --text-light: rgba(0,0,0,.75);
   --background-light-left: rgb(255, 255, 255);
   --background-light-right: rgb(243, 243, 243);
-  --selection-light: rgba(0,0,0,.25);
-  --text-dark: rgba(255, 255, 255, 0.2);
+  --selection-light: rgba(0,0,0,.2);
+  --text-dark: rgba(255, 255, 255, 0.75);
   --background-dark-left: rgb(32, 36, 38);
   --background-dark-right: rgb(47, 52, 55);
   --selection-dark: rgb(74, 82, 87);
+  --mode-switch: rgb(109, 121, 128);
 }
 
 * {
@@ -79,11 +80,11 @@ body {
 
 .fa-adjust {
   position: absolute;
-  fill: var(--text-light);
   bottom: 1rem;
   right: 1rem;
   width: 2rem;
   cursor: pointer;
+  color: var(--mode-switch);
 }
 
 @media (max-width: 1024px) {
