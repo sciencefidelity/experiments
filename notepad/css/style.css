@@ -1,9 +1,13 @@
 body {
   margin: 0px;
   overflow: hidden;
-  font-family: Monolisa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 textarea {
@@ -22,16 +26,6 @@ textarea {
 ::selection {
   color: rgba(0, 0, 0, 0.75);
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-.left {
-  width: 50%;
-  float: left;
-}
-
-.right {
-  width: 50%;
-  float: left;
 }
 
 .right-text {
