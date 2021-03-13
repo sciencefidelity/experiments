@@ -1,5 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: 0px;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,7 +21,8 @@ body {
   width: 100%;
   font-family: Monolisa, sans-serif;
   font-size: 1rem;
-  color: rgba(0,0,0,.75);
+  //color: rgba(0,0,0,.75);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.67;
   resize: none;
   &:focus {
@@ -25,11 +30,18 @@ body {
   }
 }
 ::selection {
-  color: rgba(0,0,0,.75);
-  background-color: rgba(0,0,0,.2);
+  //color: rgba(0,0,0,.75);
+  color: rgba(255, 255, 255, 0.9);
+  //background-color: rgba(0,0,0,.2);
+  background: rgb(74, 82, 87);
+}
+.left-text {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgb(32, 36, 38);
 }
 .right-text {
-  background-color: #f3f3f3;
+  //background-color: rgb(243, 243, 243);
+  background: rgb(37, 41, 43);
 }
 @media (max-width: 1024px) {
   .left-text,
@@ -40,7 +52,10 @@ body {
 @media (max-width: 768px) {
   .left-text,
   .right-text {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
   }
   .right {
     display: none;

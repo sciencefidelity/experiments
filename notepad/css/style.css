@@ -1,5 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: 0px;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,7 +23,7 @@ body {
   width: 100%;
   font-family: Monolisa, sans-serif;
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.67;
   resize: none;
 }
@@ -29,12 +33,17 @@ body {
 }
 
 ::selection {
-  color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  background: #4a5257;
+}
+
+.left-text {
+  color: rgba(255, 255, 255, 0.9);
+  background: #202426;
 }
 
 .right-text {
-  background-color: #f3f3f3;
+  background: #25292b;
 }
 
 @media (max-width: 1024px) {
@@ -46,7 +55,11 @@ body {
 @media (max-width: 768px) {
   .left-text,
 .right-text {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
   }
 
   .right {
