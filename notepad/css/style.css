@@ -1,6 +1,18 @@
+:root {
+  --text-light: rgba(0,0,0,.75);
+  --background-light-left: rgb(255, 255, 255);
+  --background-light-right: rgb(243, 243, 243);
+  --selection-light: rgba(0,0,0,.75);
+  --text-dark: rgba(255, 255, 255, 0.9);
+  --background-dark-left: rgb(32, 36, 38);
+  --background-dark-right: rgb(47, 52, 55);
+  --selection-dark: rgb(74, 82, 87);
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,47 +26,69 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-.left-text,
-.right-text {
-  box-sizing: border-box;
+.dark-mode-right, .dark-mode-left, .light-mode-right, .light-mode-left {
   border: none;
   min-height: 100vh;
   padding: 20px 30px;
   width: 100%;
   font-family: Monolisa, sans-serif;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
   line-height: 1.67;
   resize: none;
 }
-.left-text:focus,
-.right-text:focus {
+.dark-mode-right:focus, .dark-mode-left:focus, .light-mode-right:focus, .light-mode-left:focus {
   outline: 0px;
 }
 
-::selection {
-  color: rgba(255, 255, 255, 0.9);
-  background: #4a5257;
+.light-mode-left {
+  color: var(--text-light);
+  background: var(--background-light-left);
+}
+.light-mode-left::selection {
+  color: var(--text-light);
+  background: var(--selection-light);
 }
 
-.left-text {
-  color: rgba(255, 255, 255, 0.9);
-  background: #202426;
+.light-mode-right {
+  color: var(--text-light);
+  background: var(--background-light-right);
+}
+.light-mode-right::selection {
+  color: var(--text-light);
+  background: var(--selection-light);
 }
 
-.right-text {
-  background: #25292b;
+.dark-mode-left {
+  color: var(--text-dark);
+  background: var(--background-dark-left);
+}
+.dark-mode-left::selection {
+  color: var(--text-dark);
+  background: var(--selection-dark);
+}
+
+.dark-mode-right {
+  color: var(--text-dark);
+  background: var(--background-dark-right);
+}
+.dark-mode-right::selection {
+  color: var(--text-dark);
+  background: var(--selection-dark);
 }
 
 @media (max-width: 1024px) {
-  .left-text,
-.right-text {
+  .light-mode-left,
+.light-mode-right,
+.dark-mode-left,
+.dark-mode-right {
     font-size: 0.9rem;
   }
 }
 @media (max-width: 768px) {
-  .left-text,
-.right-text {
+  .light-mode-left,
+.light-mode-right,
+.dark-mode-left,
+.dark-mode-right {
     font-size: 0.85rem;
   }
 

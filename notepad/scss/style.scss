@@ -1,8 +1,18 @@
+:root {
+  --text-light: rgba(0,0,0,.75);
+  --background-light-left: rgb(255, 255, 255);
+  --background-light-right: rgb(243, 243, 243);
+  --selection-light: rgba(0,0,0,.75);
+  --text-dark: rgba(255, 255, 255, 0.9);
+  --background-dark-left: rgb(32, 36, 38);
+  --background-dark-right: rgb(47, 52, 55);
+  --selection-dark: rgb(74, 82, 87);
+}
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
@@ -12,46 +22,68 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.left-text,
-.right-text {
-  box-sizing: border-box;
+%note-area {
   border: none;
   min-height: 100vh;
   padding: 20px 30px;
   width: 100%;
   font-family: Monolisa, sans-serif;
   font-size: 1rem;
-  //color: rgba(0,0,0,.75);
-  color: rgba(255, 255, 255, 0.9);
   line-height: 1.67;
   resize: none;
   &:focus {
     outline: 0px;
   }
 }
-::selection {
-  //color: rgba(0,0,0,.75);
-  color: rgba(255, 255, 255, 0.9);
-  //background-color: rgba(0,0,0,.2);
-  background: rgb(74, 82, 87);
+.light-mode-left {
+  @extend %note-area;
+  color: var(--text-light);
+  background: var(--background-light-left);
+  &::selection {
+    color: var(--text-light);
+    background: var(--selection-light);
+  }
 }
-.left-text {
-  color: rgba(255, 255, 255, 0.9);
-  background: rgb(32, 36, 38);
+.light-mode-right {
+  @extend %note-area;
+  color: var(--text-light);
+  background: var(--background-light-right);
+  &::selection {
+    color: var(--text-light);
+    background: var(--selection-light);
+  }
 }
-.right-text {
-  //background-color: rgb(243, 243, 243);
-  background: rgb(37, 41, 43);
+.dark-mode-left {
+  @extend %note-area;
+  color: var(--text-dark);
+  background: var(--background-dark-left);
+  &::selection {
+    color: var(--text-dark);
+    background: var(--selection-dark);
+  }
+}
+.dark-mode-right {
+  @extend %note-area;
+  color: var(--text-dark);
+  background: var(--background-dark-right);
+  &::selection {
+    color: var(--text-dark);
+    background: var(--selection-dark);
+  }
 }
 @media (max-width: 1024px) {
-  .left-text,
-  .right-text {
+  .light-mode-left,
+  .light-mode-right,
+  .dark-mode-left,
+  .dark-mode-right {
     font-size: 0.9rem;
   }
 }
 @media (max-width: 768px) {
-  .left-text,
-  .right-text {
+  .light-mode-left,
+  .light-mode-right,
+  .dark-mode-left,
+  .dark-mode-right {
     font-size: 0.85rem;
   }
   .wrapper {
