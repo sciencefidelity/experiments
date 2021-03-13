@@ -1,7 +1,5 @@
 "use strict"
 
-// console.log('Hello world!')
-
 const modeSwitch = document.getElementById("modeSwitch")
 const textLeft = document.getElementById("textLeft")
 const textRight = document.getElementById("textRight")
