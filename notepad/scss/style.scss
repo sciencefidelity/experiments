@@ -9,8 +9,26 @@
   --text-dark: rgba(255, 255, 255, 0.75);
   --background-dark-left: rgb(32, 36, 38);
   --background-dark-right: rgb(47, 52, 55);
-  --selection-dark: rgb(74, 82, 87);
+  --selection-dark: rgba(255, 255, 255, 0.25);
   --mode-switch: rgb(109, 121, 128);
+}
+
+// ********** Mixins ******************
+
+@mixin serif {
+  font-family: "Iowan Old Style","Palatino Linotype",Palatino,"URW Palladio L",serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@mixin sans-serif {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@mixin monospace {
+  font-family: Monolisa,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 // ********** Base *********************
@@ -20,6 +38,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  background: var(--background-dark-left);
+}
 body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
@@ -28,19 +49,22 @@ body {
 
 // ********** Text areas ***************
 
+
 .wrapper {
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1fr;
+  overflow: visible;
 }
 %note-area {
+  @include monospace;
+  // @include sans-serif;
+  // @include serif;
   border: none;
   min-height: 100vh;
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem 12rem 1.875rem;
+  scroll-padding-bottom: 12em;
   width: 100%;
-  font-family: Monolisa, monospace;
-  font-size: 1rem;
-  line-height: 1.67;
   resize: none;
   &:focus {
     outline: 0px;
@@ -109,7 +133,7 @@ body {
   .light-mode-right,
   .dark-mode-left,
   .dark-mode-right {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) { //iPhone
@@ -117,7 +141,7 @@ body {
   .light-mode-right,
   .dark-mode-left,
   .dark-mode-right {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   .wrapper {
     grid-template-columns: 1fr;

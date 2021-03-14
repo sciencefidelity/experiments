@@ -6,7 +6,7 @@
   --text-dark: rgba(255, 255, 255, 0.75);
   --background-dark-left: rgb(32, 36, 38);
   --background-dark-right: rgb(47, 52, 55);
-  --selection-dark: rgb(74, 82, 87);
+  --selection-dark: rgba(255, 255, 255, 0.25);
   --mode-switch: rgb(109, 121, 128);
 }
 
@@ -14,6 +14,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  background: var(--background-dark-left);
 }
 
 body {
@@ -26,16 +30,18 @@ body {
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1fr;
+  overflow: visible;
 }
 
 .dark-mode-right, .dark-mode-left, .light-mode-right, .light-mode-left {
+  font-family: Monolisa, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.05rem;
+  line-height: 1.6;
   border: none;
   min-height: 100vh;
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem 12rem 1.875rem;
+  scroll-padding-bottom: 12em;
   width: 100%;
-  font-family: Monolisa, monospace;
-  font-size: 1rem;
-  line-height: 1.67;
   resize: none;
 }
 .dark-mode-right:focus, .dark-mode-left:focus, .light-mode-right:focus, .light-mode-left:focus {
@@ -101,7 +107,7 @@ body {
 .light-mode-right,
 .dark-mode-left,
 .dark-mode-right {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
@@ -109,7 +115,7 @@ body {
 .light-mode-right,
 .dark-mode-left,
 .dark-mode-right {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .wrapper {
