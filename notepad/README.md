@@ -11,6 +11,7 @@ This is the solution to a problem I was having while studying Russian language. 
 - Added light/dark mode switch.
 - Made responsive using css grid, right column hides on small screens.
 - Added button to download a markdown file of the left text area.
+- Word count, character count.
 
 ## To do
 
