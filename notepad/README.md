@@ -20,4 +20,7 @@ This is the solution to a problem I was having while studying Russian language. 
 - Switch between serif/sans-serif/manospece font.
 - Display formatted copy of the left column in the right cloumn. 
 
+## Issues
+
+- Firefox does not overflow the padding of the textarea. I added a large bottom padding so that when the text gets longer then the screen height you are not writing at the bottom of the screen. You could hit enter a few times to make space at the bottom, I thought paddin was a more elegent solution and works a charm in Safari and Brave.
 
