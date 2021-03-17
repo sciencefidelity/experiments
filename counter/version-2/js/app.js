@@ -3,27 +3,30 @@
 
 "use strict"
 
-const counters = document.querySelectorAll('.counter')
-const btn = document.getElementById('btnContainer')
-const speed = 200
+const animationDuration = 2000
+const frameDuration = 1000 / 60
+const totalFrames = Math.round( animationDuration / frameDuration )
+const easeOutQuad = t => t * ( 2 - t )
 
-document..onclick = () => {
-  console.log('clicked')
-  counters.forEach(counter => {
-    counter.innerText = 0
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target')
-      const count = +counter.innerText
-      
-      const inc = target / speed
-    
-      if(count < target) {
-        counter.innerText = Math.ceil(count + inc)
-        setTimeout(updateCount, 10)
-      } else {
-        count.innerText = target
-      }
+const animateCountUp = el => {
+  let frame = 0;
+  const countTo = parseInt( el.innerHTML, 10 )
+  const counter = setInterval( () => {
+    frame++
+    const progress = easeOutQuad( frame / totalFrames )
+    const currentCount = Math.round( countTo * progress )
+
+    if ( parseInt( el.innerHTML, 10 ) !== currentCount ) {
+      el.innerHTML = currentCount
     }
-    updateCount()
-  })
+
+    if ( frame === totalFrames ) {
+      clearInterval( counter )
+    }
+  }, frameDuration )
+}
+
+const runAnimations = () => {
+  const countupEls = document.querySelectorAll( '.counter' )
+  countupEls.forEach( animateCountUp )
 }
