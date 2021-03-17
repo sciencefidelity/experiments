@@ -29,13 +29,25 @@ body {
 
 .container {
   max-width: 88%;
-  margin: 45vh auto;
+  margin: 45vh auto 9rem;
   text-align: center;
 }
 
 .counter {
   display: inline-block;
   width: 22%;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
