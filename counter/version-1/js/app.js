@@ -7,7 +7,7 @@ const counters = document.querySelectorAll('.counter')
 const btn = document.getElementById('btnContainer')
 const speed = 200
 
-document..onclick = () => {
+btn.onclick = () => {
   console.log('clicked')
   counters.forEach(counter => {
     counter.innerText = 0
