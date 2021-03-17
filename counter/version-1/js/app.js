@@ -8,7 +8,6 @@ const btn = document.getElementById('btnContainer')
 const speed = 200
 
 btn.onclick = () => {
-  console.log('clicked')
   counters.forEach(counter => {
     counter.innerText = 0
     const updateCount = () => {
