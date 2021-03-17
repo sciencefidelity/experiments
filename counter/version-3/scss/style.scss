@@ -31,11 +31,23 @@ body {
   font-weight: 700;
 }
 
+.answer {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
 // ********** Counter Styling ********************
 
-.container {
+.counterContainer {
   max-width: 88%;
-  margin: 45vh auto 9rem;
+  margin: 150vh auto;
   text-align: center;
 }
 .counter {
@@ -43,15 +55,15 @@ body {
   width: 22%;
 }
 
-#btnContainer {
-  text-align: center;
-  
-}
-#btn {
-  border: none;
-  border-radius: 0;
-  padding: 1rem 1rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  cursor: pointer;
-}
+// #btnContainer {
+//   text-align: center;
+//   
+// }
+// #btn {
+//   border: none;
+//   border-radius: 0;
+//   padding: 1rem 1rem;
+//   font-size: 1.2rem;
+//   text-transform: uppercase;
+//   cursor: pointer;
+// }

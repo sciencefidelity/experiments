@@ -1,5 +1,4 @@
-// Count-up that triggers on click of a button
-// adjust speed and updateCount to change duration
+// Count-up that triggers on entering viewport
 
 "use strict"
 
@@ -8,16 +7,16 @@ const frameDuration = 1000 / 20
 const totalFrames = Math.round(animationDuration / frameDuration)
 const easeOutQuad = t => t * (2 - t)
 
-const animateCountUp = el => {
+const animateCountUp = count => {
   let frame = 0
-  const target = parseInt(el.getAttribute('data-target'), 10)
+  const target = parseInt(count.getAttribute('data-target'), 10)
   const counter = setInterval(() => {
     frame++
     const progress = easeOutQuad(frame / totalFrames)
     const currentCount = Math.round(target * progress)
 
-    if (parseInt(el.innerHTML, 10) !== currentCount) {
-      el.innerHTML = currentCount
+    if (parseInt(count.innerHTML, 10) !== currentCount) {
+      count.innerHTML = currentCount
     }
 
     if (frame === totalFrames) {
@@ -26,11 +25,55 @@ const animateCountUp = el => {
   }, frameDuration)
 }
 
+// Checker the viewport
+const countersInView = el => {
+  const scroll = window.scrollY || window.pageYOffset
+  const boundsTop = el.getBoundingClientRect().top + scroll
+  
+  const viewport = {
+    top: scroll,
+    bottom: scroll + window.innerHeight,
+  }
+  
+  const bounds = {
+    top: boundsTop,
+    bottom: boundsTop + el.clientHeight,
+  }
+  
+  return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) 
+    || (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
+}
+
+// Use the checker
+document.addEventListener('DOMContentLoaded', () => {
+  const tester = document.querySelector('.counterContainer')
+  const answer = document.querySelector('.answer')
+  
+  const handler = () => raf( () => {
+    console.log("hello")
+    answer.innerHTML = 'Are the numbers in view? ' + (countersInView(tester) ? 'Yes' : 'No')
+    const counters = document.querySelectorAll('.counter')
+    counters.forEach(animateCountUp)
+  })
+  
+  handler()
+  window.addEventListener('scroll', handler)
+})
+
+// requestAnimationFrame
+const raf = 
+  window.requestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  function(callback) {
+      window.setTimeout(callback, 1000 / 60)
+  }
+
 // Start count with button click
 
-const btn = document.getElementById('btn')
-
-btn.onclick = () => {
-  const counters = document.querySelectorAll('.counter')
-  counters.forEach(animateCountUp)
-}
+// const btn = document.getElementById('btn')
+// 
+// btn.onclick = () => {
+//   const counters = document.querySelectorAll('.counter')
+//   counters.forEach(animateCountUp)
+// }
