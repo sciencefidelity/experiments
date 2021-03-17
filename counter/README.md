@@ -9,3 +9,5 @@ Simple counter that triggers on page load to be dropped into any app that requir
 - Trigger when visable on screen.
 - Try using duration curves i.e the count slows when nearing completion.
 - Add controls for adjusting the speed for testing purposes.
+
+### Version 1 - Linear animation start on click
