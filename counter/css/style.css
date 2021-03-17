@@ -38,16 +38,17 @@ body {
   width: 22%;
 }
 
-.btn-container {
+#btnContainer {
   text-align: center;
 }
 
-.btn {
+#btn {
   border: none;
   border-radius: 0;
   padding: 1rem 1rem;
   font-size: 1.2rem;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
