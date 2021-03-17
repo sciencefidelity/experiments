@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+*::after {
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #1b1d1c;
+  color: #fafafa;
+  height: 100vh;
+}
+
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 88%;
+  margin: 45vh auto 9rem;
+  text-align: center;
+}
+
+.counter {
+  display: inline-block;
+  width: 22%;
+}
+
+#btnContainer {
+  text-align: center;
+}
+
+#btn {
+  border: none;
+  border-radius: 0;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
