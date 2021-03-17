@@ -1,12 +1,13 @@
+// Generate a random color upon clicking anywhere on screen
+// Display the RGB value of the generaten color
+
 "use strict"
 
 let r = 0
 let g = 0
 let b = 0
 
-document.getElementById("main").addEventListener("click", colorFunction)
-
-function colorFunction() {
+document.getElementById("main").onclick = () => {
   document.getElementById("main").style.background = "rgb(" + myFun(r) + "," + myFun(g) + "," + myFun(b) + ")"
   document.getElementById("colorRGB").innerHTML = "rgb(" + myFun(r) + ", " + myFun(g) + ", " + myFun(b) + ")"
 }
