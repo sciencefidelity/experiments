@@ -32,18 +32,28 @@ body {
 }
 .light {
   background: var(--light);
+  fill: var(--light);
 }
 .dark {
   background: var(--dark);
+  fill: var(--dark);
 }
 #mode {
   position: absolute;
   top: 1.8rem;
   right: 1.8rem;
   width: 3rem;
-  fill: #ADA4A1;
+  //fill: #ADA4A1;
   cursor: pointer; 
 }
+.darkmode {
+  fill: var(--light);
+}
+.lightmode {
+  fill: var(--dark);
+}
+
+
 .container {
   position: absolute;
   top: 50%;
