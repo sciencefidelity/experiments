@@ -1,6 +1,6 @@
 :root {
   --dark: #2C2D48;
-  --light: #f6ece3;
+  --light: #E7DBD8;
   --green: #33CC66;
   --blue: #0099FF;
   --red: #FF3333;
@@ -25,8 +25,30 @@ html {
 }
 
 body {
-  background: var(--dark);
   color: var(--white);
+}
+
+#site-main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.light {
+  background: var(--light);
+}
+
+.dark {
+  background: var(--dark);
+}
+
+#mode {
+  position: absolute;
+  top: 1.8rem;
+  right: 1.8rem;
+  width: 3rem;
+  fill: #ADA4A1;
+  cursor: pointer;
 }
 
 .container {
