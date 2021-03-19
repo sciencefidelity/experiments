@@ -1,3 +1,5 @@
+// ********* Variables ****************
+
 :root {
   --dark:  #2C2D48;
   --light: #E7DBD8;
@@ -6,6 +8,9 @@
   --red:   #FF3333;
   --white: #ffffff;
 }
+
+// ********* Base *********************
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -21,15 +26,18 @@ html {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  color: var(--white);
+  overflow: hidden;
 }
 body {
-  color: var(--white);
 }
 #site-main {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
+
+// ********* Mode Switching ***********
+
 .light {
   background: var(--light);
   fill: var(--light);
@@ -43,7 +51,6 @@ body {
   top: 1.8rem;
   right: 1.8rem;
   width: 3rem;
-  //fill: #ADA4A1;
   cursor: pointer; 
 }
 .darkmode {
@@ -53,6 +60,7 @@ body {
   fill: var(--dark);
 }
 
+// ********* Venn Diagram *************
 
 .container {
   position: absolute;
@@ -124,15 +132,15 @@ body {
 
 // Adds a paperlike texture to the screen.
 
-body::after {
+html::after {
   background: url(../images/noise.jpg);
   content: "";
+  width: 100%;
   height: 100%;
-  left: 0px;
+  left: 0;
+  top: 0;
   opacity: 0.05;
   pointer-events: none;
   position: absolute;
-  top: 0px;
-  width: 100%;
   z-index: 201;
 }

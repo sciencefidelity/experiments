@@ -22,16 +22,13 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-body {
   color: var(--white);
+  overflow: hidden;
 }
 
 #site-main {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 .light {
@@ -131,16 +128,16 @@ body {
   display: block;
 }
 
-body::after {
+html::after {
   background: url(../images/noise.jpg);
   content: "";
+  width: 100%;
   height: 100%;
-  left: 0px;
+  left: 0;
+  top: 0;
   opacity: 0.05;
   pointer-events: none;
   position: absolute;
-  top: 0px;
-  width: 100%;
   z-index: 201;
 }
 
