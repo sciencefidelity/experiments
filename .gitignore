@@ -3,3 +3,6 @@
 # Unformatted system generated files
 *.css
 *.css.map
+
+# Backups
+*.bak

@@ -47,6 +47,8 @@ body {
   }
 }
 
+// ********* Triangle Layers **********
+
 %triangle {
   box-sizing: content-box;
   position: absolute;
@@ -56,7 +58,6 @@ body {
   width: 0;
   height: 0;
 }
-
 .triangle-0 {
   @extend %triangle;
   border-left: 10em solid transparent;
@@ -118,6 +119,7 @@ body {
   border-bottom: 1.732em solid #23BA69;
 }
 
+// Border ofset values for 10 layers
 // 1.732
 // 3.464
 // 5.196
