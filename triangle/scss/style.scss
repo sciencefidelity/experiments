@@ -33,12 +33,9 @@ body {
 }
 .container {
   box-sizing: content-box;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -100%);
+  position: relative;
   width: 20em;
-  // border: 1px solid white;
+  // border: 1px solid white; // for testing
   margin: 5rem auto;
   &::after {
     content: "";
