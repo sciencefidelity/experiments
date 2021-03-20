@@ -82,19 +82,19 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: #33CC66;
+  background: var(--green);
 }
 .circle-5 {
   @extend %top-circles;
   bottom: 10.02%;
-  left: 2.41%;
-  background: #0099FF;
+  right: 2.41%;
+  background: var(--red);
 }
 .circle-6 {
   @extend %top-circles;
   bottom: 10.02%;
-  right: 2.41%;
-  background: #FF3333;
+  left: 2.41%;
+  background: var(--blue);
 }
 %white-circles {
   background: white;
