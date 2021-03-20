@@ -32,9 +32,13 @@ body {
   margin: 0;
   background: $background;
 }
-main {
-  width: 50vw;
-  margin: 30px auto;
+#site-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vh;
+  max-width: 88vw;
 }
 .container {
   position: relative;
@@ -201,27 +205,4 @@ main {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-}
-
-// ***************  Media Queries  *****************
- 
-@media (max-width: 1280px) {
-  section {
-    width: 60vw;
-  }
-}
-@media (max-width: 1100px) {
-  section {
-    width: 70vw;
-  }
-}
-@media (max-width: 800px) {
-  section {
-    width: 80vw;
-  }
-}
-@media (max-width: 600px) {
-  section {
-    width: 90vw;
-  }
 }
