@@ -32,85 +32,102 @@ body {
   background: var(--dark);
 }
 .container {
+  box-sizing: content-box;
   position: relative;
-  width: 100vw;
-  height: 100vw;
+  width: 20em;
+  height: 17.32em;
+  border: 1px solid white;
+  margin: 0rem auto;
 }
 
 %triangle {
   box-sizing: content-box;
-  background: transparent;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);  
+  top: 50%;
+  transform: translateX(-50%);
+  border-top: 2em solid transparent;
+  border-left: 1.11548em solid transparent;
+  border-right: 1.11548em solid transparent;
 }
+.guide {
+  box-sizing: content-box;
+  position: absolute;
+  width: 20em;
+  height: 17.32em;
+  outline: 1px solid cyan;
+  top: 0;
+}
+
+// 23.096
+// 20.786
+// 18.477
+// 16.167
+// 13.858
+// 11.548
+// 9.2384
+// 6.9288
+// 4.6192
+// 2.3096
 
 .triangle-0 {
   @extend %triangle;
-  top: 12rem;
-  width: 20rem;
-  height: 18rem;
-  border-top: 2rem solid transparent; 
-  border-left: 2rem solid transparent;
-  border-right: 2rem solid transparent;
-  border-bottom: 2rem solid blue;
+  width: 20.786em;
+  height: 16em;
+  border-bottom: 2em solid blue;
 }
 .triangle-1 {
   @extend %triangle;
-  top: 10rem;
-  width: 16rem;
-  height: 16rem;
-  border-top: 4rem solid transparent; 
-  border-left: 4rem solid transparent;
-  border-right: 4rem solid transparent;
-  border-bottom: 4rem solid green;
+  width: 18.477em;
+  height: 14em;
+  border-bottom: 2rem solid green;
+}
+.triangle-2 {
+  @extend %triangle;
+  width: 16.167em;
+  height: 12em;
+  border-bottom: 2rem solid yellow;
 }
 .triangle-3 {
   @extend %triangle;
-  top: 8rem;
-  width: 12rem;
-  height: 14rem;
-  border-top: 6rem solid transparent; 
-  border-left: 6rem solid transparent;
-  border-right: 6rem solid transparent;
-  border-bottom: 6rem solid yellow;
+  width: 13.858em;
+  height: 10em;
+  border-bottom: 2em solid red;
 }
 .triangle-4 {
   @extend %triangle;
-  top: 6rem;
-  width: 8rem;
-  height: 12rem;
-  border-top: 8rem solid transparent; 
-  border-left: 8rem solid transparent;
-  border-right: 8rem solid transparent;
-  border-bottom: 8rem solid red;
+  width: 11.548em;
+  height: 8em;
+  border-bottom: 2em solid purple;
 }
 .triangle-5 {
   @extend %triangle;
-  top: 4rem;
-  width: 4rem;
-  height: 10rem;
-  border-top: 10rem solid transparent; 
-  border-left: 10rem solid transparent;
-  border-right: 10rem solid transparent;
-  border-bottom: 10rem solid purple;
+  width: 9.2384em;
+  height: 6em;
+  border-bottom: 2rem solid cyan;
 }
 .triangle-6 {
   @extend %triangle;
-  top: 2rem;
-  width: 0rem;
-  height: 8rem;
-  border-top: 12rem solid transparent; 
-  border-left: 12rem solid transparent;
-  border-right: 12rem solid transparent;
-  border-bottom: 12rem solid cyan;
+  width: 6.9288em;
+  height: 4em;
+  border-bottom: 2em solid pink;
 }
-// .triangle-7 {
-//   @extend %triangle;
-//   width: 18rem;
-//   height: 18rem;
-//   border-top: 2rem solid transparent; 
-//   border-left: 2rem solid transparent;
-//   border-right: 2rem solid transparent;
-//   border-bottom: 2rem solid blue;
-// }
+.triangle-7 {
+  @extend %triangle;
+  width: 4.6192em;
+  height: 2em;
+  border-bottom: 2em solid limegreen;
+}
+.triangle-8 {
+  @extend %triangle;
+  width: 2.3096em;
+  height: 0em;
+  border-bottom: 2em solid darkcyan;
+}
+.triangle-9 {
+  @extend %triangle;
+  width: 0em;
+  height: 0em;
+  border-bottom: 2em solid orange;
+  top: 45%;
+}
