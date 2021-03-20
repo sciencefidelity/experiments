@@ -7,6 +7,8 @@
   --blue:  #0099FF;
   --red:   #FF3333;
   --white: #ffffff;
+  --serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  --mono:  SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 // ********* Base *********************
@@ -23,7 +25,7 @@
   }
 }
 html {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  font-family: var(--mono);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--white);
@@ -40,11 +42,10 @@ body {
 
 .light {
   background: var(--light);
-  fill: var(--light);
 }
 .dark {
   background: var(--dark);
-  fill: var(--dark);
+  color: var(--dark);
 }
 #mode {
   position: absolute;
@@ -58,6 +59,8 @@ body {
 }
 .lightmode {
   fill: var(--dark);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 // ********* Venn Diagram *************
@@ -128,6 +131,41 @@ body {
   content: "";
   padding-bottom: 100%;
   display: block;
+}
+.isolate {
+  isolation: isolate; /* Without isolation, the background color will be taken into account */
+  //position: relative;
+}
+
+// // ********* Diagram Labels ***********
+
+%all-content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--light);
+}
+.content-1 {
+  @extend %all-content;
+  top: 18%;
+  left: 50%;
+}
+.content-2 {
+  @extend %all-content;
+  top: 67%;
+  left: 21%;
+}
+.content-3 {
+  @extend %all-content;
+  line-height: 1.2;
+  top: 67%;
+  left: 78%;
+}
+.center {
+  @extend %all-content;
+  top: 50%;
+  left: 50%;
 }
 
 // Adds a paperlike texture to the screen.
