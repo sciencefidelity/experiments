@@ -56,74 +56,66 @@ body {
   width: 0;
   height: 0;
 }
-// .guide {
-//   box-sizing: content-box;
-//   position: absolute;
-//   width: 20em;
-//   height: 17.32em;
-//   outline: 1px solid cyan;
-//   top: 0;
-// }
 
 .triangle-0 {
   @extend %triangle;
   border-left: 10em solid transparent;
   border-right: 10em solid transparent;
-  border-bottom: 17.32em solid blue;
+  border-bottom: 17.32em solid #322FD6;
 }
 .triangle-1 {
   @extend %triangle;
   border-left: 9em solid transparent;
   border-right: 9em solid transparent;
-  border-bottom: 15.588em solid green;
+  border-bottom: 15.588em solid #692DC3;
 }
 .triangle-2 {
   @extend %triangle;
   border-left: 8em solid transparent;
   border-right: 8em solid transparent;
-  border-bottom: 13.856em solid yellow;
+  border-bottom: 13.856em solid #8F3BC3;
 }
 .triangle-3 {
   @extend %triangle;
   border-left: 7em solid transparent;
   border-right: 7em solid transparent;
-  border-bottom: 12.124em solid red;
+  border-bottom: 12.124em solid #C44283;
 }
 .triangle-4 {
   @extend %triangle;
   border-left: 6em solid transparent;
   border-right: 6em solid transparent;
-  border-bottom: 10.392em solid purple;
+  border-bottom: 10.392em solid #EA3546;
 }
 .triangle-5 {
   @extend %triangle;
   border-left: 5em solid transparent;
   border-right: 5em solid transparent;
-  border-bottom: 8.66em solid cyan;
+  border-bottom: 8.66em solid #F5631F;
 }
 .triangle-6 {
   @extend %triangle;
   border-left: 4em solid transparent;
   border-right: 4em solid transparent;
-  border-bottom: 6.928em solid pink;
+  border-bottom: 6.928em solid #F5A510;
 }
 .triangle-7 {
   @extend %triangle;
   border-left: 3em solid transparent;
   border-right: 3em solid transparent;
-  border-bottom: 5.196em solid limegreen;
+  border-bottom: 5.196em solid #E7E00D;
 }
 .triangle-8 {
   @extend %triangle;
   border-left: 2em solid transparent;
   border-right: 2em solid transparent;
-  border-bottom: 3.464em solid darkcyan;
+  border-bottom: 3.464em solid #91D834;
 }
 .triangle-9 {
   @extend %triangle;
   border-left: 1em solid transparent;
   border-right: 1em solid transparent;
-  border-bottom: 1.732em solid orange;
+  border-bottom: 1.732em solid #23BA69;
 }
 
 // 1.732
