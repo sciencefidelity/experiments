@@ -29,4 +29,88 @@ html {
   overflow: hidden;
 }
 body {
-  background: var(--dark);}
+  background: var(--dark);
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vw;
+}
+
+%triangle {
+  box-sizing: content-box;
+  background: transparent;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);  
+}
+
+.triangle-0 {
+  @extend %triangle;
+  top: 12rem;
+  width: 20rem;
+  height: 18rem;
+  border-top: 2rem solid transparent; 
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-bottom: 2rem solid blue;
+}
+.triangle-1 {
+  @extend %triangle;
+  top: 10rem;
+  width: 16rem;
+  height: 16rem;
+  border-top: 4rem solid transparent; 
+  border-left: 4rem solid transparent;
+  border-right: 4rem solid transparent;
+  border-bottom: 4rem solid green;
+}
+.triangle-3 {
+  @extend %triangle;
+  top: 8rem;
+  width: 12rem;
+  height: 14rem;
+  border-top: 6rem solid transparent; 
+  border-left: 6rem solid transparent;
+  border-right: 6rem solid transparent;
+  border-bottom: 6rem solid yellow;
+}
+.triangle-4 {
+  @extend %triangle;
+  top: 6rem;
+  width: 8rem;
+  height: 12rem;
+  border-top: 8rem solid transparent; 
+  border-left: 8rem solid transparent;
+  border-right: 8rem solid transparent;
+  border-bottom: 8rem solid red;
+}
+.triangle-5 {
+  @extend %triangle;
+  top: 4rem;
+  width: 4rem;
+  height: 10rem;
+  border-top: 10rem solid transparent; 
+  border-left: 10rem solid transparent;
+  border-right: 10rem solid transparent;
+  border-bottom: 10rem solid purple;
+}
+.triangle-6 {
+  @extend %triangle;
+  top: 2rem;
+  width: 0rem;
+  height: 8rem;
+  border-top: 12rem solid transparent; 
+  border-left: 12rem solid transparent;
+  border-right: 12rem solid transparent;
+  border-bottom: 12rem solid cyan;
+}
+// .triangle-7 {
+//   @extend %triangle;
+//   width: 18rem;
+//   height: 18rem;
+//   border-top: 2rem solid transparent; 
+//   border-left: 2rem solid transparent;
+//   border-right: 2rem solid transparent;
+//   border-bottom: 2rem solid blue;
+// }
