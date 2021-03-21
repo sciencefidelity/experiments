@@ -26,8 +26,6 @@ img1.onload = function() {
   
   let img2 = new Image();
   img2.src = c.toDataURL("image/jpeg")
-  img2.style.width = "100%"
-  
   parent.append(img2)
   
 };
