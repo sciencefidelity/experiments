@@ -8,7 +8,8 @@ Simple app for pixelating images.
 
 ### To do
 
-- Add a control for the animation speed.
-- Control the animation speed with gestures.
-- Chane th e size of the pixels with gestures.
-- Save image to server and output a URL for embedding.
+- Add a control for the animation speed
+- Control the animation speed with gestures
+- Chane th e size of the pixels with gestures
+- Save image to server and output a URL for embedding
+- Make an animaated clipping path to reveral and hide the original image
