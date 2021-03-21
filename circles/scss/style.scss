@@ -1,4 +1,6 @@
+
 // ***************  Variables  *********************
+
 $background: #232425;
 //$background: #fff;
 $bright1: rgba(249, 54, 14, 0.8);
@@ -8,12 +10,14 @@ $bright4: rgba(249, 171, 14, 0.8);
 $bright5: rgba(249, 210, 14, 0.8);
 
 // ***************  Animation  *********************
+
 @keyframes turntable {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
 }
 
 // ***************  Base  **************************
+
 * {
   box-sizing: border-box;
   &::before {
