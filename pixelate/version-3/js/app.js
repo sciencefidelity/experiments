@@ -31,7 +31,7 @@ function pixelate(v) {
 //  console.log(size)
   ctx.drawImage(img, 0, 0, w, h)
   
-  ctx.mozImageSmoothingEnabled = false
+  ctx.ImageSmoothingEnabled = false
   ctx.webkitImageSmoothingEnabled = false
   ctx.imageSmoothingEnabled = false
   ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height)
