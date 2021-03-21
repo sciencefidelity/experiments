@@ -15,3 +15,5 @@ Simple counter that triggers on page load to be dropped into any app that requir
 ### Version 2 - Non-linear animation start on click
 
 ### Version 3 - Non-linear animation start on entering viewport
+
+Currently not working
