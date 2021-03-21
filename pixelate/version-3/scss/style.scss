@@ -21,14 +21,16 @@ canvas {
   -ms-interpolation-mode: nearest-neighbor;
 }
 #crop {
-  position: relative;
-  width: 70%;
-  margin: auto;
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   overflow: hidden;
   &::after {
     content: "";
     display: block;
-    padding-bottom: 66%;
+    padding-bottom: 66.6%;
   }
 }
 #canvas {
@@ -38,7 +40,7 @@ canvas {
   top: -5%;
 }
 @media (max-width: 1000px) {
- #canvas {
+  #crop {
    width: 100%;
- }
+  }
 }
