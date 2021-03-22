@@ -32,6 +32,9 @@ canvas {
     display: block;
     padding-bottom: 66.6%;
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 }
 #canvas {
   position: absolute;
@@ -39,8 +42,4 @@ canvas {
   left: -5%;
   top: -5%;
 }
-@media (max-width: 1000px) {
-  #crop {
-   width: 100%;
-  }
-}
+
