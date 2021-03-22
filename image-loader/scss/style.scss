@@ -1,0 +1,43 @@
+.container {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: 0 0 0;
+  transition: all 2s ease-in;
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 60%;
+  }
+  &:hover {
+    box-shadow: 0 0 10px black;
+    transition: all 2s ease-out;
+  }
+}
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  object-position: 50% 100%;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+.asyncImage {
+  opacity: 1;
+  transition: all .5s ease-out;
+}
+.fullImage {
+  opacity: 1;
+  transition: all 2s ease-in;
+  //image-rendering: auto;
+  // box-shadow: 0;
+}
