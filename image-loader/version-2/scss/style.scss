@@ -1,5 +1,4 @@
 div {
-  border: 2px solid turquoise;
   width: 75%;
   position: absolute;
   top: 50%;
@@ -11,6 +10,7 @@ div {
   background-size: cover;
   background-position: 50% 50%;
   transition: background-image .5s ease-in-out;
+  -moz-transition: background-image .5s ease-in-out;
   &::after {
     content: "";
     display: block;
