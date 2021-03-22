@@ -11,3 +11,4 @@
 - Random Color Gernerator
 - Animated Font
 - Venn Diagram
+- Image Loader
