@@ -1,5 +1,12 @@
 
+// ********** Variables ****************
+
+$background: #232425;
+$textarea: #474747;
+$text: #F5F5F5;
 $sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+// ********** Base *********************
 
 *,
 *::before,
@@ -11,14 +18,14 @@ $sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
 
 html {
   font-family: $sans;
-  color: white;
-  font-size: 1.4rem;
+  color: $text;
+  font-size: 1.4em;
   -moz-osx-font-smoothing: grayscale;	
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background: #232425;
+  background: $background;
 }
 
 .container {
@@ -27,32 +34,50 @@ body {
   flex-direction: column;
 }
 
+
+// ********** Text area ****************
+
+.text,
 .backing {
-  position: absolute;
-  width: 100vw;
-  height: 60vh;
-  top: 0;
-  left: 0;
-  background: #474747;
+  height: calc(100vh - 3rem);
+  max-height: 20rem;
 }
 
 .text,
 .output {
   width: 100vw;
-  max-width: 34.7em;
+  max-width: 34.7rem;
   margin: auto;
-  padding: 1.2rem 1.5rem;
+}
+
+.backing {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: $textarea;
 }
 
 .text {
-  height: 60vh;
   border: 0;
   border-radius: 0;
-  background-color: #474747;
-  color: white;
+  background-color: $textarea;
+  padding: 1.2rem 1.5rem;
+  color: $text;
   font-family: $sans;
   font-size: 1rem;
   resize: none;
   outline: none;
   z-index: 100;
+}
+.output {
+  padding: 0.9rem 1.5rem 0 1.5rem;
+}
+
+// ********** Responsive ***************
+
+@media (max-width: 660px) {
+  html {
+    font-size: 1.1rem;
+  }
 }
