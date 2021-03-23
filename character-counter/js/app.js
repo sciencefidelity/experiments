@@ -1,6 +1,6 @@
 "use strict"
 
-const charCount = document.querySelector(".charCount")
+const text = document.querySelector(".charCount")
 const output = document.querySelector(".output")
 
 function updateCount(str) {
