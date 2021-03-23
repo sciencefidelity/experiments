@@ -9,8 +9,9 @@ div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  transition: background-image .5s ease-in-out;
-  -moz-transition: background-image .5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
   &::after {
     content: "";
     display: block;
