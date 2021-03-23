@@ -1,3 +1,6 @@
+
+$sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
 *,
 *::before,
 *::after {
@@ -5,24 +8,51 @@
   padding: 0;
   margin: 0;
 }
+
 html {
-  font-family: -apple-system;
+  font-family: $sans;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  -moz-osx-font-smoothing: grayscale;	
+  -webkit-font-smoothing: antialiased;
 }
+
 body {
   background: #232425;
 }
-.charCount {
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.backing {
+  position: absolute;
   width: 100vw;
-  height: 70vh;
+  height: 60vh;
+  top: 0;
+  left: 0;
+  background: #474747;
+}
+
+.text,
+.output {
+  width: 100vw;
+  max-width: 34.7em;
+  margin: auto;
+  padding: 1.2rem 1.5rem;
+}
+
+.text {
+  height: 60vh;
   border: 0;
   border-radius: 0;
-  padding: 1rem;
   background-color: #474747;
   color: white;
+  font-family: $sans;
   font-size: 1rem;
-}
-.output {
-  padding: 1rem;
+  resize: none;
+  outline: none;
+  z-index: 100;
 }
