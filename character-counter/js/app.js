@@ -1,13 +1,13 @@
 "use strict"
 
-const text = document.querySelector(".charCount")
+const text = document.querySelector(".text")
 const output = document.querySelector(".output")
 
-function updateCount(str) {
+const updateCount = (str) => {
   let lng = str.length
   if (lng === 1) {
     output.innerHTML = lng + " character"
-  } else {
-    output.innerHTML = lng + " characters"
+    return
   }
+  output.innerHTML = lng + " characters"
 }
