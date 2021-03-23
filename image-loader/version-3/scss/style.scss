@@ -1,0 +1,47 @@
+.container {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 60%;
+  }
+}
+
+img {
+  opacity: 0;
+}
+
+%image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+#placeholder {
+  @extend %image;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  opacity: 1;
+}
+
+#main-image {
+  @extend %image;
+}
+
+.asyncImage {
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+}
+
+.fullImage {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
