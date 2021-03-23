@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: -apple-system;
+  color: white;
+  font-size: 1.2rem;
+}
+body {
+  background: #232425;
+}
+.charCount {
+  width: 100vw;
+  height: 70vh;
+  border: 0;
+  border-radius: 0;
+  padding: 1rem;
+  background-color: #474747;
+  color: white;
+  font-size: 1rem;
+}
+.output {
+  padding: 1rem;
+}
