@@ -37,12 +37,12 @@ body {
 
 // ********** Text area ****************
 
-.text,
+.input,
 .backing {
   height: calc(100vh - 2rem);
 }
 
-.text,
+.input,
 .output {
   width: 100vw;
   max-width: 34.7rem;
@@ -57,7 +57,7 @@ body {
   background: $textarea;
 }
 
-.text {
+.input {
   border: 0;
   border-radius: 0;
   background-color: $textarea;
@@ -81,7 +81,7 @@ body {
   html {
     font-size: 1.1rem;
   }
-  .text,
+  .input,
   .backing {
     height: calc(100vh - 2rem);
   }
