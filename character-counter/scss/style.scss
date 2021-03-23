@@ -39,8 +39,7 @@ body {
 
 .text,
 .backing {
-  height: calc(100vh - 3rem);
-  max-height: 20rem;
+  height: calc(100vh - 2rem);
 }
 
 .text,
@@ -70,8 +69,10 @@ body {
   outline: none;
   z-index: 100;
 }
+
 .output {
-  padding: 0.9rem 1.5rem 0 1.5rem;
+  font-size: 0.85rem;
+  padding: 0.45rem 1.5rem 0 1.5rem;
 }
 
 // ********** Responsive ***************
@@ -79,5 +80,12 @@ body {
 @media (max-width: 660px) {
   html {
     font-size: 1.1rem;
+  }
+  .text,
+  .backing {
+    height: calc(100vh - 2rem);
+  }
+  .output {
+    padding: 0.5rem 1.5rem 0 1.5rem;
   }
 }
