@@ -14,3 +14,4 @@
 - Image Loader
 - Character Counter
 - Rainbow
+- Fractions
