@@ -12,3 +12,5 @@
 - Animated Font
 - Venn Diagram
 - Image Loader
+- Character Counter
+- Rainbow
