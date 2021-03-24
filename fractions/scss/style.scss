@@ -1,0 +1,102 @@
+
+// ********** Variables ****************
+
+$background: #1B1C1D;
+$text: #F5F5F5;
+
+// ********** Base *********************
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;	
+}
+body {
+  background: $background;
+  color: $text;
+}
+.container {
+  width: 70%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+
+
+%circle {
+  position: relative;
+  //border: 2px solid white;
+  border-radius: 50%;
+  width: 100%;
+  background: #322FD6;
+  &::after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+  :first-child {
+    position: absolute;
+    background: yellow;
+    border-radius: 50%;
+    width: 100%;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    &::after {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+  }
+}
+
+.first {
+  @extend %circle;
+}
+.second {
+  @extend %circle;
+}
+.third {
+  @extend %circle;
+}
+.fourth {
+  @extend %circle;
+}
+.fifth {
+  @extend %circle;
+}
+.sixth {
+  @extend %circle;
+}
+
+
+
+// ********** Rainbow ******************
+
+// .rainbow {
+//   //font-size: 1.1vw; // Trying to make the rainbow responsive.
+//   background: transparent;
+//   position: relative;
+//   margin: 3.5rem;
+//   width: calc(100% - 7rem);
+//   border-radius: 50%;
+//   box-shadow: 0 0 0 0.5em #722CDC,
+//               0 0 0 1em #4340FF,
+//               0 0 0 1.5em #22BCA0,
+//               0 0 0 2em #8ED631,
+//               0 0 0 2.5em #FFCF12,
+//               0 0 0 3em #FF8D0C,
+//               0 0 0 3.5em #D91A1A;
+//   &::after {
+//     content: "";
+//     padding-bottom: 100%;
+//     display: block;
+//   }
+// }
+
