@@ -1,0 +1,24 @@
+
+// ********** Variables ****************
+
+$background: #1B1C1D;
+$text: #F5F5F5;
+
+// ********** Base *********************
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;	
+}
+body {
+  background: $background;
+  color: $text;
+}
+
