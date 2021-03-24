@@ -21,4 +21,32 @@ body {
   background: $background;
   color: $text;
 }
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vh;
+  max-width: 88vw;
+}
 
+// ********** Rainbow ******************
+
+.rainbow {
+  background: transparent;
+  position: relative;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.5rem #722CDC,
+              0 0 0 1rem #4340FF,
+              0 0 0 1.5rem #22BCA0,
+              0 0 0 2rem #8ED631,
+              0 0 0 2.5rem #FFCF12,
+              0 0 0 3rem #FF8D0C,
+              0 0 0 3.5rem #D91A1A;
+  &::after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+}
