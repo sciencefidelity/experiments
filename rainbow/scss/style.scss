@@ -28,13 +28,15 @@ body {
   transform: translate(-50%, -50%);
   width: 90vh;
   max-width: 88vw;
+  // box-sizing: content-box; // For testing rainbow position.
+  // border: 2px solid white;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 
 // ********** Rainbow ******************
 
 .rainbow {
-  font-size: 1vw;
+  //font-size: 1.1vw; // Trying to make the rainbow responsive.
   background: transparent;
   position: relative;
   margin: 3.5rem;
