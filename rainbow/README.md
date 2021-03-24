@@ -1,6 +1,6 @@
 # Rainbow
 
-The challenge: to make a rainbow with css.
+The challenge: Make a rainbow with css.
 The solution: Box shadow!
 
 ### To do 
