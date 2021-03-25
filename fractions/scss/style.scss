@@ -206,6 +206,54 @@ body {
 }
 .eighth {
   @extend %circle;
+  :first-child {
+    @extend %inner;
+    background: purple;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    transform: rotate(-90deg);
+    @extend %after;
+  }
+  :nth-child(2) {
+    @extend %inner;
+    background: deeppink;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    transform: rotate(-45deg);
+    @extend %after;
+  }
+  :nth-child(3) {
+    @extend %inner;
+    background: red;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    transform: rotate(-0deg);
+    @extend %after;
+  }
+  :nth-child(4) {
+    @extend %inner;
+    background: orange;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    transform: rotate(45deg);
+    @extend %after;
+  }
+  :nth-child(5) {
+    @extend %inner;
+    background: yellow;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    transform: rotate(90deg);
+    @extend %after;
+  }
+  :nth-child(6) {
+    @extend %inner;
+    background: limegreen;
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    transform: rotate(135deg);
+    @extend %after;
+  }
+  :nth-child(7) {
+    @extend %inner;
+    background: teal;
+    clip-path: polygon(0 0, 0 50%, 50% 50%);
+    @extend %after;
+  }
 }
 
 
