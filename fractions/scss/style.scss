@@ -12,6 +12,13 @@ $yellow: #FFD800;
 $green: #80D834;
 $teal: #23BA69;
 
+// ********** Animation ****************
+
+@keyframes turntable {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
 // ********** Base *********************
 
 *,
@@ -44,6 +51,7 @@ body {
   border-radius: 50%;
   width: 100%;
   background: $blue;
+  animation: turntable 1s linear infinite;
   @extend %after;
 }
 %inner {
