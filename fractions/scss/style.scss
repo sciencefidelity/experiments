@@ -44,6 +44,11 @@ body {
   gap: 1rem;
 }
 
+.btn {
+  text-align: center;
+  cursor: pointer;
+}
+
 // ********** Extend Circles ***********
 
 %circle {
