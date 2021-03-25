@@ -135,16 +135,28 @@ body {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
     @extend %after;
   }
-  // :nth-child(2) {
-  //   @extend %inner;
-  //   background: red;
-  //   clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-  //   @extend %after;
-  // }
-  :nth-child(3) {
+  :nth-child(2) {
     @extend %inner;
     background: orange;
     clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+    @extend %after;
+  }
+  :nth-child(3) {
+    @extend %inner;
+    background: red;
+    clip-path: polygon(50% 50%, 100% 78.87%, 100% 21.13%);
+    @extend %after;
+  }
+  :nth-child(4) {
+    @extend %inner;
+    background: yellow;
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0% 100%);
+    @extend %after;
+  }
+  :nth-child(5) {
+    @extend %inner;
+    background: limegreen;
+    clip-path: polygon(50% 50%, 0 78.78%, 0 21.13%);
     @extend %after;
   }
 }
