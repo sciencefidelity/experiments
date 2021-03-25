@@ -89,13 +89,13 @@ body {
   }
   :nth-child(2) {
     @extend %inner;
-    background: red;
+    background: limegreen;
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
     @extend %after;
   }
   :nth-child(3) {
     @extend %inner;
-    background: limegreen;
+    background: red;
     clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
     @extend %after;
   }
@@ -129,6 +129,24 @@ body {
 }
 .sixth {
   @extend %circle;
+  :first-child {
+    @extend %inner;
+    background: purple;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    @extend %after;
+  }
+  // :nth-child(2) {
+  //   @extend %inner;
+  //   background: red;
+  //   clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  //   @extend %after;
+  // }
+  :nth-child(3) {
+    @extend %inner;
+    background: orange;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+    @extend %after;
+  }
 }
 .seventh {
   @extend %circle;
