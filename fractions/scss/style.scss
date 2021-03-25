@@ -153,7 +153,7 @@ body {
   :nth-child(3) {
     @extend %inner;
     background: $red;
-    clip-path: polygon(50% 50%, 100% 78.87%, 100% 21.13%);
+    clip-path: polygon(50% 50%, 100% 79%, 100% 21%);
     @extend %after;
   }
   :nth-child(4) {
@@ -165,7 +165,7 @@ body {
   :nth-child(5) {
     @extend %inner;
     background: $green;
-    clip-path: polygon(50% 50%, 0 78.78%, 0 21.13%);
+    clip-path: polygon(50% 50%, 0 79%, 0 21%);
     @extend %after;
   }
 }
