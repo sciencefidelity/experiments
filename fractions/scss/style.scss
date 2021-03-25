@@ -102,6 +102,30 @@ body {
 }
 .fifth {
   @extend %circle;
+  :first-child {
+    @extend %inner;
+    background: red;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    @extend %after;
+  }
+  :nth-child(2) {
+    @extend %inner;
+    background: orange;
+    clip-path: polygon(0 66.25%, 100% 34.55%, 100% 100%, 0% 100%);
+    @extend %after;
+  }
+  :nth-child(3) {
+    @extend %inner;
+    background: limegreen;
+    clip-path: polygon(0 50%, 50% 50%, 86.33% 100%, 0% 100%);
+    @extend %after;
+  }
+  :nth-child(4) {
+    @extend %inner;
+    background: yellow;
+    clip-path: polygon(0 33%, 50% 50%, 13% 100%, 0% 100%);
+    @extend %after;
+  }
 }
 .sixth {
   @extend %circle;
