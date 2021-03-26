@@ -65,19 +65,19 @@ body {
 }
 .layer-container-2 {
   @extend %layer-container;
-  animation: turntable 72s linear infinite;
+  // animation: turntable 72s linear infinite;
 }
 .layer-container-3 {
   @extend %layer-container;
-  animation: turntable 36s linear infinite;
+  // animation: turntable 36s linear infinite;
 }
 .layer-container-4 {
   @extend %layer-container;
-  animation: turntable 16s linear infinite;
+  // animation: turntable 16s linear infinite;
 }
 .layer-container-5 {
   @extend %layer-container;
-  animation: turntable 7s linear infinite;
+  // animation: turntable 7s linear infinite;
 }
 
 // ***************  Circles  ***********************
