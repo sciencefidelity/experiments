@@ -8,6 +8,8 @@ $bright3: #FFDA47;
 $bright4: #FF5B2E;
 $bright5: #E0151F;
 $bright6: #E73C83;
+$cutout1: 0.02em 0.05em 0.02em 0.02em;
+$cutout2: 0.02em 0.05em 0.02em 0.02em; 
 
 // ***************  Animation  *********************
 
@@ -36,17 +38,17 @@ body {
   margin: 0;
   background: $background;
 }
+
 #site-main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vh;
-  max-width: 88vw;
+  display: grid;
+  place-items: center;
+  height: 100vh
 }
+
 .container {
   position: relative;
-  width: 100%;
+  width: 80vh;
+  max-width: 88vw;
   &::after {
     content: "";
     padding-bottom: 100%;
@@ -93,7 +95,7 @@ body {
   height: 100%;
   border-radius: 100%;
   background: $bright1;
-  box-shadow: 0.05em 0.05em 0.05em 0.02em rgba(0, 0, 0, 0.2),
+  box-shadow: 0.05em 0.05em 0.05em 0.02em rgba(black, 0.2),
               0.05em 0.05em 0.05em 0.02em rgba($bright1, 0.6);
 }
 .circle-1 {
@@ -108,8 +110,8 @@ body {
   height: 50%;
   border-radius: 100%;
   background: $bright2;
-  box-shadow: 0.02em 0.05em 0.02em 0.02em rgba(0, 0, 0, 0.3),
-              0.02em 0.05em 0.02em 0.02em rgba($bright2, 0.3);
+  box-shadow: $cutout1 rgba(black, 0.3),
+              $cutout2 rgba($bright2, 0.3);
 }
 .circle-2 {
   @extend %circles2;
@@ -130,8 +132,8 @@ body {
   height: 33.333%;
   border-radius: 100%;
   background: $bright3;
-  box-shadow: 0.02em 0.05em 0.02em 0.02em rgba(0, 0, 0, 0.3),
-              0.02em 0.05em 0.02em 0.02em rgba($bright3, 0.3);
+  box-shadow: $cutout1 rgba(black, 0.3),
+              $cutout2 rgba($bright3, 0.3);
 }
 .circle-4 {
   @extend %circles3;
@@ -158,8 +160,8 @@ body {
   height: 25%;
   border-radius: 100%;
   background: $bright4;
-  box-shadow: 0.02em 0.05em 0.02em 0.02em rgba(0, 0, 0, 0.3),
-              0.02em 0.05em 0.02em 0.02em rgba($bright4, 0.3);
+  box-shadow: $cutout1 rgba(black, 0.3),
+              $cutout2 rgba($bright4, 0.3);
 }
 .circle-7 {
   @extend %circles4;
@@ -192,8 +194,8 @@ body {
   height: 20%;
   border-radius: 100%;
   background: $bright5;
-  box-shadow: 0.02em 0.05em 0.02em 0.02em rgba(0, 0, 0, 0.3),
-              0.02em 0.05em 0.02em 0.02em rgba($bright5, 0.3);
+  box-shadow: $cutout1 rgba(black, 0.3),
+              $cutout2 rgba($bright5, 0.3);
 }
 .circle-11 {
   @extend %circles5;
@@ -231,8 +233,8 @@ body {
   height: 16.66%;
   border-radius: 100%;
   background: $bright6;
-  box-shadow: 0.02em 0.05em 0.02em 0.02em rgba(0, 0, 0, 0.3),
-              0.02em 0.05em 0.02em 0.02em rgba($bright6, 0.3);
+  box-shadow: $cutout1 rgba(black, 0.3),
+              $cutout2 rgba($bright6, 0.3);
 }
 .circle-16 {
   @extend %circles6;
