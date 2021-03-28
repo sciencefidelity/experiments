@@ -20,11 +20,8 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
-  &::after {
-    box-sizing: border-box;
-  }
+  &::after,
   &::before {
     box-sizing: border-box;
   }
@@ -34,8 +31,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  padding: 0;
-  margin: 0;
   background-color: var(--background);
   color: var(--foreground);
 }
@@ -46,11 +41,6 @@ body {
   transform: translate(-50%, -50%);
   width: 90vh;
   max-width: 88vw;
-}
-@media (max-width: 450px){
-  #site-main {
-    width: 95%;
-  }
 }
 
 // ***************  coloured squares  **************
