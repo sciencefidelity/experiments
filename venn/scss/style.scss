@@ -34,6 +34,8 @@ html {
 body {
 }
 #site-main {
+  display: grid;
+  place-items: center;
   width: 100vw;
   height: 100vh;
 }
@@ -65,10 +67,7 @@ body {
 // ********* Venn Diagram *************
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: 90vh;
   max-width: 88vw;
 }
