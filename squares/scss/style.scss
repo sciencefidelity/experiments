@@ -47,8 +47,8 @@ body {
 
 // **********  Coloured Squares  *********
 
-@each $name, $color in $colors {
-  .#{$name} {
+@each $x, $color in $colors {
+  .#{$x} {
     background: $color;
   }
 }
