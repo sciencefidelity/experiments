@@ -1,22 +1,32 @@
 
-// ***************  Variables  *********************
+// **********  Variables  ****************
 
-:root {
-  --background: #ABA393;
-  --foreground: #f5f5f5;
-  --darkgreen: rgb(47, 122, 58);
-  --lightgreen: rgb(48, 204, 48);
-  --yellow: rgb(249, 200, 14);
-  --lightorange: rgb(254, 144, 5);
-  --darkorange: rgb(255, 87, 0);
-  --red: rgb(208, 0, 26);
-  --pink: rgb(173, 30, 173);
-  --lilac: rgb(118, 90, 213);
-  --lightblue: rgb(68, 141, 217);
-  --darkblue: rgb(0, 27, 237);
+$background: #ABA393;
+$colors: (
+  color-1:  rgb(47, 122, 58),
+  color-2:  rgb(48, 204, 48),
+  color-3:  rgb(249, 200, 14),
+  color-4:  rgb(254, 144, 5),
+  color-5:  rgb(255, 87, 0),
+  color-6:  rgb(208, 0, 26),
+  color-7:  rgb(173, 30, 173),
+  color-8:  rgb(118, 90, 213),
+  color-9:  rgb(68, 141, 217),
+  color-10: rgb(0, 27, 237),
+);
+
+// **********  Mixins  *******************
+
+@mixin after($pos: relative) {
+  position: $pos;
+  &::after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
 }
 
-// ***************  Base  **************************
+// **********  Base  *********************
 
 * {
   box-sizing: border-box;
@@ -26,112 +36,32 @@
     box-sizing: border-box;
   }
 }
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-}
-#site-main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(90vh, 88vw);
+  background: $background;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
-// ***************  coloured squares  **************
+// **********  Coloured Squares  *********
 
-.square-contaner {
-  width: 100%;
-  position: relative;
-}
-.square-container::after {
-  content: "";
-  padding-bottom: 100%;
-  display: block;
-}
-
-.color-1 {
-  background: var(--darkgreen);
-} 
-.color-2 {
-  background: var(--lightgreen);
-}
-.color-3 {
-  background: var(--yellow);
-}
-.color-4 {
-  background: var(--lightorange);
-}
-.color-5 {
-  background: var(--darkorange);
-}
-.color-6 {
-  background: var(--red);
-}
-.color-7 {
-  background: var(--pink);
-}
-.color-8 {
-  background: var(--lilac);
-}
-.color-9 {
-  background: var(--lightblue);
-}
-.color-0 {
-  background: var(--darkblue);
-}
-
-#square-1, #square-2, #square-3, #square-4, #square-5, 
-#square-6, #square-7, #square-8, #square-9, #square-0 {
-  position: absolute;
-  bottom: 0;
-  &::after {
-    content: "";
-    padding-bottom: 100%;
-    display: block;
+@each $name, $color in $colors {
+  .#{$name} {
+    background: $color;
   }
 }
-#square-1 {
-  width: 10%;
-  z-index: 20;
-}
-#square-2 {
-  width: 20%;
-  z-index: 19;
-}
-#square-3 {
-  width: 30%;
-  z-index: 18;
-}
-#square-4 {
-  width: 40%;
-  z-index: 17;
-}
-#square-5 {
-  width: 50%;
-  z-index: 16;
-}
-#square-6 {
-  width: 60%;
-  z-index: 15;
-}
-#square-7 {
-  width: 70%;
-  z-index: 14;
-}
-#square-8 {
-  width: 80%;
-  z-index: 13;
-}
-#square-9 {
-  width: 90%;
-  z-index: 12;
-}
-#square-0 {
-  width: 100%;
-  z-index: 11;
+
+#container {
+  width: min(80vh, 88vw);
+  @include after();
+  @for $i from 1 through 10 {
+    :nth-child(#{$i}) {
+      bottom: 0;
+      width: (10% * $i);
+      z-index: (20 - $i);
+      @include after($pos: absolute);
+    }
+  }
 }

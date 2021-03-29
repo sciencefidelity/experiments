@@ -19,7 +19,7 @@ const square6 = document.getElementById("square-6")
 const square7 = document.getElementById("square-7")
 const square8 = document.getElementById("square-8")
 const square9 = document.getElementById("square-9")
-const square0 = document.getElementById("square-0")
+const square0 = document.getElementById("square-10")
 
 setInterval(colorChange1, 100)
 function colorChange1() {
