@@ -1,7 +1,7 @@
 "use strict"
 
-const input = document.querySelector(".input")
-const output = document.querySelector(".output")
+const input = document.getElementById("input")
+const output = document.getElementById("output")
 
 input.addEventListener('input', function(e) {
   const target = e.target

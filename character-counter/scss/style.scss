@@ -1,9 +1,9 @@
 
 // ********** Variables ****************
 
-$background: #232425;
-$textarea: #474747;
 $text: #F5F5F5;
+$textarea: #474747;
+$footer: #232425;
 
 // ********** Base *********************
 
@@ -36,14 +36,14 @@ main {
 }
 
 footer {
-  background: $background;
+  background: $footer;
 }
 
 // ********** Text Area ****************
 
 %text {
   font-size: clamp(0.9em, 3.5vw, 1.6em);
-  max-width: 64ch;
+  width: min(64ch, 100%);
   height: 100%;
   margin: auto;
 }
@@ -53,6 +53,13 @@ footer {
   padding: 2em 2em;
   overflow-wrap: break-word;
   outline: none;
+  // These lines are not needed for a div.
+  display: block;
+  background: transparent;
+  border: none;
+  resize: none;
+  font-family: inherit;
+  color: inherit;
 }
 
 #output {
