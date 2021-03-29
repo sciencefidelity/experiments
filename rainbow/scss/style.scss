@@ -1,54 +1,52 @@
 
 // ********** Variables ****************
 
-$background: #1B1C1D;
-$text: #F5F5F5;
+$background: #ABA393;
+$color-1: #722CDC;
+$color-2: #4340FF;
+$color-3: #22BCA0;
+$color-4: #8ED631;
+$color-5: #FFCF12;
+$color-6: #FF8D0C;
+$color-7: #D91A1A;
 
 // ********** Base *********************
 
-*,
-*::after,
-*::before {
+* {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
-}
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;	
+  &*::after,
+  *::before {
+    box-sizing: border-box;
+  }
 }
 body {
   background: $background;
-  color: $text;
 }
 .container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vh;
-  max-width: 88vw;
-  // box-sizing: content-box; // For testing rainbow position.
-  // border: 2px solid white;
+  width: min(90vh, 88vw);
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 
 // ********** Rainbow ******************
 
 .rainbow {
-  //font-size: 1.1vw; // Trying to make the rainbow responsive.
+  font-size: min(1.96vw, 2vh);
   background: transparent;
   position: relative;
-  margin: 3.5rem;
-  width: calc(100% - 7rem);
+  width: 100%;
   border-radius: 50%;
-  box-shadow: 0 0 0 0.5em #722CDC,
-              0 0 0 1em #4340FF,
-              0 0 0 1.5em #22BCA0,
-              0 0 0 2em #8ED631,
-              0 0 0 2.5em #FFCF12,
-              0 0 0 3em #FF8D0C,
-              0 0 0 3.5em #D91A1A;
+  box-shadow: inset 0 0 0 0.5em $color-7,
+              inset 0 0 0 1.0em $color-6,
+              inset 0 0 0 1.5em $color-5,
+              inset 0 0 0 2.0em $color-4,
+              inset 0 0 0 2.5em $color-3,
+              inset 0 0 0 3.0em $color-2,
+              inset 0 0 0 3.5em $color-1;
   &::after {
     content: "";
     padding-bottom: 100%;
