@@ -1,47 +1,45 @@
 // ********* Variables ****************
 
-:root {
-  --dark:  #ABA393;
-  --light: #E7DBD8;
-  --white: #ffffff;
-  --sans:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-  --mono:  SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
+$background:  #ABA393;
+$colors: (
+  1: #23BA69,
+  2: #91D834,
+  3: #E7E00D,
+  4: #F5A510,
+  5: #F5631F,
+  6: #EA3546,
+  7: #C44283,
+  8: #8F3BC3,
+  9: #692DC3,
+  10: #322FD6,
+);
 
 // ********* Base *********************
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
   &::after,
   &::before {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
   }
 }
-html {
-  font-family: var(--sans);
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: var(--white);
-  overflow: hidden;
-}
+
 body {
-  background: var(--dark);
+  background: $background;
 }
+
 #site-main {
   width: 100vw;
   height: 100vh;
   display: grid;
   place-items: center;
 }
+
 .container {
   box-sizing: content-box;
   position: relative;
   width: 20em;
-  // border: 1px solid white; // for testing
   &::after {
     content: "";
     padding-bottom: 86.66%;
@@ -51,84 +49,23 @@ body {
 
 // ********* Triangle Layers **********
 
-%triangle {
-  box-sizing: content-box;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-}
-.triangle-0 {
-  @extend %triangle;
-  border-left: 10em solid transparent;
-  border-right: 10em solid transparent;
-  border-bottom: 17.32em solid #322FD6;
-}
-.triangle-1 {
-  @extend %triangle;
-  border-left: 9em solid transparent;
-  border-right: 9em solid transparent;
-  border-bottom: 15.588em solid #692DC3;
-}
-.triangle-2 {
-  @extend %triangle;
-  border-left: 8em solid transparent;
-  border-right: 8em solid transparent;
-  border-bottom: 13.856em solid #8F3BC3;
-}
-.triangle-3 {
-  @extend %triangle;
-  border-left: 7em solid transparent;
-  border-right: 7em solid transparent;
-  border-bottom: 12.124em solid #C44283;
-}
-.triangle-4 {
-  @extend %triangle;
-  border-left: 6em solid transparent;
-  border-right: 6em solid transparent;
-  border-bottom: 10.392em solid #EA3546;
-}
-.triangle-5 {
-  @extend %triangle;
-  border-left: 5em solid transparent;
-  border-right: 5em solid transparent;
-  border-bottom: 8.66em solid #F5631F;
-}
-.triangle-6 {
-  @extend %triangle;
-  border-left: 4em solid transparent;
-  border-right: 4em solid transparent;
-  border-bottom: 6.928em solid #F5A510;
-}
-.triangle-7 {
-  @extend %triangle;
-  border-left: 3em solid transparent;
-  border-right: 3em solid transparent;
-  border-bottom: 5.196em solid #E7E00D;
-}
-.triangle-8 {
-  @extend %triangle;
-  border-left: 2em solid transparent;
-  border-right: 2em solid transparent;
-  border-bottom: 3.464em solid #91D834;
-}
-.triangle-9 {
-  @extend %triangle;
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  border-bottom: 1.732em solid #23BA69;
+@for $i from 1 through 10 {
+  div:nth-child(#{$i}) {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: (1em * $i) solid transparent;
+    border-right: (1em * $i) solid transparent;
+    border-bottom: (1.732em * $i) solid;
+    z-index: (10 - $i);
+  }
 }
 
-// Border ofset values for 10 layers
-// 1.732
-// 3.464
-// 5.196
-// 6.928
-// 8.66
-// 10.392
-// 12.124
-// 13.856
-// 15.588
-// 17.32
+@each $x, $color in $colors {
+  div:nth-child(#{$x}) {
+    border-bottom-color: $color;
+  }
+}
