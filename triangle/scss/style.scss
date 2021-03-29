@@ -1,18 +1,18 @@
 // ********* Variables ****************
 
-$background:  #ABA393;
-$colors: (
-  1: #23BA69,
-  2: #91D834,
-  3: #E7E00D,
-  4: #F5A510,
-  5: #F5631F,
-  6: #EA3546,
-  7: #C44283,
-  8: #8F3BC3,
-  9: #692DC3,
-  10: #322FD6,
-);
+:root {
+  --background: #ABA393;
+  --color-1: #23BA69;
+  --color-2: #91D834;
+  --color-3: #E7E00D;
+  --color-4: #F5A510;
+  --color-5: #F5631F;
+  --color-6: #EA3546;
+  --color-7: #C44283;
+  --color-8: #8F3BC3;
+  --color-9: #692DC3;
+  --color-10: #322FD6;
+}
 
 // ********* Base *********************
 
@@ -26,7 +26,7 @@ $colors: (
 }
 
 body {
-  background: $background;
+  background: var(--background);
 }
 
 #site-main {
@@ -36,8 +36,10 @@ body {
   place-items: center;
 }
 
-.container {
-  box-sizing: content-box;
+// ********* Triangle Layers **********
+
+#container {
+  font-size: min(5vh, 4vw);
   position: relative;
   width: 20em;
   &::after {
@@ -45,27 +47,19 @@ body {
     padding-bottom: 86.66%;
     display: block;
   }
-}
-
-// ********* Triangle Layers **********
-
-@for $i from 1 through 10 {
-  div:nth-child(#{$i}) {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: (1em * $i) solid transparent;
-    border-right: (1em * $i) solid transparent;
-    border-bottom: (1.732em * $i) solid;
-    z-index: (10 - $i);
-  }
-}
-
-@each $x, $color in $colors {
-  div:nth-child(#{$x}) {
-    border-bottom-color: $color;
+  @for $i from 1 through 10 {
+    :nth-child(#{$i}) {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: (1em * $i) solid transparent;
+      border-right: (1em * $i) solid transparent;
+      border-bottom: ((1.732em) * $i) solid var(--color-#{$i});
+      box-shadow: 0 0.03em 0.0em 0 rgba(black, 0.2);
+      z-index: (10 - $i);
+    }
   }
 }
