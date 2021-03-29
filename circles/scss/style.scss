@@ -48,6 +48,23 @@ body {
   right: 0;
 }
 
+@mixin circle($num: 1, $width: 50%, $color: $bright2) {
+  @extend %layers;
+  @for $i from 0 through $num {
+    :nth-child(#{($i + 1)}) {
+      position: absolute;
+      width: $width;
+      height: $width;
+      border-radius: 100%;
+      background: $color;
+      box-shadow: $cutout rgba(black, 0.3);
+      transform: translateY(-50%);
+      top: 50%;
+      left: $width * $i;
+    }
+  }
+}
+
 .layer-1 {
   @extend %layers;
   border-radius: 100%;
@@ -57,93 +74,23 @@ body {
 }
 
 .layer-2 {
-  @extend %layers;
-  @for $i from 0 through 1 {
-    :nth-child(#{($i + 1)}) {
-      position: absolute;
-      width: 50%;
-      height: 50%;
-      border-radius: 100%;
-      background: $bright2;
-      box-shadow: $cutout rgba(black, 0.3),
-                  $cutout rgba($bright2, 0.3);
-      transform: translateY(-50%);
-      top: 50%;
-      left: (50% * $i);
-    }
-  }
+  @include circle();
 }
 
 .layer-3 {
-  @extend %layers;
-  @for $i from 0 through 2 {
-    :nth-child(#{($i + 1)}) {
-      position: absolute;
-      width: 33.33%;
-      height: 33.33%;
-      border-radius: 100%;
-      background: $bright3;
-      box-shadow: $cutout rgba(black, 0.3),
-                  $cutout rgba($bright2, 0.3);
-      transform: translateY(-50%);
-      top: 50%;
-      left: (33.33% * $i);
-    }
-  }
+  @include circle($num: 2, $width: 33.33%, $color: $bright3);
 }
 
 .layer-4 {
-  @extend %layers;
-  @for $i from 0 through 3 {
-    :nth-child(#{($i + 1)}) {
-      position: absolute;
-      width: 25%;
-      height: 25%;
-      border-radius: 100%;
-      background: $bright4;
-      box-shadow: $cutout rgba(black, 0.3),
-                  $cutout rgba($bright2, 0.3);
-      transform: translateY(-50%);
-      top: 50%;
-      left: (25% * $i);
-    }
-  }
+  @include circle($num: 3, $width: 25%, $color: $bright4);
 }
 
 .layer-5 {
-  @extend %layers;
-  @for $i from 0 through 4 {
-    :nth-child(#{($i + 1)}) {
-      position: absolute;
-      width: 20%;
-      height: 20%;
-      border-radius: 100%;
-      background: $bright5;
-      box-shadow: $cutout rgba(black, 0.3),
-                  $cutout rgba($bright2, 0.3);
-      transform: translateY(-50%);
-      top: 50%;
-      left: (20% * $i);
-    }
-  }
+  @include circle($num: 4, $width: 20%, $color: $bright5);
 }
 
 .layer-6 {
-  @extend %layers;
-  @for $i from 0 through 5 {
-    :nth-child(#{($i + 1)}) {
-      position: absolute;
-      width: 16.66%;
-      height: 16.66%;
-      border-radius: 100%;
-      background: $bright6;
-      box-shadow: $cutout rgba(black, 0.3),
-                  $cutout rgba($bright2, 0.3);
-      transform: translateY(-50%);
-      top: 50%;
-      left: (16.66% * $i);
-    }
-  }
+  @include circle($num: 5, $width: 16.66%, $color: $bright6);
 }
 // Adds a paperlike texture to the screen.
 
