@@ -7,8 +7,7 @@
   --blue:  #0099FF;
   --red:   #FF3333;
   --white: #ffffff;
-  --sans:  -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-  --mono:  SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --mono:  'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
   --transition: 0.3s ease-in-out;
 }
 
@@ -74,31 +73,35 @@ body {
   max-width: 88vw;
 }
 
-// @mixin circle(top: $top, left: $left) {
-//   
-// }
-
-%top-circles {
-  mix-blend-mode: difference;
-  opacity: 0.65;
+@mixin circle($bottom: 10.02%, $left: 2.41%) {
   position: absolute;
   width: 60.59%;
   border-radius: 50%;
+  bottom: $bottom;
+  left: $left;
+}
+
+%top {
+  position: absolute;
+  width: 60.59%;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  opacity: 0.65;
 }
 .circle-4 {
-  @extend %top-circles;
+  @extend %top;
   bottom: 39.41%;
   left: 19.705%;
   background: var(--green);
 }
 .circle-5 {
-  @extend %top-circles;
+  @extend %top;
   bottom: 10.02%;
-  right: 2.41%;
+  left: 37%;
   background: var(--red);
 }
 .circle-6 {
-  @extend %top-circles;
+  @extend %top;
   bottom: 10.02%;
   left: 2.41%;
   background: var(--blue);
@@ -111,19 +114,18 @@ body {
 }
 .circle-1 {
   @extend %white-circles;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 39.41%;
+  left: 19.705%;
 }
 .circle-2 {
   @extend %white-circles;
   bottom: 10.02%;
-  left: 2.41%;
+  left: 37%;
 }
 .circle-3 {
   @extend %white-circles;
   bottom: 10.02%;
-  right: 2.41%;
+  left: 2.41%;
 }
 .container::after, 
 .circle-1::after,
