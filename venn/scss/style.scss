@@ -9,6 +9,7 @@
   --white: #ffffff;
   --sans:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
   --mono:  SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --transition: all 0.3s ease-in-out;
 }
 
 // ********* Base *********************
@@ -44,11 +45,11 @@ body {
 
 .light {
   background: var(--light);
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition);
 }
 .dark {
   background: var(--dark);
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition);
 }
 #mode {
   position: absolute;
@@ -59,13 +60,13 @@ body {
 }
 .darkmode {
   fill: var(--light);
-  transition: all 0.3s ease-in-out; 
+  transition: var(--transition);
 }
 .lightmode {
   fill: var(--dark);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  transition: all 0.3s ease-in-out; 
+  transition: var(--transition); 
 }
 
 // ********* Venn Diagram *************
