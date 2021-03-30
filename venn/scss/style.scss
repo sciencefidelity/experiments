@@ -65,77 +65,50 @@ body {
 
 // ********* Venn Diagram *************
 
-.container {
-  position: relative;
-  width: 90vh;
-  max-width: 88vw;
-}
-
-%top {
-  position: absolute;
-  width: 60.59%;
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  opacity: 0.65;
-}
-@mixin circle($bottom: 10.02%, $left: 2.41%, $bg: $white) {
+@mixin circle($bottom: 10.02%, $left: 2.41%, $bg: $white, $blend: normal, $op: 1) {
   position: absolute;
   width: 60.59%;
   border-radius: 50%;
   bottom: $bottom;
   left: $left;
   background: $bg;
+  mix-blend-mode: $blend;
+  opacity: 0.65;
+  @extend %after;
+}
+
+#container {
+  position: relative;
+  width: 90vh;
+  max-width: 88vw;
+  @extend %after;
 }
 
 .circle-4 {
-  @extend %top;
-  bottom: 39.41%;
-  left: 19.705%;
-  background: $green;
+  @include circle($bottom: 39.41%, $left: 19.705%, $bg: $green, $blend: difference, $op: 0.65);
 }
 .circle-5 {
-  @extend %top;
-  bottom: 10.02%;
-  left: 37%;
-  background: $red;
+  @include circle($left: 37%, $bg: $red, $blend: difference, $op: 0.65);
 }
 .circle-6 {
-  @extend %top;
-  bottom: 10.02%;
-  left: 2.41%;
-  background: $blue;
-}
-%white-circles {
-  background: $white;
-  position: absolute;
-  width: 60.59%;
-  border-radius: 50%;
+  @include circle($bg: $blue, $blend: difference, $op: 0.65);
 }
 .circle-1 {
-  @extend %white-circles;
-  bottom: 39.41%;
-  left: 19.705%;
+  @include circle($bottom: 39.41%, $left: 19.705%);
 }
 .circle-2 {
-  @extend %white-circles;
-  bottom: 10.02%;
-  left: 37%;
+  @include circle($left: 37%);
 }
 .circle-3 {
-  @extend %white-circles;
-  bottom: 10.02%;
-  left: 2.41%;
+  @include circle();
 }
-.container::after, 
-.circle-1::after,
-.circle-2::after,
-.circle-3::after,
-.circle-4::after,
-.circle-5::after,
-.circle-6::after {
-  content: "";
-  padding-bottom: 100%;
-  display: block;
+
+%after {
+  &::after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
 }
 
 // ********* Diagram Labels ***********
