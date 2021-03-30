@@ -44,9 +44,11 @@ body {
 
 .light {
   background: var(--light);
+  transition: all 0.3s ease-in-out;
 }
 .dark {
   background: var(--dark);
+  transition: all 0.3s ease-in-out;
 }
 #mode {
   position: absolute;
@@ -57,11 +59,13 @@ body {
 }
 .darkmode {
   fill: var(--light);
+  transition: all 0.3s ease-in-out; 
 }
 .lightmode {
   fill: var(--dark);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  transition: all 0.3s ease-in-out; 
 }
 
 // ********* Venn Diagram *************
