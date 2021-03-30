@@ -1,15 +1,13 @@
 // ********* Variables ****************
 
-:root {
-  --dark:  #2C2D48;
-  --light: #E7DBD8;
-  --green: #33CC66;
-  --blue:  #0099FF;
-  --red:   #FF3333;
-  --white: #ffffff;
-  --mono:  'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
-  --transition: 0.3s ease-in-out;
-}
+$dark:  #2C2D48;
+$light: #E7DBD8;
+$green: #33CC66;
+$blue:  #0099FF;
+$red:   #FF3333;
+$white: #ffffff;
+$mono:  'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+$transition: 0.3s ease-in-out;
 
 // ********* Base *********************
 
@@ -22,10 +20,10 @@
   }
 }
 html {
-  font-family: var(--mono);
+  font-family: $mono;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--white);
+  color: $white;
   overflow: hidden;
 }
 body {
@@ -40,12 +38,12 @@ body {
 // ********* Mode Switching ***********
 
 .light {
-  background: var(--light);
-  transition: background var(--transition);
+  background: $light;
+  transition: background $transition;
 }
 .dark {
-  background: var(--dark);
-  transition: background var(--transition);
+  background: $dark;
+  transition: background $transition;
 }
 #mode {
   position: absolute;
@@ -55,14 +53,14 @@ body {
   cursor: pointer; 
 }
 .darkmode {
-  fill: var(--light);
-  transition: transform var(--transition);
+  fill: $light;
+  transition: fill $transition, transform $transition, -webkit-transform $transition;
 }
 .lightmode {
-  fill: var(--dark);
+  fill: $dark;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  transition: transform var(--transition), -webkit-transform var(--transition); 
+  transition: fill $transition, transform $transition, -webkit-transform $transition; 
 }
 
 // ********* Venn Diagram *************
@@ -73,14 +71,6 @@ body {
   max-width: 88vw;
 }
 
-@mixin circle($bottom: 10.02%, $left: 2.41%) {
-  position: absolute;
-  width: 60.59%;
-  border-radius: 50%;
-  bottom: $bottom;
-  left: $left;
-}
-
 %top {
   position: absolute;
   width: 60.59%;
@@ -88,26 +78,35 @@ body {
   mix-blend-mode: difference;
   opacity: 0.65;
 }
+@mixin circle($bottom: 10.02%, $left: 2.41%, $bg: $white) {
+  position: absolute;
+  width: 60.59%;
+  border-radius: 50%;
+  bottom: $bottom;
+  left: $left;
+  background: $bg;
+}
+
 .circle-4 {
   @extend %top;
   bottom: 39.41%;
   left: 19.705%;
-  background: var(--green);
+  background: $green;
 }
 .circle-5 {
   @extend %top;
   bottom: 10.02%;
   left: 37%;
-  background: var(--red);
+  background: $red;
 }
 .circle-6 {
   @extend %top;
   bottom: 10.02%;
   left: 2.41%;
-  background: var(--blue);
+  background: $blue;
 }
 %white-circles {
-  background: white;
+  background: $white;
   position: absolute;
   width: 60.59%;
   border-radius: 50%;
