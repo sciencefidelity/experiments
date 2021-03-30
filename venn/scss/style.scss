@@ -7,22 +7,19 @@
   --blue:  #0099FF;
   --red:   #FF3333;
   --white: #ffffff;
-  --sans:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  --sans:  -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
   --mono:  SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  --transition: all 0.3s ease-in-out;
+  --transition: 0.3s ease-in-out;
 }
 
 // ********* Base *********************
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  box-sizing: border-box;
   &::after,
   &::before {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
   }
 }
 html {
@@ -45,11 +42,11 @@ body {
 
 .light {
   background: var(--light);
-  transition: var(--transition);
+  transition: background var(--transition);
 }
 .dark {
   background: var(--dark);
-  transition: var(--transition);
+  transition: background var(--transition);
 }
 #mode {
   position: absolute;
@@ -60,13 +57,13 @@ body {
 }
 .darkmode {
   fill: var(--light);
-  transition: var(--transition);
+  transition: transform var(--transition);
 }
 .lightmode {
   fill: var(--dark);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  transition: var(--transition); 
+  transition: transform var(--transition), -webkit-transform var(--transition); 
 }
 
 // ********* Venn Diagram *************
@@ -76,6 +73,11 @@ body {
   width: 90vh;
   max-width: 88vw;
 }
+
+// @mixin circle(top: $top, left: $left) {
+//   
+// }
+
 %top-circles {
   mix-blend-mode: difference;
   opacity: 0.65;
@@ -85,9 +87,8 @@ body {
 }
 .circle-4 {
   @extend %top-circles;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 39.41%;
+  left: 19.705%;
   background: var(--green);
 }
 .circle-5 {
