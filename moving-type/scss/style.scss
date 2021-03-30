@@ -1,15 +1,15 @@
-// ********** Variables **************************
+// ********** Variables ****************
 
-$background: #1B1C1D;
-$foreground: #fff;
-$orange: #F3B945;
-$darkcyan: darkcyan;
-$sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$bg: #171614;
+$grape: #FFD800;
+$melon: #9D37B1;
+$graph: #80D834;
+$sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 
-// ********** Fonts ******************************
+// ********** Fonts ********************
 
 @font-face {
-  font-family: Recursive; // font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0
+  font-family: Recursive;
   src:  url(../fonts/recursive.woff2) format("woff supports variations"),
         url(../fonts/recursive.woff2) format("woff2-variations");
   font-weight: normal;
@@ -18,98 +18,77 @@ $sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
   font-display: swap;
 }
 
-// ********** Animation **************************
+// ********** Animation ****************
 
-@keyframes grapefruit {
-  0%  {font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $orange;}
-  50% {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $foreground;}
-  100%{font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $orange;}
+@keyframes grape {
+  0%  {font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $melon;}
+  50% {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $grape;}
+  100%{font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $melon;}
 }
-@keyframes watermelon {
-  0%  {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $foreground;;}
-  50% {font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $orange;}
-  100%{font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $foreground;}
+@keyframes melon {
+  0%  {font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $grape;}
+  50% {font-variation-settings: "MONO" 1, "CASL" 0, "wght"  300, "slnt" 0; color: $melon;}
+  100%{font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0; color: $grape;}
 }
 
-// ********** Base *******************************
+// ********** Base *********************
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
-  &::after {
-    box-sizing: border-box;
-  }
+  &::after,
   &::before {
     box-sizing: border-box;
   }
 }
 
 html {
-  font-family: $sans;
+  font-family: Recursive, $sans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: Recursive, $sans;
-  background: $background;
-  color: $foreground;
+  background: $bg;
+  overflow: hidden;
 }
 
-section {
-  width: 100vw;
+main {
   height: 100vh;
+  display: grid;
+  place-items: center; 
 }
 
-// ********** Font Variations ********************
+// ********** Font Variations **********
 
-%variable {
-  font-size: 5rem;
+// Variation range for Recursive:
+// "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0
+
+%vari {
+  font-size: min(20vh, 15vw);
   text-align: center;
-  // font-variation-settings: "MONO" 0, "CASL" 0, "wght" 400, "slnt" 0; // default variations
-}
-.typography {
-  @extend %variable;
-  color: $darkcyan;
-  margin-top: 1rem;
-}
-.grapefruit {
-  @extend %variable;
-  margin-top: 5rem;
-  animation: grapefruit 15s infinite;
-  // font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0; // default variations
-}
-.watermelon {
-  @extend %variable;
-  animation: watermelon 15s infinite;
 }
 
-// Change the font letter-by-letter 
+#graph {
+  @extend %vari;
+  color: $graph;
+  @for $i from 1 through 10 {
+    :nth-child(#{$i}) {
+      font-variation-settings: 
+        "MONO" 1,
+        "CASL" ($i - 1) * 0.11,
+        "wght" (($i - 1) * 78) + 300,
+        "slnt" ($i - 1) * -1.67;
+    }
+  }
+}
 
-// These figures are the range for the Recursive variable font...
-// font-variation-settings: "MONO" 0 - 1, "CASL" 0 - 1, "wght" 300 - 1000, "slnt" -15 - 0
+#grape {
+  @extend %vari;
+  animation: grape 15s infinite;
+}
 
-// Reset all variations
-// .f1 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f2 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f3 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f4 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f5 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f6 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f7 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f8 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f9 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-// .f0 {font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0;}
-
-
-.f1 {font-variation-settings: "MONO" 1, "CASL" 0.00, "wght" 300,  "slnt" -0;}
-.f2 {font-variation-settings: "MONO" 1, "CASL" 0.11, "wght" 378,  "slnt" -1.5;}
-.f3 {font-variation-settings: "MONO" 1, "CASL" 0.22, "wght" 456,  "slnt" -3;}
-.f4 {font-variation-settings: "MONO" 1, "CASL" 0.33, "wght" 533,  "slnt" -4.5;}
-.f5 {font-variation-settings: "MONO" 1, "CASL" 0.44, "wght" 611,  "slnt" -6;}
-.f6 {font-variation-settings: "MONO" 1, "CASL" 0.55, "wght" 689,  "slnt" -7.5;}
-.f7 {font-variation-settings: "MONO" 1, "CASL" 0.66, "wght" 767,  "slnt" -9;}
-.f8 {font-variation-settings: "MONO" 1, "CASL" 0.77, "wght" 844,  "slnt" -10.5;}
-.f9 {font-variation-settings: "MONO" 1, "CASL" 0.88, "wght" 922,  "slnt" -12;}
-.f0 {font-variation-settings: "MONO" 1, "CASL" 1.00, "wght" 1000, "slnt" -15}
+#melon {
+  @extend %vari;
+  animation: melon 15s infinite;
+}
