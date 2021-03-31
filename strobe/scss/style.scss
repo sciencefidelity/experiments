@@ -1,31 +1,14 @@
-// ********** Variables **************************
-
-$background: #272829;
-$foreground: #fafafa;
-$color0: #007F00;
-$color1: #F9C80E;
-$color2: #F86624;
-$color3: #EA3546;
-$color4: #662E9B;
-$color5: #43BCCD;
-
-// ********** Base *******************************
-
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
-  &::after {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+  &::after,
   &::before {
     box-sizing: border-box;
   }
 }
 
 body {
-  background: $background; 
-  color: $foreground;
+  background: #272829;
 }
 
 #shape {
@@ -34,23 +17,9 @@ body {
   height: 100vh;
 }
 
-// ********** colours ****************************
-
-.c0 {
-  background: $color0;
-}
-.c1 {
-  background: $color1;
-}
-.c2 {
-  background: $color2;
-}
-.c3 {
-  background: $color3;
-}
-.c4 {
-  background: $color4;
-}
-.c5 {
-  background: $color5;
-}
+.c0 { background: #007F00; }
+.c1 { background: #F9C80E; }
+.c2 { background: #F86624; }
+.c3 { background: #EA3546; }
+.c4 { background: #662E9B; }
+.c5 { background: #43BCCD; }
