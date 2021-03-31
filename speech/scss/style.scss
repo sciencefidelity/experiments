@@ -1,9 +1,10 @@
-@import "normalize";
-
-*,
-*::after,
-*::before {
+* {
+  margin: auto;
   box-sizing: border-box;
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
 }
 html {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
