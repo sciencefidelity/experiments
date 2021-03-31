@@ -46,13 +46,13 @@ const countersInView = el => {
 
 // Use the checker
 document.addEventListener('DOMContentLoaded', () => {
-  const tester = document.querySelector('.counterContainer')
-  const answer = document.querySelector('.answer')
+  const tester = document.querySelector('#count')
+  const answer = document.querySelector('#answer')
   
   const handler = () => raf( () => {
     console.log("hello")
     answer.innerHTML = 'Are the numbers in view? ' + (countersInView(tester) ? 'Yes' : 'No')
-    const counters = document.querySelectorAll('.counter')
+    const counters = document.querySelectorAll('h1')
     counters.forEach(animateCountUp)
   })
   
@@ -71,9 +71,9 @@ const raf =
 
 // Start count with button click
 
-// const btn = document.getElementById('btn')
-// 
-// btn.onclick = () => {
-//   const counters = document.querySelectorAll('.counter')
-//   counters.forEach(animateCountUp)
-// }
+const btn = document.getElementById('btn')
+
+btn.onclick = () => {
+  const counters = document.querySelectorAll('h1')
+  counters.forEach(animateCountUp)
+}
