@@ -34,7 +34,6 @@
 
 body {
   background: var(--bg);
-  
 }
 
 #btn {
@@ -52,6 +51,7 @@ body {
 .spin > section {
   animation: turntable 1s linear infinite;
 }
+
 .stop > section {
   animation: none;
 }
