@@ -1,17 +1,16 @@
 * {
+  margin: 0;
   box-sizing: border-box;
-  margin:0;
-  padding:0;
-  &::before {
-    box-sizing: border-box;
-  }
+  &::before,
   &::after {
     box-sizing: border-box;
   }
 }
+
 body {
   text-align: center;
 }
+
 canvas {
   image-rendering: optimizeSpeed;
   image-rendering: -moz-crisp-edges;
@@ -20,6 +19,7 @@ canvas {
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
 }
+
 #canvas {
   width: 77%;
   position: absolute;
@@ -27,8 +27,3 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%)
 }
-// @media(max-width: 1000px) {
-//   #canvas {
-//     width: 100%;
-//   }
-// }
