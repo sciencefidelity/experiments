@@ -6,7 +6,6 @@ $green: #33CC66;
 $blue:  #0099FF;
 $red:   #FF3333;
 $white: #ffffff;
-$mono:  'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
 $time: 0.3s ease-in-out;
 
 // ********* Base *********************
@@ -20,7 +19,7 @@ $time: 0.3s ease-in-out;
   }
 }
 html {
-  font-family: $mono;
+  font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: $white;
