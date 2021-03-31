@@ -14,7 +14,6 @@ html {
 body {
   background: #1b1d1c;
   color: #fafafa;
-  height: 100vh;
   overflow: hidden;
 }
 h1 {
@@ -29,8 +28,7 @@ h1 {
   text-align: center;
 }
 #btn {
-  bottom: 0;
-  margin: 3em calc(50vw - 4.5em);
+  margin: 0 calc(50vw - 4.5em);
   background: #fafafa;
   color: #1b1d1c;
   padding: 1em 1em;
