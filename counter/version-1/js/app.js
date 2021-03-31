@@ -3,8 +3,8 @@
 
 "use strict"
 
-const counters = document.querySelectorAll('.counter')
-const btn = document.getElementById('btnContainer')
+const counters = document.querySelectorAll('h1')
+const btn = document.getElementById('btn')
 const speed = 200
 
 btn.onclick = () => {
