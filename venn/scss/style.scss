@@ -7,7 +7,7 @@ $blue:  #0099FF;
 $red:   #FF3333;
 $white: #ffffff;
 $mono:  'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
-$transition: 0.3s ease-in-out;
+$time: 0.3s ease-in-out;
 
 // ********* Base *********************
 
@@ -39,11 +39,11 @@ body {
 
 .light {
   background: $light;
-  transition: background $transition;
+  transition: background $time;
 }
 .dark {
   background: $dark;
-  transition: background $transition;
+  transition: background $time;
 }
 #mode {
   position: absolute;
@@ -54,13 +54,13 @@ body {
 }
 .darkmode {
   fill: $light;
-  transition: fill $transition, transform $transition, -webkit-transform $transition;
+  transition: fill $time, transform $time, -webkit-transform $time;
 }
 .lightmode {
   fill: $dark;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  transition: fill $transition, transform $transition, -webkit-transform $transition; 
+  transition: fill $time, transform $time, -webkit-transform $time; 
 }
 
 // ********* Venn Diagram *************
