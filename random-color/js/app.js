@@ -3,16 +3,18 @@
 
 "use strict"
 
+const canvas = document.querySelector("main")
+const code = document.querySelector("p")
 let r = 0
 let g = 0
 let b = 0
 
-document.getElementById("main").onclick = () => {
-  document.getElementById("main").style.background = "rgb(" + myFun(r) + "," + myFun(g) + "," + myFun(b) + ")"
-  document.getElementById("colorRGB").innerHTML = "rgb(" + myFun(r) + ", " + myFun(g) + ", " + myFun(b) + ")"
+canvas.onclick = () => {
+  canvas.style.background = "rgb(" + color(r) + "," + color(g) + "," + color(b) + ")"
+  code.innerHTML = "rgb(" + color(r) + ", " + color(g) + ", " + color(b) + ")"
 }
 
-function myFun(r, g, b) {
+function color(r, g, b) {
   return r = (Math.random() * 255).toFixed(0)
   return g = (Math.random() * 255).toFixed(0)
   return b = (Math.random() * 255).toFixed(0)
