@@ -3,14 +3,14 @@
 
 $background: #1B1C1D;
 $text: #F5F5F5;
-$blue: #4846D1;
-$purple: #9D37B1;
-$pink: #E02B45;
-$red: #FF4A1B;
-$orange: #FF9C03;
-$yellow: #FFD800;
-$green: #80D834;
-$teal: #23BA69;
+$color-1: #4846D1;
+$color-2: #23BA69;
+$color-3: #80D834;
+$color-4: #FFD800;
+$color-5: #FF9C03;
+$color-6: #FF4A1B;
+$color-7: #E02B45;
+$color-8: #9D37B1;
 
 // ********** Animation ****************
 
@@ -21,27 +21,18 @@ $teal: #23BA69;
 
 // ********** Base *********************
 
-*,
-*::after,
-*::before {
+* {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
 }
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;	
-}
+
 body {
   background: $background;
-  color: $text;
-}
-#container {
-  width: 80%;
-  margin: 2rem auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
+  
 }
 
 #btn {
@@ -50,31 +41,10 @@ body {
   margin: auto;
   cursor: pointer;
 }
+
 .spinner {
   width: 2rem;
   fill: $text;
-}
-
-// ********** Extend Circles ***********
-
-%circle {
-  position: relative;
-  border-radius: 50%;
-  width: 100%;
-  background: $blue;
-  @extend %after;
-}
-%inner {
-  position: absolute;
-  border-radius: 50%;
-  width: 100%;
-}
-%after {
-  &::after {
-    content: "";
-    padding-bottom: 100%;
-    display: block;
-  }
 }
 
 .spin > div {
@@ -86,208 +56,263 @@ body {
 
 // ********** Circles ******************
 
-#container {
-  :first-child {
-    @extend %circle;
+%container {
+  position: relative;
+  width: 100%;
+  &::after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+}
+
+%inner {
+  position: absolute;
+  border-radius: 50%;
+}
+
+main {
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  :nth-child(1) {
+    @extend %container;
+    :nth-child(1) {
+      @extend %inner;
+      background: $color-1;
+    }
   }
   :nth-child(2) {
-    @extend %circle;
-    :first-child {
+    @extend %container;
+    :nth-child(1) {
       @extend %inner;
-      background: $yellow;
-      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-      @extend %after;
+      background: $color-1;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+      transform: rotate(0deg);
+    }
+    :nth-child(2) {
+      @extend %inner;
+      background: $color-4;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+      transform: rotate(180deg);
     }
   }
   :nth-child(3) {
-    @extend %circle;
-    :first-child {
+    @extend %container;
+    :nth-child(1) {
       @extend %inner;
-      background: $red;
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-      @extend %after;
+      background: $color-1;
+      clip-path: polygon(50% 0, 0 0, 0 79%, 50% 50%);
+      transform: rotate(0deg);
     }
     :nth-child(2) {
       @extend %inner;
-      background: $yellow;
-      clip-path: polygon(50% 50%, 100% 75%, 100% 100%, 0 100%, 0 75%);
-      @extend %after;
+      background: $color-4;
+      clip-path: polygon(50% 0, 0 0, 0 79%, 50% 50%);
+      transform: rotate(120deg);
+    }
+    :nth-child(3) {
+      @extend %inner;
+      background: $color-7;
+      clip-path: polygon(50% 0, 0 0, 0 79%, 50% 50%);
+      transform: rotate(240deg);
     }
   }
   :nth-child(4) {
-    @extend %circle;
-    :first-child {
+    @extend %container;
+    :nth-child(1) {
       @extend %inner;
-      background: $yellow;
-      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-      @extend %after;
+      background: $color-1;
+      clip-path: polygon(50% 0, 0 0, 0 50%, 50% 50%);
+      transform: rotate(0deg);
     }
     :nth-child(2) {
       @extend %inner;
-      background: $green;
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-      @extend %after;
+      background: $color-2;
+      clip-path: polygon(50% 0, 0 0, 0 50%, 50% 50%);
+      transform: rotate(90deg);
     }
     :nth-child(3) {
       @extend %inner;
-      background: $red;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      @extend %after;
+      background: $color-4;
+      clip-path: polygon(50% 0, 0 0, 0 50%, 50% 50%);
+      transform: rotate(180deg);
+    }
+    :nth-child(4) {
+      @extend %inner;
+      background: $color-7;
+      clip-path: polygon(50% 0, 0 0, 0 50%, 50% 50%);
+      transform: rotate(270deg);
     }
   }
   :nth-child(5) {
-    @extend %circle;
-    :first-child {
+    @extend %container;
+    :nth-child(1) {
       @extend %inner;
-      background: $red;
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-      @extend %after;
+      background: $color-1;
+      clip-path: polygon(50% 0, 0 0, 0 34%, 50% 50%);
+      transform: rotate(0deg);
     }
     :nth-child(2) {
       @extend %inner;
-      background: $orange;
-      clip-path: polygon(0 65%, 100% 35%, 100% 100%, 0% 100%);
-      @extend %after;
+      background: $color-2;
+      clip-path: polygon(50% 0, 0 0, 0 34%, 50% 50%);
+      transform: rotate(72deg);
     }
     :nth-child(3) {
       @extend %inner;
-      background: $yellow;
-      clip-path: polygon(0 50%, 50% 50%, 86.33% 100%, 0% 100%);
-      @extend %after;
+      background: $color-4;
+      clip-path: polygon(50% 0, 0 0, 0 34%, 50% 50%);
+      transform: rotate(144deg);
     }
     :nth-child(4) {
       @extend %inner;
-      background: $green;
-      clip-path: polygon(0 33%, 50% 50%, 13% 100%, 0% 100%);
-      @extend %after;
+      background: $color-5;
+      clip-path: polygon(50% 0, 0 0, 0 34%, 50% 50%);
+      transform: rotate(216deg);
+    }
+    :nth-child(5) {
+      @extend %inner;
+      background: $color-7;
+      clip-path: polygon(50% 0, 0 0, 0 34%, 50% 50%);
+      transform: rotate(288deg);
     }
   }
   :nth-child(6) {
-    @extend %circle;
-    :first-child {
+    @extend %container;
+    :nth-child(1) {
       @extend %inner;
-      background: $purple;
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-      @extend %after;
+      background: $color-1;
+      clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
+      transform: rotate(0deg);
     }
     :nth-child(2) {
       @extend %inner;
-      background: $orange;
-      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
-      @extend %after;
+      background: $color-2;
+      clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
+      transform: rotate(60deg);
     }
     :nth-child(3) {
       @extend %inner;
-      background: $red;
-      clip-path: polygon(50% 50%, 100% 79%, 100% 21%);
-      @extend %after;
+      background: $color-4;
+      clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
+      transform: rotate(120deg);
     }
     :nth-child(4) {
       @extend %inner;
-      background: $yellow;
-      clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0% 100%);
-      @extend %after;
+      background: $color-5;
+      clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
+      transform: rotate(180deg);
     }
     :nth-child(5) {
       @extend %inner;
-      background: $green;
-      clip-path: polygon(50% 50%, 0 79%, 0 21%);
-      @extend %after;
+      background: $color-7;
+      clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
+      transform: rotate(240deg);
+    }
+    :nth-child(6) {
+      @extend %inner;
+      background: $color-8;
+      clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
+      transform: rotate(300deg);
     }
   }
   :nth-child(7) {
-    @extend %circle;
-    :first-child {
+    @extend %container;
+    :nth-child(1) {
       @extend %inner;
-      background: $purple;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(-90deg);
-      @extend %after;
+      background: $color-1;
+      clip-path: polygon(50% 0, 0 0, 0 10.5%, 50% 50%);
+      transform: rotate(0deg);
     }
     :nth-child(2) {
       @extend %inner;
-      background: $red;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(-38.57deg);
-      @extend %after;
+      background: $color-2;
+      clip-path: polygon(50% 0, 0 0, 0 10.5%, 50% 50%);
+      transform: rotate(51.43deg);
     }
     :nth-child(3) {
       @extend %inner;
-      background: $orange;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(12.86deg);
-      @extend %after;
+      background: $color-3;
+      clip-path: polygon(50% 0, 0 0, 0 10.5%, 50% 50%);
+      transform: rotate(102.86deg);
     }
     :nth-child(4) {
       @extend %inner;
-      background: $yellow;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(64.29deg);
-      @extend %after;
+      background: $color-4;
+      clip-path: polygon(50% 0, 0 0, 0 10.5%, 50% 50%);
+      transform: rotate(154.29deg);
     }
     :nth-child(5) {
       @extend %inner;
-      background: $green;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(115.72deg);
-      @extend %after;
+      background: $color-5;
+      clip-path: polygon(50% 0, 0 0, 0 10.5%, 50% 50%);
+      transform: rotate(205.71deg);
     }
     :nth-child(6) {
       @extend %inner;
-      background: $teal;
-      clip-path: polygon(0 10.13%, 0 61.41%, 50% 50%);
-      @extend %after;
-    }
-  }
-  :nth-child(8) {
-    @extend %circle;
-    :first-child {
-      @extend %inner;
-      background: $purple;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(-90deg);
-      @extend %after;
-    }
-    :nth-child(2) {
-      @extend %inner;
-      background: $pink;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(-45deg);
-      @extend %after;
-    }
-    :nth-child(3) {
-      @extend %inner;
-      background: $red;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(-0deg);
-      @extend %after;
-    }
-    :nth-child(4) {
-      @extend %inner;
-      background: $orange;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(45deg);
-      @extend %after;
-    }
-    :nth-child(5) {
-      @extend %inner;
-      background: $yellow;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(90deg);
-      @extend %after;
-    }
-    :nth-child(6) {
-      @extend %inner;
-      background: $green;
-      clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
-      transform: rotate(135deg);
-      @extend %after;
+      background: $color-7;
+      clip-path: polygon(50% 0, 0 0, 0 10.5%, 50% 50%);
+      transform: rotate(257.14deg);
     }
     :nth-child(7) {
       @extend %inner;
-      background: $teal;
-      clip-path: polygon(0 0, 0 50%, 50% 50%);
-      @extend %after;
+      background: $color-8;
+      clip-path: polygon(50% 0, 0 0, 0 10.5%, 50% 50%);
+      transform: rotate(308.57deg);
+    }
+  }
+  :nth-child(8) {
+    @extend %container;
+    :nth-child(1) {
+      @extend %inner;
+      background: $color-1;
+      clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+      transform: rotate(0deg);
+    }
+    :nth-child(2) {
+      @extend %inner;
+      background: $color-2;
+      clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+      transform: rotate(45deg);
+    }
+    :nth-child(3) {
+      @extend %inner;
+      background: $color-3;
+      clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+      transform: rotate(90deg);
+    }
+    :nth-child(4) {
+      @extend %inner;
+      background: $color-4;
+      clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+      transform: rotate(135deg);
+    }
+    :nth-child(5) {
+      @extend %inner;
+      background: $color-5;
+      clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+      transform: rotate(180deg);
+    }
+    :nth-child(6) {
+      @extend %inner;
+      background: $color-6;
+      clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+      transform: rotate(225deg);
+    }
+    :nth-child(7) {
+      @extend %inner;
+      background: $color-7;
+      clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+      transform: rotate(270deg);
+    }
+    :nth-child(8) {
+      @extend %inner;
+      background: $color-8;
+      clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+      transform: rotate(315deg);
     }
   }
 }
