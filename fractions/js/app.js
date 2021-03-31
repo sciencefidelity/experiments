@@ -1,10 +1,9 @@
 "use strict"
 
 const btn = document.getElementById("btn")
-const turntable = document.getElementById("container")
+const turntable = document.querySelector("main")
 
 btn.onclick = () => {
-  console.log("Clicked")
   if (turntable.className === "stop") {
     turntable.className = "spin"
   } else {

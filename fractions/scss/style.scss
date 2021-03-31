@@ -49,10 +49,10 @@ body {
   fill: var(--text);
 }
 
-.spin > div {
+.spin > section {
   animation: turntable 1s linear infinite;
 }
-.stop > div {
+.stop > section {
   animation: none;
 }
 
