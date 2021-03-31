@@ -31,6 +31,6 @@ const animateCountUp = el => {
 const btn = document.getElementById('btn')
 
 btn.onclick = () => {
-  const counters = document.querySelectorAll('.counter')
+  const counters = document.querySelectorAll('h1')
   counters.forEach(animateCountUp)
 }
