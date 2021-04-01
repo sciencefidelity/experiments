@@ -1,21 +1,18 @@
-.container {
-  width: 75%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+* {
+  margin: 0;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
   overflow: hidden;
-  &::after {
-    content: "";
-    display: block;
-    padding-bottom: 60%;
-  }
+}
+section {
+  width: min(135vh, 100vw);
+  aspect-ratio: 3/2;
+  overflow: hidden;
 }
 img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
   image-rendering: crisp-edges;
