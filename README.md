@@ -15,3 +15,4 @@
 - Character Counter
 - Rainbow
 - Fractions
+- Oblique Strategies
