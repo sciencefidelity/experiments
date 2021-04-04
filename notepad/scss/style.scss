@@ -1,149 +1,119 @@
 
-// ********** Variables ****************
+// ********** Colors **************
 
-:root {
-  --text-light: rgba(0,0,0,.75);
-  --background-light-left: rgb(255, 255, 255);
-  --background-light-right: rgb(243, 243, 243);
-  --selection-light: rgba(0,0,0,.2);
-  --text-dark: rgba(255, 255, 255, 0.75);
-  --background-dark-left: rgb(32, 36, 38);
-  --background-dark-right: rgb(47, 52, 55);
-  --selection-dark: rgba(255, 255, 255, 0.25);
-  --mode-switch: rgb(109, 121, 128);
-}
+$txt-lgt: rgba(black,.75);
+$bg-lgt-l: white;
+$bg-lgt-r: #F3F3F3;
+$select-lgt: rgba(black,.2);
+$txt-dk: rgba(white, 0.75);
+$bg-dk-l: #202426;
+$bg-dk-r: #2F3437;
+$select-dk: rgba(white,.25);
+$mode-btn: #6D7980;
 
-// ********** Mixins ******************
+// ********** Typography **********
 
 @mixin serif {
-  font-family: "Iowan Old Style","Palatino Linotype",Palatino,"URW Palladio L",serif;
+  font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", serif;
   font-size: 1.25rem;
   line-height: 1.5;
 }
-@mixin sans-serif {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+@mixin sans {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 @mixin monospace {
-  font-family: Monolisa,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-family: Monolisa, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
-// ********** Base *********************
+// ********** Base ****************
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
+
 html {
-  background: var(--background-dark-left);
+  background: $bg-dk-l;
 }
+
 body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-// ********** Text areas ***************
+// ********** Text areas **********
 
 .wrapper {
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1fr;
   overflow: visible;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
-%note-area {
+
+@mixin note-area($clr: $txt-lgt, $bg: $bg-lgt-l, $sel-clr: $txt-lgt, $sel-bg: $select-lgt) {
   @include monospace;
-  // @include sans-serif;
-  // @include serif;
   border: none;
   min-height: 100vh;
   padding: 1.25rem 1.875rem 35vh 1.875rem;
   width: 100%;
   resize: none;
+  color: $clr;
+  background: $bg;
+  &::selection {
+    color: $sel-clr;
+    background: $sel-bg;
+  }
   &:focus {
     outline: 0px;
   }
-}
-.light-mode-left {
-  @extend %note-area;
-  color: var(--text-light);
-  background: var(--background-light-left);
-  &::selection {
-    color: var(--text-light);
-    background: var(--selection-light);
-  }
-}
-.light-mode-right {
-  @extend %note-area;
-  color: var(--text-light);
-  background: var(--background-light-right);
-  &::selection {
-    color: var(--text-light);
-    background: var(--selection-light);
-  }
-}
-.dark-mode-left {
-  @extend %note-area;
-  color: var(--text-dark);
-  background: var(--background-dark-left);
-  &::selection {
-    color: var(--text-dark);
-    background: var(--selection-dark);
-  }
-}
-.dark-mode-right {
-  @extend %note-area;
-  color: var(--text-dark);
-  background: var(--background-dark-right);
-  &::selection {
-    color: var(--text-dark);
-    background: var(--selection-dark);
-  }
-}
-
-// ********** Control icons ************
-
-.fa-adjust {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  width: 2rem;
-  cursor: pointer;
-  color: var(--mode-switch);
-}
-.fa-file-download {
-  position: absolute;
-  bottom: 1rem;
-  right: 4rem;
-  height: 2rem;
-  cursor: pointer;
-  color: var(--mode-switch);
-}
-
-// ********** Responsive ***************
-
-@media (max-width: 1024px) { // iPad
-  .light-mode-left,
-  .light-mode-right,
-  .dark-mode-left,
-  .dark-mode-right {
+  @media (max-width: 1024px) {
     font-size: 1rem;
   }
-}
-@media (max-width: 768px) { //iPhone
-  .light-mode-left,
-  .light-mode-right,
-  .dark-mode-left,
-  .dark-mode-right {
+  @media (max-width: 768px) {
     font-size: 0.9rem;
   }
-  .wrapper {
-    grid-template-columns: 1fr;
-  }
+}
+.light-mode-left {
+  @include note-area();
+}
+.light-mode-right {
+  @include note-area($bg: $bg-lgt-r);
+}
+.dark-mode-left {
+  @include note-area($clr: $txt-dk, $bg: $bg-dk-l, $sel-clr: $txt-dk, $sel-bg: $select-dk);
+}
+.dark-mode-right {
+  @include note-area($clr: $txt-dk, $bg: $bg-dk-r, $sel-clr: $txt-dk, $sel-bg: $select-dk);
+}
+
+// ********** Control icons *******
+
+@mixin icon($right: 1rem) {  
+  position: absolute;
+  bottom: 1rem;
+  right: $right;
+  height: 2rem;
+  cursor: pointer;
+  color: $mode-btn;
+}
+.fa-adjust {
+  @include icon();
+}
+.fa-file-download {
+  @include icon($right: 4rem);
+}
+
+// hide the right column on small screens
+
+@media (max-width: 768px) {
   .right {
     display: none;
   }
