@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Helvetica Neue", "Helvetica" ,sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  background: #e0dccf;
+}
+.container {
+  width: 40rem;
+  height: 100vh;
+  margin: auto;
+}
+#strategy {
+  display: flex;
+  line-height: 1.4;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
