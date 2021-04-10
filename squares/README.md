@@ -4,9 +4,7 @@ Rainbow animated coloured squares base on a collage and stop motion animation vi
 
 ## To do
 
-- Optimise the JavaScript code
 - Make the colours a little softer
-- STart and stop the animation on click
-- control the speed and direction of the animation
-- Change the background colour between light and dark
+- Start and stop the animation on click
+- Control the speed and direction of the animation
 - Control the animation with touch an scroll
