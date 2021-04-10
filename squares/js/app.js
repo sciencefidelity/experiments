@@ -1,104 +1,35 @@
 "use strict"
 
-let a = 0
-let b = 1
-let c = 2
-let d = 3
-let e = 4
-let f = 5
-let g = 6
-let h = 7
-let i = 8
-let j = 9
-const square1 = document.getElementById("square-1")
-const square2 = document.getElementById("square-2")
-const square3 = document.getElementById("square-3")
-const square4 = document.getElementById("square-4")
-const square5 = document.getElementById("square-5")
-const square6 = document.getElementById("square-6")
-const square7 = document.getElementById("square-7")
-const square8 = document.getElementById("square-8")
-const square9 = document.getElementById("square-9")
-const square0 = document.getElementById("square-10")
+const square0 = document.querySelector(".color-0")
+const square1 = document.querySelector(".color-1")
+const square2 = document.querySelector(".color-2")
+const square3 = document.querySelector(".color-3")
+const square4 = document.querySelector(".color-4")
+const square5 = document.querySelector(".color-5")
+const square6 = document.querySelector(".color-6")
+const square7 = document.querySelector(".color-7")
+const square8 = document.querySelector(".color-8")
+const square9 = document.querySelector(".color-9")
 
-setInterval(colorChange1, 100)
-function colorChange1() {
-  a--
-  if (a === -1) {
-    a = 9;
-  }
-  square1.className = "color-" + (a)
-}
-setInterval(colorChange2, 100)
-function colorChange2() {
-  b--
-  if (b === -1) {
-    b = 9;
-  }
-  square2.className = "color-" + (b)
-}
-setInterval(colorChange3, 100)
-function colorChange3() {
-  c--
-  if (c === -1) {
-    c = 9
-  }
-  square3.className = "color-" + (c)
-}
-setInterval(colorChange4, 100)
-function colorChange4() {
-  d--
-  if (d === -1) {
-    d = 9
-  }
-  square4.className = "color-" + (d)
-}
-setInterval(colorChange5, 100);
-function colorChange5() {
-  e--
-  if (e === -1) {
-    e = 9
-  }
-  square5.className = "color-" + (e)
-}
-setInterval(colorChange6, 100)
-function colorChange6() {
-  f--
-  if (f === -1) {
-    f = 9
-  }
-  square6.className = "color-" + (f)
-}
-setInterval(colorChange7, 100)
-function colorChange7() {
-  g--
-  if (g === -1) {
-    g = 9
-  }
-  square7.className = "color-" + (g)
-}
-setInterval(colorChange8, 100)
-function colorChange8() {
-  h--
-  if (h === -1) {
-    h = 9
-  }
-  square8.className = "color-" + (h)
-}
-setInterval(colorChange9, 100)
-function colorChange9() {
-  i--
-  if (i === -1) {
-    i = 9
-  }
-  square9.className = "color-" + (i)
-}
-setInterval(colorChange0, 100)
-function colorChange0() {
-  j--
-  if (j === -1) {
-    j = 9
-  }
-  square0.className = "color-" + (j)
+let i = 0
+
+function splitToDigit(n) {
+  return [...n + ''].map(Number)
 }
 
+const colorChange = setInterval(() => {
+  if (i === 10) {
+    i = 0
+  }
+  square0.className = "color-" + splitToDigit(i + 0).reverse()[0]
+  square1.className = "color-" + splitToDigit(i + 1).reverse()[0]
+  square2.className = "color-" + splitToDigit(i + 2).reverse()[0]
+  square3.className = "color-" + splitToDigit(i + 3).reverse()[0]
+  square4.className = "color-" + splitToDigit(i + 4).reverse()[0]
+  square5.className = "color-" + splitToDigit(i + 5).reverse()[0]
+  square6.className = "color-" + splitToDigit(i + 6).reverse()[0]
+  square7.className = "color-" + splitToDigit(i + 7).reverse()[0]
+  square8.className = "color-" + splitToDigit(i + 8).reverse()[0]
+  square9.className = "color-" + splitToDigit(i + 9).reverse()[0]
+  i++
+}, 50)
