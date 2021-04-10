@@ -14,22 +14,23 @@ const square9 = document.querySelector(".color-9")
 let i = 0
 
 function splitToDigit(n) {
-  return [...n + ''].map(Number)
+  return [...n + ''].map(Number).reverse()[0]
 }
 
 const colorChange = setInterval(() => {
   if (i === 10) {
     i = 0
   }
-  square0.className = "color-" + splitToDigit(i + 0).reverse()[0]
-  square1.className = "color-" + splitToDigit(i + 1).reverse()[0]
-  square2.className = "color-" + splitToDigit(i + 2).reverse()[0]
-  square3.className = "color-" + splitToDigit(i + 3).reverse()[0]
-  square4.className = "color-" + splitToDigit(i + 4).reverse()[0]
-  square5.className = "color-" + splitToDigit(i + 5).reverse()[0]
-  square6.className = "color-" + splitToDigit(i + 6).reverse()[0]
-  square7.className = "color-" + splitToDigit(i + 7).reverse()[0]
-  square8.className = "color-" + splitToDigit(i + 8).reverse()[0]
-  square9.className = "color-" + splitToDigit(i + 9).reverse()[0]
+  console.log(i)
+  square0.className = "color-" + splitToDigit(i + 0)
+  square1.className = "color-" + splitToDigit(i + 1)
+  square2.className = "color-" + splitToDigit(i + 2)
+  square3.className = "color-" + splitToDigit(i + 3)
+  square4.className = "color-" + splitToDigit(i + 4)
+  square5.className = "color-" + splitToDigit(i + 5)
+  square6.className = "color-" + splitToDigit(i + 6)
+  square7.className = "color-" + splitToDigit(i + 7)
+  square8.className = "color-" + splitToDigit(i + 8)
+  square9.className = "color-" + splitToDigit(i + 9)
   i++
 }, 50)
