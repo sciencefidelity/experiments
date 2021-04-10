@@ -13,9 +13,15 @@ const square9 = document.querySelector(".color-9")
 
 let i = 0
 
+// split the digits into an array, 
+// reverse it and select the first number
+
 function splitToDigit(n) {
   return [...n + ''].map(Number).reverse()[0]
 }
+
+// counter timed to change the color number 
+// of each square
 
 const colorChange = setInterval(() => {
   if (i === 10) {
