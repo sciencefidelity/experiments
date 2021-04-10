@@ -13,6 +13,13 @@ $mode-btn: #6D7980;
 
 // ********** Typography **********
 
+@font-face {
+  font-family: MonoLisa;
+  src: url(../fonts/MonoLisa-Regular.woff2) format("woff2");
+  font-weight: normal;
+  font-size: normal;
+}
+
 @mixin serif {
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", serif;
   font-size: 1.25rem;
@@ -24,7 +31,7 @@ $mode-btn: #6D7980;
   line-height: 1.5;
 }
 @mixin monospace {
-  font-family: Monolisa, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-family: MonoLisa, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 1.05rem;
   line-height: 1.6;
 }
