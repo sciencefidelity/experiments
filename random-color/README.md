@@ -13,3 +13,4 @@ It would be cool if this generated a colour scheme with a several colours that c
 - Option to copy the colour code.
 - choose format of the displayed colour code.
 - Bring up colour picker to refine the colour.
+- Test contrast ratio and change text white or black in response.
