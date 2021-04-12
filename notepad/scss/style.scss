@@ -67,11 +67,9 @@ body {
 
 @mixin note-area($clr: $txt-lgt, $bg: $bg-lgt-l, $sel-clr: $txt-lgt, $sel-bg: $select-lgt) {
   @include monospace;
-  // border: none;
   min-height: 100vh;
   padding: 1.25rem 1.875rem 35vh 1.875rem;
   width: 100%;
-  // resize: none;
   color: $clr;
   background: $bg;
   &::selection {
