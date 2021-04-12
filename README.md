@@ -16,3 +16,4 @@
 - Rainbow
 - Fractions
 - Oblique Strategies
+- Syntax Highlighter
