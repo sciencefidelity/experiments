@@ -15,7 +15,6 @@ This is the solution to a problem I was having while studying Russian language. 
 
 ## To do
 
-- Use browser cashing/local storage to save notes between sessions.
 - Add basic syntax highlighting/formatting for markdown.
 - Detect browser or system dark/lightmode preferences and adjust accordingly.
 - Switch between serif/sans-serif/manospece font.
