@@ -67,11 +67,11 @@ body {
 
 @mixin note-area($clr: $txt-lgt, $bg: $bg-lgt-l, $sel-clr: $txt-lgt, $sel-bg: $select-lgt) {
   @include monospace;
-  border: none;
+  // border: none;
   min-height: 100vh;
   padding: 1.25rem 1.875rem 35vh 1.875rem;
   width: 100%;
-  resize: none;
+  // resize: none;
   color: $clr;
   background: $bg;
   &::selection {
@@ -93,12 +93,14 @@ body {
 }
 .light-mode-right {
   @include note-area($bg: $bg-lgt-r);
+  @include serif();
 }
 .dark-mode-left {
   @include note-area($clr: $txt-dk, $bg: $bg-dk-l, $sel-clr: $txt-dk, $sel-bg: $select-dk);
 }
 .dark-mode-right {
   @include note-area($clr: $txt-dk, $bg: $bg-dk-r, $sel-clr: $txt-dk, $sel-bg: $select-dk);
+  @include serif();
 }
 
 // ********** Control icons *******
