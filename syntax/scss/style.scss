@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: ui-serif, "New York", serif;
+  font-size: 62.5%;
+}
+
+body {
+  background: #121212;
+}
+
+%text {
+  color: #fafafa;
+  width: 100vw;
+  height: 50vh;
+  padding: 2em 2em;
+  outline: none;
+  overflow: hidden;
+}
+
+#input {
+  @extend %text;
+  font-size: 1.8em;
+  line-height: 1.52;
+  font-family: ui-monospace, "SF Mono", monospace;
+  background: #121212;
+}
+
+#output {
+  @extend %text;
+  font-size: 2.2em;
+  background: #282828;
+}
