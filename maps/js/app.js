@@ -10,6 +10,7 @@ googleScript.async = true
 const zoom = 10
 let lat = []
 let lgn = []
+let map1, map2, map3, map4, map5, map6, map7, map8, map9
 
 // Random number generator
 
@@ -20,16 +21,11 @@ function rand(min, max){
 
 for (let i = 0; i < 8; i++) {
   lat.push(Number(rand(-84, 84).toFixed(3)))
-}
-
-for (let i = 0; i < 8; i++) {
   lgn.push(Number(rand(-180, 180).toFixed(3)))
 }
 
 // Google Maps Platform
 
-let map1, map2, map3, map4, map5, map6, map7, map8, map9
-// 
 function initMap() {
   map1 = new google.maps.Map(document.getElementById("map1"), {
     center: { lat: lat[0], lng: lgn[0] },
