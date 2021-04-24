@@ -4,7 +4,7 @@
 "use strict"
 
 const googleScript = document.createElement('script')
-googleScript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDhftVfSKZHAeEjN--y_7vh2t5BLhpT3JA&callback=initMap'
+googleScript.src = 'https://maps.googleapis.com/maps/api/js?key=GOOGLE_API_KEY&callback=initMap'
 googleScript.async = true
 
 const zoom = 10
