@@ -1,6 +1,6 @@
 // Oblique Strategies browser version
 
-'use strict';
+'use strict'
 
 const strategies = [
   'Abandon normal instruments',
@@ -119,17 +119,17 @@ const strategies = [
   'You can only make one dot at a time',
   'You don\'t have to be ashamed of using your own ideas',
   ' '
-];
+]
 
 function rand(min, max){
   return (Math.floor(Math.pow(10,14)*Math.random()
-  *Math.random())%(max-min+1))+min;
-};
+  *Math.random())%(max-min+1))+min
+}
 
-let i = rand(0, 113);
+let i = rand(0, 113)
 // let i = (29 - 4) // for single card testing
-var text = document.getElementById('strategy');
+var text = document.getElementById('strategy')
 
 window.onload = function() {
-  text.innerHTML = strategies[i];
-};
+  text.innerHTML = strategies[i]
+}
