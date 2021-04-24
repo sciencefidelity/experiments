@@ -17,3 +17,4 @@
 - Fractions
 - Oblique Strategies
 - Syntax Highlighter
+- Random Map Generator
