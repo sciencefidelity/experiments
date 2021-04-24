@@ -10,3 +10,14 @@
 body {
   background: #272829;
 }
+
+#site-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#map1,
+#map2 {
+  width: 25vw;
+  height: 50vh;
+}

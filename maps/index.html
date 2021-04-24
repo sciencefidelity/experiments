@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
 
-  <title>Disco Light</title>
+  <title>Random Map Generator</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="./css/style.css" rel="stylesheet" />
   <link rel="icon" href="data:;base64,="><!-- Prevent 404 Favicon requests -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_API_KEY&libraries=geometry&callback=initMap">
+  </script>
 
 </head>
 <body>
   <section id="site-main">
-    <div>
-      Hello world!
-    </div>
+    <div id="map1"></div>
+    <div id="map2"></div>
+
   </section>
   <script src="./js/app.js"></script>
 </body>
