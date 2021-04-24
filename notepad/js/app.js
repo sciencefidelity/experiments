@@ -1,10 +1,25 @@
+
 "use strict"
 
-// Switch between "dark mode" and "light mode".
+const modeSwitch = document.querySelector('#modeSwitch')
+const textLeft = document.querySelector('#textLeft')
+const textRight = document.querySelector('#textRight')
 
-const modeSwitch = document.getElementById("modeSwitch")
-const textLeft = document.getElementById("textLeft")
-const textRight = document.getElementById("textRight")
+// initialise the input content
+textLeft.textContent = ""
+
+// save input text into local storage
+textLeft.addEventListener('input', updateValue)
+
+function updateValue(e) {
+  localStorage.setItem('leftText', textLeft.textContent)
+  textRight.textContent = e.target.textContent
+}
+
+textLeft.textContent = localStorage.getItem('leftText')
+textRight.textContent = localStorage.getItem('leftText')
+
+// Switch between "dark mode" and "light mode"
 
 modeSwitch.onclick = () => {
   
@@ -15,15 +30,15 @@ modeSwitch.onclick = () => {
     textLeft.className = "light-mode-left"
     textRight.className = "light-mode-right"
   }
+  
 }
 
 // Download notes to a markdown file.
 
-const save = document.getElementById("save")
-const text = document.getElementById("textLeft")
+const save = document.querySelector('#save')
 
 const fileDownload = (content, filename, contentType) => {
-  const a = document.createElement("a")
+  const a = document.createElement('a')
   const file = new Blob([content], {type: contentType})
 
   a.href= URL.createObjectURL(file)
@@ -32,7 +47,7 @@ const fileDownload = (content, filename, contentType) => {
   URL.revokeObjectURL(a.href)
 }
 
-save.onclick = () => {
-  fileDownload(text.value, "browser-note.md", "text/markdown")
+textLeft.onclick = () => {
+  fileDownload(text.textContent, "browser-note.md", "text/markdown")
 }
 
