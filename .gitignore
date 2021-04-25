@@ -2,11 +2,11 @@
 .DS_store
 .nova/
 
-# Unformatted system generated files
+# generated
 *.css
 *.css.map
 
-# Backups
+# backups
 *.bak
 .env
 
@@ -15,3 +15,8 @@ node_modules/
 .cache/
 build/
 *.log
+
+# Vite
+dist
+dist-ssr
+*.local
