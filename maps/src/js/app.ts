@@ -10,7 +10,7 @@ googleScript.async = true
 const zoom = 10
 let lat = []
 let lgn = []
-let map1, map2, map3, map4, map5, map6, map7, map8, map9
+let map1, map2, map3, map4, map5, map6, map7, map8
 
 // Random number generator
 

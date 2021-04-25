@@ -8,6 +8,7 @@ module.exports = {
   },
   root: './src/',
   plugins: [
+    '@snowpack/plugin-dotenv',
     [
       '@snowpack/plugin-sass',
       {
