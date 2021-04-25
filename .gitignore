@@ -9,3 +9,9 @@
 # Backups
 *.bak
 .env
+
+# Node
+node_modules/
+.cache/
+build/
+*.log
