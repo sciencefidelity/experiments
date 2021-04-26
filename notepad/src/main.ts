@@ -1,10 +1,5 @@
-import mode from './mode'
-
-'use strict'
-
-const modeSwitch = document.querySelector<HTMLDivElement>('#modeSwitch')!
-const textLeft = document.querySelector<HTMLDivElement>('#textLeft')!
-const textRight = document.querySelector<HTMLDivElement>('#textRight')!
+import { textLeft, textRight, save } from './variables'
+import { mode } from './mode'
 
 // initialise the input content
 textLeft.textContent = `&nbsp;`
@@ -22,13 +17,10 @@ function updateValue(e: any) {
 textLeft.textContent = localStorage.getItem('leftText')
 textRight.textContent = localStorage.getItem('leftText')
 
-// Switch between "dark mode" and "light mode"
-
+// light/dark mode switching
 mode()
 
 // Download notes to a markdown file.
-
-const save = document.querySelector<HTMLDivElement>('#save')!
 
 const fileDownload = (content: string, filename: string, contentType: string) => {
   const a = document.createElement('a')

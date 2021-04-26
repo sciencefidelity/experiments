@@ -1,4 +1,8 @@
-const mode = () => {
+// Switch between "dark mode" and "light mode"
+
+import { modeSwitch, textLeft, textRight } from './variables'
+
+export function mode() {
   modeSwitch.onclick = () => {
     
     if (textLeft.className === "light-mode-left") {
@@ -12,4 +16,3 @@ const mode = () => {
   }
 }
 
-export default mode()
