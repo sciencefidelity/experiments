@@ -2,14 +2,17 @@
 
 "use strict"
 
-setInterval(colorChange, 2000)
-let shape = document.getElementById("shape")
-let i = 0
+const shape: HTMLElement = document.getElementById("shape")
+
+let i: number = 0
 shape.className = "c" + i
-function colorChange() {
+
+const colorChange = () => {
   i++
   if (i === 6) {
     i = 0
   }
   shape.className = "c" + i
 }
+
+setInterval(colorChange, 2000)
