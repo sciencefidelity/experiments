@@ -1,10 +1,8 @@
 "use strict"
 
-console.log("Venn Diagram")
-
-const modeSwitch = document.getElementById("mode")
-const background = document.getElementById("site-main")
-const mode = document.getElementById("mode")
+const modeSwitch: HTMLElement = document.getElementById("mode")
+const background: HTMLElement = document.getElementById("site-main")
+const mode: HTMLElement = document.getElementById("mode")
 
 modeSwitch.onclick = () => {
   if (background.className === "light") {
