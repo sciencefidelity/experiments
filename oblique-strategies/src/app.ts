@@ -2,7 +2,7 @@
 
 'use strict'
 
-const strategies = [
+const strategies: string[] = [
   'Abandon normal instruments',
   'Accept advice',
   'Accretion',
@@ -121,15 +121,15 @@ const strategies = [
   ' '
 ]
 
-function rand(min, max){
+function rand(min: number, max: number){
   return (Math.floor(Math.pow(10,14)*Math.random()
   *Math.random())%(max-min+1))+min
 }
 
 let i = rand(0, 113)
 // let i = (29 - 4) // for single card testing
-var text = document.getElementById('strategy')
+const text = document.getElementById('strategy')
 
-window.onload = function() {
+window.onload = () => {
   text.innerHTML = strategies[i]
 }
