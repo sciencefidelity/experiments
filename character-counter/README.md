@@ -8,4 +8,4 @@ I've got an idea about being able to simply asses whether a column in a webiste 
 
 - Count words and characters and characters without spaces
 - Incorporate into the note notepad app
-- 
+- Character count is not displayed on page refresh 
