@@ -1,22 +1,22 @@
 "use strict"
 
-const square0 = document.querySelector(".color-0")
-const square1 = document.querySelector(".color-1")
-const square2 = document.querySelector(".color-2")
-const square3 = document.querySelector(".color-3")
-const square4 = document.querySelector(".color-4")
-const square5 = document.querySelector(".color-5")
-const square6 = document.querySelector(".color-6")
-const square7 = document.querySelector(".color-7")
-const square8 = document.querySelector(".color-8")
-const square9 = document.querySelector(".color-9")
+const square0: Element = document.querySelector(".color-0")
+const square1: Element = document.querySelector(".color-1")
+const square2: Element = document.querySelector(".color-2")
+const square3: Element = document.querySelector(".color-3")
+const square4: Element = document.querySelector(".color-4")
+const square5: Element = document.querySelector(".color-5")
+const square6: Element = document.querySelector(".color-6")
+const square7: Element = document.querySelector(".color-7")
+const square8: Element = document.querySelector(".color-8")
+const square9: Element = document.querySelector(".color-9")
 
-let i = 0
+let i: number = 0
 
 // split the digits into an array, 
 // reverse it and select the first number
 
-function splitToDigit(n) {
+function splitToDigit(n: number) {
   return [...n + ''].map(Number).reverse()[0]
 }
 
