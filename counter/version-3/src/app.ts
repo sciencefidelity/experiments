@@ -7,7 +7,7 @@ const frameDuration = 1000 / 20
 const totalFrames = Math.round(animationDuration / frameDuration)
 const easeOutQuad = t => t * (2 - t)
 
-const animateCountUp = count => {
+const animateCountUp = (count: number) => {
   let frame = 0
   const target = parseInt(count.getAttribute('data-target'), 10)
   const counter = setInterval(() => {
@@ -29,18 +29,18 @@ const animateCountUp = count => {
 const countersInView = el => {
   const scroll = window.scrollY || window.pageYOffset
   const boundsTop = el.getBoundingClientRect().top + scroll
-  
+
   const viewport = {
     top: scroll,
     bottom: scroll + window.innerHeight,
   }
-  
+
   const bounds = {
     top: boundsTop,
     bottom: boundsTop + el.clientHeight,
   }
-  
-  return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) 
+
+  return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom)
     || (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
 }
 
@@ -48,20 +48,20 @@ const countersInView = el => {
 document.addEventListener('DOMContentLoaded', () => {
   const tester = document.querySelector('#count')
   const answer = document.querySelector('#answer')
-  
+
   const handler = () => raf( () => {
     console.log("hello")
     answer.innerHTML = 'Are the numbers in view? ' + (countersInView(tester) ? 'Yes' : 'No')
     const counters = document.querySelectorAll('h1')
     counters.forEach(animateCountUp)
   })
-  
+
   handler()
   window.addEventListener('scroll', handler)
 })
 
 // requestAnimationFrame
-const raf = 
+const raf =
   window.requestAnimationFrame ||
   window.webkitRequestAnimationFrame ||
   window.mozRequestAnimationFrame ||
