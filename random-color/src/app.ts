@@ -3,17 +3,17 @@
 
 "use strict"
 
-const canvas = document.querySelector("main")
-const code = document.querySelector("p")
-const r = 0
-const g = 0
-const b = 0
+const canvas: HTMLElement = document.querySelector("main")
+const code: HTMLParagraphElement = document.querySelector("p")
+let r: number = 0
+let g: number = 0
+let b: number = 0
 
 canvas.onclick = () => {
   canvas.style.background = 
-    "rgb(" + color(r) + "," + color(g) + "," + color(b) + ")"
+    `rgb(${color(r)}, ${color(g)}, ${color(b)})`
   code.innerHTML = 
-    "rgb(" + color(r) + ", " + color(g) + ", " + color(b) + ")"
+    `rgb(${color(r)}, ${color(g)}, ${color(b)})`
 }
 
 const color = (r, g, b) => {
