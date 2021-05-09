@@ -1,3 +1,4 @@
+
 "use strict"
 
 const btn = document.getElementById("btn")
@@ -10,5 +11,3 @@ btn.onclick = () => {
     turntable.className = "stop"
   }
 }
-
-
