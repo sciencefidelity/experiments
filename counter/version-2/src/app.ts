@@ -6,9 +6,9 @@
 const animationDuration = 2000
 const frameDuration = 1000 / 20
 const totalFrames = Math.round(animationDuration / frameDuration)
-const easeOutQuad = t => t * (2 - t)
+const easeOutQuad = (t: number) => t * (2 - t)
 
-const animateCountUp = el => {
+const animateCountUp = (el: any) => {
   let frame = 0
   const target = parseInt(el.getAttribute('data-target'), 10)
   const counter = setInterval(() => {
