@@ -9,18 +9,18 @@ const speed = 200
 
 btn.onclick = () => {
   counters.forEach(counter => {
-    counter.innerText = 0
+    counter.innerText = '0'
     const updateCount = () => {
       const target = +counter.getAttribute('data-target')
       const count = +counter.innerText
-      
+
       const inc = target / speed
-    
+
       if(count < target) {
-        counter.innerText = Math.ceil(count + inc)
+        counter.innerText = Math.ceil(count + inc).toString()
         setTimeout(updateCount, 10)
       } else {
-        count.innerText = target
+        counter.innerText = target.toString()
       }
     }
     updateCount()
