@@ -1,5 +1,21 @@
-.wrong {
-  background: hsl(0, 50%, 50%);
-  color: white;
-  padding: 0.2rem;
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont,
+               "Helvetica Neue", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: hsl(0, 0%, 5%);
+  color: hsl(0, 0%, 95%);
+}
+
+.container {
+  width: min(30rem, 88%);
+  margin: auto;
 }
