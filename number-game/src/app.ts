@@ -11,13 +11,14 @@ const guessField = <HTMLInputElement>document.querySelector('.guessField')
 
 let guessCount = 1
 let resetButton: HTMLButtonElement
+guessField.focus()
 
 function checkGuess() {
   if (guesses === null ||
       guessField === null ||
       lastResult === null ||
       lowOrHi === null) {
-    alert('oops')
+    alert('Oops, some HTML elements don\'t exist!')
   } else {
     let userGuess = Number(guessField.value)
     if (guessCount === 1) {
@@ -52,7 +53,7 @@ guessSubmit!.addEventListener('click', checkGuess)
 
 function setGameOver() {
   if (guessField === null) {
-    alert('oops')
+    alert('Oops, some HTML elements don\'t exist!')
   } else {
     guessField.disabled = true
     guessField.disabled = true
@@ -68,7 +69,7 @@ function resetGame() {
       guessSubmit === null ||
       lastResult === null ||
       resetButton.parentNode === null) {
-    alert('oops')
+    alert('Oops, some HTML elements don\'t exist!')
   } else {
     guessCount = 1
 
