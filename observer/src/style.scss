@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont,
+               "Helvetica Neue", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: hsl(0, 0%, 5%);
+  color: hsl(0, 0%, 95%);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  &--red {
+    background: red;
+  }
+  &--orange {
+    background: orange;
+  }
+  &--yellow {
+    background: yellow;
+  }
+  &--green {
+    background: green;
+  }
+  &--blue {
+    background: blue;
+  }
+  &--indego {
+    background: indego;
+  }
+  &--red {
+    background: red;
+  }
+}
+
+.observed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+}
