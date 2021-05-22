@@ -5,9 +5,9 @@
 const animationDuration = 2000
 const frameDuration = 1000 / 20
 const totalFrames = Math.round(animationDuration / frameDuration)
-const easeOutQuad = t => t * (2 - t)
+const easeOutQuad = (t: number) => t * (2 - t)
 
-const animateCountUp = (count: number) => {
+const animateCountUp = (count: Element) => {
   let frame = 0
   const target = parseInt(count.getAttribute('data-target'), 10)
   const counter = setInterval(() => {
@@ -16,7 +16,7 @@ const animateCountUp = (count: number) => {
     const currentCount = Math.round(target * progress)
 
     if (parseInt(count.innerHTML, 10) !== currentCount) {
-      count.innerHTML = currentCount
+      count.innerHTML = currentCount.toString()
     }
 
     if (frame === totalFrames) {
@@ -26,7 +26,7 @@ const animateCountUp = (count: number) => {
 }
 
 // Checker the viewport
-const countersInView = el => {
+const countersInView = (el: Element) => {
   const scroll = window.scrollY || window.pageYOffset
   const boundsTop = el.getBoundingClientRect().top + scroll
 
@@ -64,9 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const raf =
   window.requestAnimationFrame ||
   window.webkitRequestAnimationFrame ||
-  window.mozRequestAnimationFrame ||
   function(callback) {
-      window.setTimeout(callback, 1000 / 60)
+    window.setTimeout(callback, 1000 / 60)
   }
 
 // Start count with button click
