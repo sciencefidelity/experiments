@@ -2,7 +2,7 @@
 
 ## Some in progress projects
 
-- Squares animation
+- Squares Animation
 - Dictation App
 - Browser Notepad
 - Animated Counter
@@ -18,3 +18,5 @@
 - Oblique Strategies
 - Syntax Highlighter
 - Random Map Generator
+- Guess the Number Game
+- Intersection Observer
