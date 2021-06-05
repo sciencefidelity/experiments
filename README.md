@@ -2,21 +2,24 @@
 
 ## Some in progress projects
 
-- Squares Animation
-- Dictation App
-- Browser Notepad
-- Animated Counter
-- Geolmetric Tunting Circles
-- Strobing Colors
-- Random Color Gernerator
-- Animated Font
-- Venn Diagram
-- Image Loader
 - Character Counter
-- Rainbow
+- Geometric Tunting Circles
+- Animated Counter
 - Fractions
-- Oblique Strategies
-- Syntax Highlighter
+- Image Loader
 - Random Map Generator
+- Animated Font
+- Browser Notepad
 - Guess the Number Game
+- Oblique Strategies
 - Intersection Observer
+- Animated Image Pixelator
+- Rainbow
+- Random Color Gernerator
+- Scroll Video
+- Dictation App
+- Squares Animation
+- Strobing Colors
+- Syntax Highlighter
+- Rainbow Triangle
+- Venn Diagram
