@@ -1,25 +1,9 @@
-
-// ********** Variables ****************
-
-$text: #F5F5F5;
-$textarea: #474747;
-$footer: #232425;
-
-// ********** Base *********************
-
 * {
   box-sizing: border-box;
   margin: 0;
-  &::before,
-  &::after {
-    box-sizing: border-box;
-  }
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont,
-               "Helvetica Neue", sans-serif;
-  color: $text;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
