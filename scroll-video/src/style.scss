@@ -13,14 +13,14 @@ $footer: #232425;
   &::before,
   &::after {
     box-sizing: border-box;
-  } 
+  }
 }
 
 html {
   font-family: -apple-system, BlinkMacSystemFont,
                "Helvetica Neue", sans-serif;
   color: $text;
-  -moz-osx-font-smoothing: grayscale;	
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -30,39 +30,7 @@ body {
   height: 100vh;
 }
 
-main {
-  background: $textarea;
+video {
   width: 100%;
-}
-
-footer {
-  background: $footer;
-}
-
-// ********** Text Area ****************
-
-%text {
-  font-size: clamp(0.9em, 3.5vw, 1.6em);
-  width: min(64ch, 100%);
-  height: 100%;
-  margin: auto;
-}
-
-#input {
-  @extend %text;
-  padding: 2em 2em;
-  overflow-wrap: break-word;
-  outline: none;
-  // These lines are not needed for a div.
-  display: block;
-  background: transparent;
-  border: none;
-  resize: none;
-  font-family: inherit;
-  color: inherit;
-}
-
-#output {
-  @extend %text;
-  padding: 0.2em 2em;
+  height: auto;
 }

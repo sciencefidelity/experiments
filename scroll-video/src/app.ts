@@ -1,16 +1,16 @@
 'use strict'
 
-const input = document.querySelector<HTMLTextAreaElement>('#input')!
-const output = document.querySelector<HTMLDivElement>('#output')!
+let frameNumber = 0
+const playbackConst = 500
+const setHeight = document.querySelector<HTMLDivElement>('set-height')
+const vid = document.querySelector<HTMLVideoElement>('#v0')
 
-input?.addEventListener('input', function(e) {
-  const target = (<HTMLTextAreaElement>e.target)
-  const lgn = target.value.length
-  if (lgn === 0 && output !== null) {
-    output.innerHTML = `&nbsp;`
-  } else if (lgn === 1 && output !== null) {
-    output.innerHTML = `${lgn} character`
-  } else if (lgn > 1 && output !== null) {
-    output.innerHTML = `${lgn} characters`
-  }
+vid!.addEventListener('loadedmetadata', function() {
+  setHeight!.style.height = Math.floor(vid!.duration) * playbackConst + 'px'
 })
+
+const scrollPlay = () => {
+  let frameNumber = window.pageYOffset / playbackConst
+  vid!.currentTime = frameNumber
+  window.requestAnimationFrame(scrollPlay)
+}
