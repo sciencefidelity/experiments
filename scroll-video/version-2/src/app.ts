@@ -1,7 +1,7 @@
 'use strict'
 
 const html = document.documentElement
-const canvas = document.querySelector<HTMLCanvasElement>('#coin')
+const canvas = <HTMLCanvasElement> document.getElementById('coin')
 const context = canvas!.getContext('2d')
 
 const frameCount = 602
