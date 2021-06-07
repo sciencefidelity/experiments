@@ -1,12 +1,12 @@
 'use strict'
 
 const html = document.documentElement
-const canvas = document.querySelector('#coin')
-const context = canvas.getContext('2d')
+const canvas = document.querySelector<HTMLCanvasElement>('#coin')
+const context = canvas!.getContext('2d')
 
 const frameCount = 602
-const currentFrame = index => (
-  `../videos/coin/frame-${index.toString().padStart(5, '0')}.jpg.webp`
+const currentFrame = (index:number) => (
+  `../videos/coin/frame-${index.toString().padStart(6, '0')}.jpg.webp`
 )
 
 const preloadImages = () => {
@@ -18,22 +18,22 @@ const preloadImages = () => {
 
 const img = new Image()
 img.src = currentFrame(1)
-canvas.width=1920
-canvas.height=1080
+canvas!.width=1920
+canvas!.height=1080
 img.onload=function(){
-  context.drawImage(img, 0, 0)
+  context!.drawImage(img, 0, 0)
 }
 
-const updateImage = index => {
+const updateImage = (index:number) => {
   img.src = currentFrame(index)
-  context.drawImage(img, 0, 0)
+  context!.drawImage(img, 0, 0)
 }
 
 window.addEventListener('scroll', () => {
   const scrollTop = html.scrollTop
   const maxScrollTop = html.scrollHeight - window.innerHeight
   const scrollFraction = scrollTop / maxScrollTop
-  frameIndex = Math.min(
+  const frameIndex = Math.min(
     frameCount - 1,
     Math.ceil(scrollFraction * frameCount)
   )
