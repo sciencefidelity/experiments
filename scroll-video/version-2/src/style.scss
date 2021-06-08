@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  height: 500vh;
+  height: 1800vh;
   background: #fff;
 }
 
@@ -12,6 +12,5 @@ canvas {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
 }
