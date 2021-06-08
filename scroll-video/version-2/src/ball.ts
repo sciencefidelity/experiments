@@ -1,4 +1,3 @@
-
 const html = document.documentElement
 const canvas = <HTMLCanvasElement> document.getElementById('coin')
 const context = canvas!.getContext('2d')
