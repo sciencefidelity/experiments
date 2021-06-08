@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  div {
+    text-align: center;
+    font-size: 6rem;
+    margin: 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
