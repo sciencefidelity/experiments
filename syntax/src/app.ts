@@ -1,8 +1,9 @@
 
 'use strict'
 
-const input: Element = document.querySelector('#input')
-const output: Element = document.querySelector('#output')
+const loadContent = localStorage.getItem('content')
+const input: HTMLPreElement = document.querySelector('#input') as HTMLPreElement
+const output: HTMLDivElement = document.querySelector('#output') as HTMLDivElement
 
 // initialise the input content
 input.innerHTML = ''
@@ -10,7 +11,7 @@ input.innerHTML = ''
 // save input text into local storage
 input.addEventListener('input', updateValue)
 
-function updateValue(e) {
+function updateValue(e: any) {
   localStorage.setItem('content', input.innerHTML)
   output.innerHTML = e.target.textContent
     .replaceAll('Matt', '<span style="color:orange">Matt</span>')
@@ -18,10 +19,13 @@ function updateValue(e) {
 }
 
 // copy input text into output
-input.innerHTML = localStorage.getItem('content')
-  .replaceAll('Matt', '<span style="color:orange">Matt</span>')
-  .replaceAll('World', '<span style="color:limegreen">World</span>')
-output.innerHTML = localStorage.getItem('content')
-  .replaceAll('Matt', '<span style="color:orange">Matt</span>')
-  .replaceAll('World', '<span style="color:limegreen">World</span>')
-
+if (loadContent) {
+  input.innerHTML = loadContent
+    .replaceAll('Matt', '<span style="color:orange">Matt</span>')
+    .replaceAll('World', '<span style="color:limegreen">World</span>')
+}
+ if (loadContent) {
+  output.innerHTML = loadContent
+    .replaceAll('Matt', '<span style="color:orange">Matt</span>')
+    .replaceAll('World', '<span style="color:limegreen">World</span>')
+}
