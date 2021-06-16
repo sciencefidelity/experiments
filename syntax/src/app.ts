@@ -4,6 +4,8 @@
 const input: Element = document.querySelector('#input')
 const output: Element = document.querySelector('#output')
 
+// document.onload(output.innerHTML = localStorage.getItem('content'))
+
 // initialise the input content
 input.textContent = ''
 
@@ -12,12 +14,14 @@ input.addEventListener('input', updateValue)
 
 function updateValue(e) {
   localStorage.setItem('content', input.textContent)
-  output.innerHTML = e.target.textContent.replace('Matt', '<span style="color:orange">Matt</span>')
+  output.innerHTML = e.target.textContent
+    .replace('Matt', '<span style="color:orange">Matt</span>')
+    .replace('World', '<span style="color:limegreen">World</span>')
 }
 
 // copy input text into output
-let re = /\**/gi
 input.textContent = localStorage.getItem('content')
-const p: string = localStorage.getItem('content')
-output.innerHTML = p
+output.innerHTML = localStorage.getItem('content')
+  .replace('Matt', '<span style="color:orange">Matt</span>')
+  .replace('World', '<span style="color:limegreen">World</span>')
 
