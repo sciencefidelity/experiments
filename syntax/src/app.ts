@@ -4,8 +4,6 @@
 const input: Element = document.querySelector('#input')
 const output: Element = document.querySelector('#output')
 
-// document.onload(output.innerHTML = localStorage.getItem('content'))
-
 // initialise the input content
 input.textContent = ''
 
