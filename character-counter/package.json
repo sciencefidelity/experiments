@@ -1,14 +1,18 @@
 {
   "name": "character-counter",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
-    "sass": "^1.32.11",
-    "typescript": "^4.2.3",
-    "vite": "^2.2.3"
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "eslint": "^7.32.0",
+    "sass": "^1.37.0",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.4"
   }
 }
