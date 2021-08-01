@@ -1,10 +1,10 @@
-'use strict'
+"use strict"
 
-const input = document.querySelector<HTMLTextAreaElement>('#input')!
-const output = document.querySelector<HTMLDivElement>('#output')!
+const input = document.querySelector<HTMLTextAreaElement>("#input")!
+const output = document.querySelector<HTMLDivElement>("#output")!
 
-input?.addEventListener('input', function(e) {
-  const target = (<HTMLTextAreaElement>e.target)
+input?.addEventListener("input", function (e) {
+  const target = <HTMLTextAreaElement>e.target
   const lgn = target.value.length
   if (lgn === 0 && output !== null) {
     output.innerHTML = `&nbsp;`

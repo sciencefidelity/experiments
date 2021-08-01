@@ -5,11 +5,13 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
 section {
   width: min(135vh, 100vw);
   aspect-ratio: 3/2;
   overflow: hidden;
 }
+
 img {
   width: 100%;
   height: auto;

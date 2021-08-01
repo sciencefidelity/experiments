@@ -1,14 +1,16 @@
 * {
   box-sizing: border-box;
 }
+
 html {
-  font-family: "Helvetica Neue", "Helvetica" ,sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 62.5%;
   font-weight: 400;
   letter-spacing: 0.01rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   font-size: 2rem;
   padding: 0;
@@ -16,10 +18,12 @@ body {
   color: #000;
   background: #e0dccf;
 }
+
 .container {
   height: 100vh;
   margin: auto;
 }
+
 #strategy {
   display: flex;
   line-height: 1.4;

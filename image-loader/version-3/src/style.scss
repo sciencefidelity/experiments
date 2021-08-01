@@ -4,33 +4,40 @@ body {
   display: grid;
   place-items: center;
 }
+
 main {
   position: relative;
   width: min(135vh, 100vw);
   overflow: hidden;
   aspect-ratio: 3/2;
 }
+
 img {
   opacity: 0;
 }
+
 %image {
   position: absolute;
   width: 100%;
   height: auto;
 }
+
 #placeholder {
   @extend %image;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
   opacity: 1;
 }
+
 #main-image {
   @extend %image;
 }
+
 .asyncImage {
   transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
 }
+
 .fullImage {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;

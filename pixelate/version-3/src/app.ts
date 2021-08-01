@@ -1,21 +1,21 @@
-let canvas = document.getElementById('canvas'),
-    ctx = canvas.getContext('2d'),
-    img = new Image(),
-    play = false
+let canvas = document.getElementById("canvas"),
+  ctx = canvas.getContext("2d"),
+  img = new Image(),
+  play = false
 
 window.onload = firstDraw()
 
 function firstDraw() {
-  let initialImageURL = './images/umbrella-lg.jpg'
+  let initialImageURL = "./images/umbrella-lg.jpg"
   draw(initialImageURL)
 }
-function draw (imgURL) {
-  img.crossOrigin="anonymous"
+function draw(imgURL) {
+  img.crossOrigin = "anonymous"
   img.src = imgURL
 
-  img.onload = function() {
-    canvas.height = img.height/4
-    canvas.width = img.width/4
+  img.onload = function () {
+    canvas.height = img.height / 4
+    canvas.width = img.width / 4
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
     pixelate()
   }
@@ -23,14 +23,14 @@ function draw (imgURL) {
 function pixelate(v) {
   canvas.height = img.height
   canvas.width = img.width
-  
+
   let size = (play ? v : blocks.value) * 0.01,
-      w = canvas.width * size,
-      h = canvas.height * size
-    
-//  console.log(size)
+    w = canvas.width * size,
+    h = canvas.height * size
+
+  //  console.log(size)
   ctx.drawImage(img, 0, 0, w, h)
-  
+
   ctx.ImageSmoothingEnabled = false
   ctx.webkitImageSmoothingEnabled = false
   ctx.imageSmoothingEnabled = false
@@ -39,12 +39,12 @@ function pixelate(v) {
 
 function toggleAnim() {
   let v = Math.min(20, parseInt(blocks.value, 10)),
-      dx = 0.01; // "speed"
-  play = !play;
-  animate.value = play ? 'stop' : 'Animate'
-  
+    dx = 0.01 // "speed"
+  play = !play
+  animate.value = play ? "stop" : "Animate"
+
   if (play === true) anim()
-  
+
   function anim() {
     v += dx
     if (v <= 1 || v > 20) dx = -dx
@@ -53,11 +53,16 @@ function toggleAnim() {
   }
 }
 
-blocks.addEventListener('change', pixelate, false)
-animate.addEventListener('click', toggleAnim, false)
+blocks.addEventListener("change", pixelate, false)
+animate.addEventListener("click", toggleAnim, false)
 
 window.requestAnimationFrame = (function () {
-  return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
-    window.setTimeout(callback, 1000 / 60)
-  }
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    function (callback) {
+      window.setTimeout(callback, 1000 / 60)
+    }
+  )
 })()

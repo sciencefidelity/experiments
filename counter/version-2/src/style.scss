@@ -6,22 +6,26 @@
     box-sizing: border-box;
   }
 }
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   background: #1b1d1c;
   color: #fafafa;
   overflow: hidden;
 }
+
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
   display: inline-block;
   width: 22%;
 }
+
 #count {
   max-width: 88%;
   margin: 45vh auto 9rem;

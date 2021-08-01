@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <title>Scroll Video</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="./src/style.scss" rel="stylesheet" />
-  <link rel="icon" href="data:;base64,="><!-- Prevent 404 Favicon requests -->
-
-</head>
-<body>
-  <div id="set-height">
-    <video id="v0" tabindex="0" autobuffer preload>
-      <source type="video/mp4" src="./videos/ball.mp4">
-    </video>
-  </div>
-  <script src="./src/app.ts"></script>
-</body>
+  <head>
+    <title>Scroll Video</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./src/style.scss" rel="stylesheet" />
+    <!-- Prevent 404 Favicon requests -->
+    <link rel="icon" href="data:;base64,=" />
+  </head>
+  <body>
+    <div id="set-height">
+      <video id="v0" tabindex="0" autobuffer preload>
+        <source type="video/mp4" src="./videos/ball.mp4" />
+      </video>
+    </div>
+    <script src="./src/app.ts"></script>
+  </body>
 </html>

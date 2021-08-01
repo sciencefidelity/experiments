@@ -1,10 +1,10 @@
 // ********* Variables ****************
 
-$dark:  #2C2D48;
-$light: #E7DBD8;
-$green: #33CC66;
-$blue:  #0099FF;
-$red:   #FF3333;
+$dark: #2c2d48;
+$light: #e7dbd8;
+$green: #33cc66;
+$blue: #0099ff;
+$red: #ff3333;
 $white: #ffffff;
 $time: 0.3s ease-in-out;
 
@@ -18,15 +18,16 @@ $time: 0.3s ease-in-out;
     box-sizing: border-box;
   }
 }
+
 html {
-  font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;;
+  font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
+    Menlo, Consolas, monospace;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: $white;
   overflow: hidden;
 }
-body {
-}
+
 #site-main {
   display: grid;
   place-items: center;
@@ -40,31 +41,41 @@ body {
   background: $light;
   transition: background $time;
 }
+
 .dark {
   background: $dark;
   transition: background $time;
 }
+
 #mode {
   position: absolute;
   top: 1.8rem;
   right: 1.8rem;
   width: 3rem;
-  cursor: pointer; 
+  cursor: pointer;
 }
+
 .darkmode {
   fill: $light;
   transition: fill $time, transform $time, -webkit-transform $time;
 }
+
 .lightmode {
   fill: $dark;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  transition: fill $time, transform $time, -webkit-transform $time; 
+  transition: fill $time, transform $time, -webkit-transform $time;
 }
 
 // ********* Venn Diagram *************
 
-@mixin circle($bottom: 10.02%, $left: 2.41%, $bg: $white, $blend: normal, $op: 1) {
+@mixin circle(
+  $bottom: 10.02%,
+  $left: 2.41%,
+  $bg: $white,
+  $blend: normal,
+  $op: 1
+) {
   position: absolute;
   width: 60.59%;
   border-radius: 50%;
@@ -100,7 +111,13 @@ body {
     @include circle();
   }
   :nth-child(4) {
-    @include circle($bottom: 39.41%, $left: 19.705%, $bg: $green, $blend: difference, $op: 0.65);
+    @include circle(
+      $bottom: 39.41%,
+      $left: 19.705%,
+      $bg: $green,
+      $blend: difference,
+      $op: 0.65
+    );
   }
   :nth-child(5) {
     @include circle($left: 37%, $bg: $red, $blend: difference, $op: 0.65);

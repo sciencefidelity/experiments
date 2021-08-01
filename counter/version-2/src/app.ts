@@ -10,7 +10,7 @@ const easeOutQuad = (t: number) => t * (2 - t)
 
 const animateCountUp = (el: any) => {
   let frame = 0
-  const target = parseInt(el.getAttribute('data-target'), 10)
+  const target = parseInt(el.getAttribute("data-target"), 10)
   const counter = setInterval(() => {
     frame++
     const progress = easeOutQuad(frame / totalFrames)
@@ -28,9 +28,9 @@ const animateCountUp = (el: any) => {
 
 // Start count with button click
 
-const btn = document.getElementById('btn')
+const btn = document.getElementById("btn")
 
 btn.onclick = () => {
-  const counters = document.querySelectorAll('h1')
+  const counters = document.querySelectorAll("h1")
   counters.forEach(animateCountUp)
 }

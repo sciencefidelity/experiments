@@ -6,6 +6,7 @@
     box-sizing: border-box;
   }
 }
+
 body {
   background: #232425;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
@@ -13,11 +14,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 main {
   width: 100vw;
   height: 100vh;
   cursor: pointer;
 }
+
 p {
   width: 100%;
   font-weight: 700;

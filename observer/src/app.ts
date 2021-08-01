@@ -1,27 +1,31 @@
-'use strict'
+"use strict"
 
-// const red = <HTMLDivElement>document.querySelector('#red')
-// const orange = <HTMLDivElement>document.querySelector('#orange')
-// const yellow = <HTMLDivElement>document.querySelector('#yellow')
-// const green = <HTMLDivElement>document.querySelector('#green')
-// const blue = <HTMLDivElement>document.querySelector('#blue')
-// const indigo = <HTMLDivElement>document.querySelector('#indigo')
+// const red = <HTMLDivElement>document.querySelector("#red")
+// const orange = <HTMLDivElement>document.querySelector("#orange")
+// const yellow = <HTMLDivElement>document.querySelector("#yellow")
+// const green = <HTMLDivElement>document.querySelector("#green")
+// const blue = <HTMLDivElement>document.querySelector("#blue")
+// const indigo = <HTMLDivElement>document.querySelector("#indigo")
 
 const numSteps = 20.0
 
-let boxElement:HTMLDivElement
+let boxElement: HTMLDivElement
 let prevRatio = 0.0
 let increasingColor = "rgba(40, 40, 190, ratio)"
 let decreasingColor = "rgba(190, 40, 40, ratio)"
 
-window.addEventListener("load", event => {
-  boxElement = <HTMLDivElement>document.querySelector("#box")
+window.addEventListener(
+  "load",
+  event => {
+    boxElement = <HTMLDivElement>document.querySelector("#box")
 
-  createObserver()
-}, false)
+    createObserver()
+  },
+  false
+)
 
 function createObserver() {
-  let observer;
+  let observer
 
   let options = {
     root: null,
@@ -46,12 +50,18 @@ function buildThresholdList() {
   return thresholds
 }
 
-function handleIntersect(entries:any, observer: any) {
+function handleIntersect(entries: any, observer: any) {
   entries.forEach((entry: any) => {
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio)
+      entry.target.style.backgroundColor = increasingColor.replace(
+        "ratio",
+        entry.intersectionRatio
+      )
     } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio)
+      entry.target.style.backgroundColor = decreasingColor.replace(
+        "ratio",
+        entry.intersectionRatio
+      )
     }
 
     prevRatio = entry.intersectionRatio

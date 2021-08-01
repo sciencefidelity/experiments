@@ -1,14 +1,13 @@
-
 // ********** Variables ****************
 
-$background: #ABA393;
-$color-1: #D91A1A;
-$color-2: #FF8D0C;
-$color-3: #FFCF12;
-$color-4: #8ED631;
-$color-5: #22BCA0;
-$color-6: #4340FF;
-$color-7: #722CDC;
+$background: #aba393;
+$color-1: #d91a1a;
+$color-2: #ff8d0c;
+$color-3: #ffcf12;
+$color-4: #8ed631;
+$color-5: #22bca0;
+$color-6: #4340ff;
+$color-7: #722cdc;
 $inset: inset 0 0 0;
 
 // ********** Mixins *******************
@@ -53,13 +52,9 @@ body {
     position: absolute;
     width: 100%;
     border-radius: 50%;
-    box-shadow: $inset 0.5em $color-1,
-                $inset 1.0em $color-2,
-                $inset 1.5em $color-3,
-                $inset 2.0em $color-4,
-                $inset 2.5em $color-5,
-                $inset 3.0em $color-6,
-                $inset 3.5em $color-7;
+    box-shadow: $inset 0.5em $color-1, $inset 1em $color-2,
+      $inset 1.5em $color-3, $inset 2em $color-4, $inset 2.5em $color-5,
+      $inset 3em $color-6, $inset 3.5em $color-7;
     @include after();
   }
 }
@@ -78,4 +73,3 @@ html::after {
   position: absolute;
   z-index: -100;
 }
-

@@ -1,6 +1,5 @@
 # system
 .DS_store
-.nova/
 
 # generated
 *.css

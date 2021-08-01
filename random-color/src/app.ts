@@ -10,10 +10,8 @@ let g: number = 0
 let b: number = 0
 
 canvas.onclick = () => {
-  canvas.style.background = 
-    `rgb(${color(r)}, ${color(g)}, ${color(b)})`
-  code.innerHTML = 
-    `rgb(${color(r)}, ${color(g)}, ${color(b)})`
+  canvas.style.background = `rgb(${color(r)}, ${color(g)}, ${color(b)})`
+  code.innerHTML = `rgb(${color(r)}, ${color(g)}, ${color(b)})`
 }
 
 const color = (r, g, b) => {

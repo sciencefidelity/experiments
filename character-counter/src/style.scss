@@ -1,7 +1,6 @@
-
 // ********** Variables ****************
 
-$text: #F5F5F5;
+$text: #f5f5f5;
 $textarea: #474747;
 $footer: #232425;
 
@@ -13,14 +12,13 @@ $footer: #232425;
   &::before,
   &::after {
     box-sizing: border-box;
-  } 
+  }
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont,
-               "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   color: $text;
-  -moz-osx-font-smoothing: grayscale;	
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 

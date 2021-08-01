@@ -1,10 +1,9 @@
 // Switch between "dark mode" and "light mode"
 
-import { modeSwitch, textLeft, textRight } from './variables'
+import { modeSwitch, textLeft, textRight } from "./variables"
 
 export function mode() {
   modeSwitch.onclick = () => {
-    
     if (textLeft.className === "light-mode-left") {
       textLeft.className = "dark-mode-left"
       textRight.className = "dark-mode-right"
@@ -12,7 +11,5 @@ export function mode() {
       textLeft.className = "light-mode-left"
       textRight.className = "light-mode-right"
     }
-    
   }
 }
-

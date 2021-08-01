@@ -4,6 +4,7 @@ body {
   height: 100vh;
   margin: 0;
 }
+
 div {
   width: min(135vh, 100%);
   overflow: hidden;
@@ -14,4 +15,3 @@ div {
   image-rendering: pixelated;
   aspect-ratio: 3/2;
 }
-
