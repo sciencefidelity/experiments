@@ -1,0 +1,13 @@
+{
+  "name": "experiments",
+  "version": "1.0.0",
+  "description": "Experiments with Typescript and Sass.",
+  "main": "",
+  "repository": "https://github.com/sciencefidelity/experiments",
+  "author": "Matt Cook <matt@sciencefidelity.co.uk>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
