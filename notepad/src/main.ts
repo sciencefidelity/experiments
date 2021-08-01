@@ -2,20 +2,20 @@ import { textLeft, textRight, save } from "./variables"
 import { mode } from "./mode"
 
 // initialise the input content
-textLeft.textContent = `&nbsp;`
+if (textLeft) textLeft.textContent = "&nbsp;"
 
 // save input text into local storage
 textLeft?.addEventListener("input", updateValue)
 
-function updateValue(e: any) {
-  if (textLeft !== null) {
+function updateValue(e: Event) {
+  if (textLeft && textRight) {
     localStorage.setItem("leftText", textLeft.textContent || "")
     textRight.textContent = (<HTMLDivElement>e.target).textContent
   }
 }
 
-textLeft.textContent = localStorage.getItem("leftText")
-textRight.textContent = localStorage.getItem("leftText")
+if (textLeft) textLeft.textContent = localStorage.getItem("leftText")
+if (textRight) textRight.textContent = localStorage.getItem("leftText")
 
 // light/dark mode switching
 mode()
@@ -36,6 +36,8 @@ const fileDownload = (
   URL.revokeObjectURL(a.href)
 }
 
-save.onclick = () => {
-  fileDownload(textLeft.textContent || "", "browser-note.md", "text/markdown")
+if (save) {
+  save.onclick = () => {
+    fileDownload(textLeft && textLeft.textContent || "", "browser-note.md", "text/markdown")
+  }
 }
