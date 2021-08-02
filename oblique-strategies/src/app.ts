@@ -107,7 +107,7 @@ const strategies: string[] = [
   "Use an unacceptable color",
   "Use fewer notes",
   "Use filters",
-  'Use "unqualified" people',
+  "Use \"unqualified\" people",
   "Water",
   "What are you really thinking about just now? Incorporate",
   "What is the reality of the situation?",
@@ -129,10 +129,10 @@ function rand(min: number, max: number) {
   )
 }
 
-let i = rand(0, 113)
-// let i = (29 - 4) // for single card testing
+const i = rand(0, 113)
+// const i = (29 - 4) // for single card testing
 const text = document.getElementById("strategy")
 
 window.onload = () => {
-  text.innerHTML = strategies[i]
+  if (text) text.innerHTML = strategies[i]
 }
