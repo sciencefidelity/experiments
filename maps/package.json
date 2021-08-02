@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint ./src/*.ts",
+    "fix": "yarn lint --fix"
   },
   "devDependencies": {
     "@types/google.maps": "^3.45.6",
