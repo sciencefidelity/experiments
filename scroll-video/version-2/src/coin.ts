@@ -1,6 +1,6 @@
 const html = document.documentElement
-const canvas = <HTMLCanvasElement>document.getElementById("coin")
-const context = canvas!.getContext("2d")
+const canvas = document.getElementById("coin") as HTMLCanvasElement
+const context = canvas.getContext("2d")
 
 const frameCount = 602
 const currentFrame = (index: number) =>
@@ -17,15 +17,15 @@ const preloadImages = () => {
 
 const img = new Image()
 img.src = currentFrame(1)
-canvas!.width = 1920
-canvas!.height = 1080
+canvas.width = 1920
+canvas.height = 1080
 img.onload = function () {
-  context!.drawImage(img, 0, 0)
+  if (context) context.drawImage(img, 0, 0)
 }
 
 const updateImage = (index: number) => {
   img.src = currentFrame(index)
-  context!.drawImage(img, 0, 0)
+  if (context) context.drawImage(img, 0, 0)
 }
 
 window.addEventListener("scroll", () => {
