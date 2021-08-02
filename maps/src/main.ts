@@ -1,5 +1,5 @@
 // Random map generator
-/// <reference types="google.maps" />
+// <reference types="google.maps" />
 
 "use strict"
 
@@ -10,9 +10,9 @@ googleScript.async = true
 googleScript.type = "text/javascript"
 
 const zoom = 10
-let lat: any[] = []
-let lgn: any[] = []
-let map1: google.maps.Map
+const lat: number[] = []
+const lgn: number[] = []
+let map1: google.maps.Map | null
 let map2: google.maps.Map
 let map3: google.maps.Map
 let map4: google.maps.Map
@@ -35,40 +35,72 @@ for (let i = 0; i < 8; i++) {
 }
 
 // Google Maps Platform
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function initMap(): void {
-  map1 = new google.maps.Map(document.querySelector<HTMLDivElement>("#map1")!, {
-    center: { lat: lat[0], lng: lgn[0] },
-    zoom: zoom
-  })
-  map2 = new google.maps.Map(document.querySelector<HTMLDivElement>("#map2")!, {
-    center: { lat: lat[1], lng: lgn[1] },
-    zoom: zoom
-  })
-  map3 = new google.maps.Map(document.querySelector<HTMLDivElement>("#map3")!, {
-    center: { lat: lat[2], lng: lgn[2] },
-    zoom: zoom
-  })
-  map4 = new google.maps.Map(document.querySelector<HTMLDivElement>("#map4")!, {
-    center: { lat: lat[3], lng: lgn[3] },
-    zoom: zoom
-  })
-  map5 = new google.maps.Map(document.querySelector<HTMLDivElement>("#map5")!, {
-    center: { lat: lat[4], lng: lgn[4] },
-    zoom: zoom
-  })
-  map6 = new google.maps.Map(document.querySelector<HTMLDivElement>("#map6")!, {
-    center: { lat: lat[5], lng: lgn[5] },
-    zoom: zoom
-  })
-  map7 = new google.maps.Map(document.querySelector<HTMLDivElement>("#map7")!, {
-    center: { lat: lat[6], lng: lgn[6] },
-    zoom: zoom
-  })
-  map8 = new google.maps.Map(document.querySelector<HTMLDivElement>("#map8")!, {
-    center: { lat: lat[7], lng: lgn[7] },
-    zoom: zoom
-  })
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  map1 = new google.maps.Map(
+    document.querySelector("#map1") as HTMLDivElement,
+    {
+      center: { lat: lat[0], lng: lgn[0] },
+      zoom: zoom
+    }
+  )
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  map2 = new google.maps.Map(
+    document.querySelector("#map2") as HTMLDivElement,
+    {
+      center: { lat: lat[1], lng: lgn[1] },
+      zoom: zoom
+    }
+  )
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  map3 = new google.maps.Map(
+    document.querySelector("#map3") as HTMLDivElement,
+    {
+      center: { lat: lat[2], lng: lgn[2] },
+      zoom: zoom
+    }
+  )
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  map4 = new google.maps.Map(
+    document.querySelector("#map4") as HTMLDivElement,
+    {
+      center: { lat: lat[3], lng: lgn[3] },
+      zoom: zoom
+    }
+  )
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  map5 = new google.maps.Map(
+    document.querySelector("#map5") as HTMLDivElement,
+    {
+      center: { lat: lat[4], lng: lgn[4] },
+      zoom: zoom
+    }
+  )
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  map6 = new google.maps.Map(
+    document.querySelector("#map6") as HTMLDivElement,
+    {
+      center: { lat: lat[5], lng: lgn[5] },
+      zoom: zoom
+    }
+  )
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  map7 = new google.maps.Map(
+    document.querySelector("#map7") as HTMLDivElement,
+    {
+      center: { lat: lat[6], lng: lgn[6] },
+      zoom: zoom
+    }
+  )
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  map8 = new google.maps.Map(
+    document.querySelector("#map8") as HTMLDivElement,
+    {
+      center: { lat: lat[7], lng: lgn[7] },
+      zoom: zoom
+    }
+  )
 }
 
 document.head.appendChild(googleScript)
