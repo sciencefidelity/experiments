@@ -1,14 +1,8 @@
 "use strict"
 
 const loadContent = localStorage.getItem("content")
-const input: HTMLPreElement = document.querySelector("#input") as HTMLPreElement
-const output: HTMLDivElement = document.querySelector(
-  "#output"
-) as HTMLDivElement
-
-interface Event {
-  readonly target: EventTarget | null
-}
+const input = document.querySelector("#input") as HTMLPreElement
+const output = document.querySelector("#output") as HTMLDivElement
 
 // initialise the input content
 input.innerHTML = ""
