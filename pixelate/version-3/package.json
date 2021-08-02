@@ -1,6 +1,7 @@
 {
   "name": "pixelate",
-  "version": "0.0.3",
+  "version": "0.1.2",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
