@@ -1,6 +1,6 @@
 "use strict"
 // Page is loaded
-const objects = document.getElementsByClassName("asyncImage")
+const objects = document.getElementsByClassName("asyncImage") as HTMLCollectionOf<HTMLImageElement>
 Array.from(objects).map(item => {
   // Start loading image
   const img = new Image()
