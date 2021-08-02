@@ -28,9 +28,11 @@ const animateCountUp = (el: any) => {
 
 // Start count with button click
 
-const btn = document.getElementById("btn")
+const btn = document.getElementById("btn") as HTMLButtonElement
 
 btn.onclick = () => {
-  const counters = document.querySelectorAll("h1")
+  const counters = document.querySelectorAll(
+    "h1"
+  ) as NodeListOf<HTMLHeadingElement>
   counters.forEach(animateCountUp)
 }

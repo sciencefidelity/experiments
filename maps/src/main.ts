@@ -12,7 +12,7 @@ googleScript.type = "text/javascript"
 const zoom = 10
 const lat: number[] = []
 const lgn: number[] = []
-let map1: google.maps.Map | null
+let map1: google.maps.Map
 let map2: google.maps.Map
 let map3: google.maps.Map
 let map4: google.maps.Map

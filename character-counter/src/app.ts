@@ -1,18 +1,16 @@
 "use strict"
 
-const input = document.querySelector<HTMLTextAreaElement>("#input")
-const output = document.querySelector<HTMLDivElement>("#output")
+const input = document.querySelector("#input") as HTMLTextAreaElement
+const output = document.querySelector("#output") as HTMLDivElement
 
-if (input && output) {
-  input?.addEventListener("input", function (e) {
-    const target = <HTMLTextAreaElement>e.target
-    const lgn = target.value.length
-    if (lgn === 0 && output !== null) {
-      output.innerHTML = "&nbsp;"
-    } else if (lgn === 1 && output !== null) {
-      output.innerHTML = `${lgn} character`
-    } else if (lgn > 1 && output !== null) {
-      output.innerHTML = `${lgn} characters`
-    }
-  })
-}
+input?.addEventListener("input", function (e) {
+  const target = <HTMLTextAreaElement>e.target
+  const lgn = target.value.length
+  if (lgn === 0 && output !== null) {
+    output.innerHTML = "&nbsp;"
+  } else if (lgn === 1 && output !== null) {
+    output.innerHTML = `${lgn} character`
+  } else if (lgn > 1 && output !== null) {
+    output.innerHTML = `${lgn} characters`
+  }
+})

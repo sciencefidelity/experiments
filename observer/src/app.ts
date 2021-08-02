@@ -7,17 +7,15 @@
 // const blue = <HTMLDivElement>document.querySelector("#blue")
 // const indigo = <HTMLDivElement>document.querySelector("#indigo")
 
-const numSteps = 20.0
-
 let boxElement: HTMLDivElement
 let prevRatio = 0.0
-let increasingColor = "rgba(40, 40, 190, ratio)"
-let decreasingColor = "rgba(190, 40, 40, ratio)"
+const increasingColor = "rgba(40, 40, 190, ratio)"
+const decreasingColor = "rgba(190, 40, 40, ratio)"
 
 window.addEventListener(
   "load",
   event => {
-    boxElement = <HTMLDivElement>document.querySelector("#box")
+    boxElement = document.querySelector("#box") as HTMLDivElement
 
     createObserver()
   },
@@ -25,24 +23,22 @@ window.addEventListener(
 )
 
 function createObserver() {
-  let observer
-
-  let options = {
+  const options = {
     root: null,
     rootMargin: "0px",
     threshold: buildThresholdList()
   }
 
-  observer = new IntersectionObserver(handleIntersect, options)
+  const observer = new IntersectionObserver(handleIntersect, options)
   observer.observe(boxElement)
 }
 
 function buildThresholdList() {
-  let thresholds = []
-  let numSteps = 20
+  const thresholds = []
+  const numSteps = 20
 
   for (let i = 1.0; i <= numSteps; i++) {
-    let ratio = i / numSteps
+    const ratio = i / numSteps
     thresholds.push(ratio)
   }
 
@@ -50,7 +46,7 @@ function buildThresholdList() {
   return thresholds
 }
 
-function handleIntersect(entries: any, observer: any) {
+function handleIntersect(entries: any, _observer: any) {
   entries.forEach((entry: any) => {
     if (entry.intersectionRatio > prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace(

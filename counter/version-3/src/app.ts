@@ -9,7 +9,7 @@ const easeOutQuad = (t: number) => t * (2 - t)
 
 const animateCountUp = (count: Element) => {
   let frame = 0
-  const target = parseInt(count.getAttribute("data-target"), 10)
+  const target = parseInt(count.getAttribute("data-target")!, 10)
   const counter = setInterval(() => {
     frame++
     const progress = easeOutQuad(frame / totalFrames)
@@ -48,8 +48,8 @@ const countersInView = (el: Element) => {
 
 // Use the checker
 document.addEventListener("DOMContentLoaded", () => {
-  const tester = document.querySelector("#count")
-  const answer = document.querySelector("#answer")
+  const tester = document.querySelector("#count") as HTMLDivElement
+  const answer = document.querySelector("#answer") as HTMLDivElement
 
   const handler = () =>
     raf(() => {
@@ -74,7 +74,7 @@ const raf =
 
 // Start count with button click
 
-const btn = document.getElementById("btn")
+const btn = document.getElementById("btn") as HTMLButtonElement
 
 btn.onclick = () => {
   const counters = document.querySelectorAll("h1")

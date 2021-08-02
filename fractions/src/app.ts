@@ -1,13 +1,12 @@
 "use strict"
 
-const btn = document.getElementById("btn")
-const turntable = document.querySelector("main")
+const btn = document.getElementById("btn") as HTMLButtonElement
+const turntable = document.querySelector("main") as HTMLElement
 
-if (btn)
-  btn.onclick = () => {
-    if (turntable && turntable.className === "stop") {
-      turntable.className = "spin"
-    } else {
-      if (turntable) turntable.className = "stop"
-    }
+btn.onclick = () => {
+  if (turntable.className === "stop") {
+    turntable.className = "spin"
+  } else {
+    turntable.className = "stop"
   }
+}
