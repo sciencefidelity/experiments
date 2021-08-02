@@ -2,7 +2,7 @@
 
 "use strict"
 
-const shape: HTMLElement | null = document.getElementById("shape")
+const shape = document.getElementById("shape") as HTMLDivElement
 
 let i = 0
 if (shape) shape.className = "c" + i
