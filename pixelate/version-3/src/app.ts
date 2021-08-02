@@ -46,14 +46,14 @@ const toggleAnim = () => {
   play = !play
   animate.value = play ? "stop" : "Animate"
 
-  if (play === true) anim()
-
-  function anim() {
+  const anim = () => {
     v += dx
     if (v <= 1 || v > 20) dx = -dx
     pixelate(v)
     if (play) requestAnimationFrame(anim)
   }
+
+  if (play === true) anim()
 }
 
 blocks.addEventListener("change", pixelate, false)

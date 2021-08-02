@@ -1,5 +1,3 @@
-"use strict"
-
 let frameNumber = 0
 const playbackConst = 500
 const setHeight = document.querySelector("#set-height") as HTMLDivElement

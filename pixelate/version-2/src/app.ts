@@ -1,7 +1,7 @@
-const canvas = document.getElementById("canvas") as HTMLCanvasElement
+const canvas = document.querySelector("#canvas") as HTMLCanvasElement
 const ctx = canvas.getContext("2d")
 const img = new Image() as HTMLImageElement
-const blocks = document.getElementById("blocks") as HTMLInputElement
+const blocks = document.querySelector("#blocks") as HTMLInputElement
 
 window.onload = (() => firstDraw())
 

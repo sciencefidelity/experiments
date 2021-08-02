@@ -1,5 +1,3 @@
-"use strict"
-
 const loadContent = localStorage.getItem("content")
 const input = document.querySelector("#input") as HTMLPreElement
 const output = document.querySelector("#output") as HTMLDivElement

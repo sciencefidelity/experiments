@@ -1,8 +1,6 @@
 // Generate a random color upon clicking anywhere on screen
 // Display the RGB value of the generaten color
 
-"use strict"
-
 const canvas = document.querySelector("main") as HTMLCanvasElement
 const code = document.querySelector("p") as HTMLParagraphElement
 const r = 0

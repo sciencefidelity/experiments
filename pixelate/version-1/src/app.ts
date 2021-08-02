@@ -1,12 +1,12 @@
 const c = document.createElement("canvas") as HTMLCanvasElement
 const ctx = c.getContext("2d")
 const img1 = new Image()
-const placeholder = document.getElementById("image1") as HTMLImageElement
+const placeholder = document.querySelector("#image1") as HTMLImageElement
 
 img1.onload = function () {
   if (placeholder) placeholder.remove()
 
-  const parent = document.getElementById("container") as HTMLDivElement
+  const parent = document.querySelector("#container") as HTMLDivElement
   const w = img1.width
   const h = img1.height
 

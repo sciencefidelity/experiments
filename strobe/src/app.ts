@@ -1,8 +1,6 @@
 // Animated colour changer / strobe / disco light.
 
-"use strict"
-
-const shape = document.getElementById("shape") as HTMLDivElement
+const shape = document.querySelector("#shape") as HTMLDivElement
 
 let i = 0
 if (shape) shape.className = "c" + i

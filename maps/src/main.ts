@@ -1,8 +1,6 @@
 // Random map generator
 // <reference types="google.maps" />
 
-"use strict"
-
 const googleScript = document.createElement("script")
 googleScript.src =
   "https://maps.googleapis.com/maps/api/js?key=GOOGLE_API_KEY&callback=initMap"

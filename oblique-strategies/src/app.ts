@@ -1,7 +1,5 @@
 // Oblique Strategies browser version
 
-"use strict"
-
 const strategies: string[] = [
   "Abandon normal instruments",
   "Accept advice",
@@ -131,7 +129,7 @@ function rand(min: number, max: number) {
 
 const i = rand(0, 113)
 // const i = (29 - 4) // for single card testing
-const text = document.getElementById("strategy")
+const text = document.querySelector("#strategy")
 
 window.onload = () => {
   if (text) text.innerHTML = strategies[i]

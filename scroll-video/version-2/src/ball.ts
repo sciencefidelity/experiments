@@ -1,5 +1,5 @@
 const html = document.documentElement
-const canvas = document.getElementById("coin") as HTMLCanvasElement
+const canvas = document.querySelector("#ball") as HTMLCanvasElement
 const context = canvas.getContext("2d")
 
 const frameCount = 602

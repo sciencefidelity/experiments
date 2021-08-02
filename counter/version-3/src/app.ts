@@ -1,7 +1,5 @@
 // Count-up that triggers on entering viewport
 
-"use strict"
-
 const animationDuration = 2000
 const frameDuration = 1000 / 20
 const totalFrames = Math.round(animationDuration / frameDuration)

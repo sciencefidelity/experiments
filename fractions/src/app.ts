@@ -1,5 +1,3 @@
-"use strict"
-
 const btn = document.getElementById("btn") as HTMLButtonElement
 const turntable = document.querySelector("main") as HTMLElement
 
