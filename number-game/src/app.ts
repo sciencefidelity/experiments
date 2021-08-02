@@ -3,11 +3,11 @@
 let randomNumber = Math.floor(Math.random() * 100) + 1
 
 const guesses = document.querySelector(".guesses")
-const lastResult = <HTMLParagraphElement>document.querySelector(".lastResult")
+const lastResult = document.querySelector(".lastResult") as HTMLParagraphElement
 const lowOrHi = document.querySelector(".lowOrHi")
 
-const guessSubmit = <HTMLInputElement>document.querySelector(".guessSubmit")
-const guessField = <HTMLInputElement>document.querySelector(".guessField")
+const guessSubmit = document.querySelector(".guessSubmit") as HTMLInputElement
+const guessField = document.querySelector(".guessField") as HTMLInputElement
 
 let guessCount = 1
 let resetButton: HTMLButtonElement
@@ -22,7 +22,7 @@ function checkGuess() {
   ) {
     alert("Oops, some HTML elements don't exist!")
   } else {
-    let userGuess = Number(guessField.value)
+    const userGuess = Number(guessField.value)
     if (guessCount === 1) {
       guesses.textContent = "Previous guesses: "
     }
@@ -51,7 +51,7 @@ function checkGuess() {
   }
 }
 
-guessSubmit!.addEventListener("click", checkGuess)
+guessSubmit.addEventListener("click", checkGuess)
 
 function setGameOver() {
   if (guessField === null) {
