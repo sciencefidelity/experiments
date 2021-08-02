@@ -1,5 +1,3 @@
-"use strict"
-
 const input = document.querySelector("#input") as HTMLTextAreaElement
 const output = document.querySelector("#output") as HTMLDivElement
 

@@ -7,9 +7,9 @@ const frameDuration = 1000 / 20
 const totalFrames = Math.round(animationDuration / frameDuration)
 const easeOutQuad = (t: number) => t * (2 - t)
 
-const animateCountUp = (count: Element) => {
+const animateCountUp = (count: HTMLDivElement) => {
   let frame = 0
-  const target = parseInt(count.getAttribute("data-target")!, 10)
+  const target = parseInt(count.getAttribute("data-target") || "0", 10)
   const counter = setInterval(() => {
     frame++
     const progress = easeOutQuad(frame / totalFrames)

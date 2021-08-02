@@ -1,8 +1,6 @@
 // Count-up that triggers on click of a button
 // adjust speed and updateCount to change duration
 
-"use strict"
-
 const counters = document.querySelectorAll(
   "h1"
 ) as NodeListOf<HTMLHeadingElement>
@@ -13,8 +11,8 @@ btn.onclick = () => {
   counters.forEach(counter => {
     counter.innerText = "0"
     const updateCount = () => {
-      const target = +counter.getAttribute("data-target")!
-      const count = +counter.innerText
+      const target = Number(counter.getAttribute("data-target"))
+      const count = Number(counter.innerText)
       const inc = target / speed
       if (count < target) {
         counter.innerText = Math.ceil(count + inc).toString()
