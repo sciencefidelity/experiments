@@ -1,15 +1,15 @@
 "use strict"
 
-const modeSwitch: HTMLElement = document.getElementById("mode")
-const background: HTMLElement = document.getElementById("site-main")
-const mode: HTMLElement = document.getElementById("mode")
+const modeSwitch: HTMLElement | null = document.getElementById("mode")
+const background: HTMLElement | null = document.getElementById("site-main")
+const mode: HTMLElement | null = document.getElementById("mode")
 
-modeSwitch.onclick = () => {
-  if (background.className === "light") {
+if(modeSwitch) modeSwitch.onclick = () => {
+  if (background && background.className === "light") {
     background.className = "dark"
-    mode.className = "darkmode"
+    if(mode) mode.className = "darkmode"
   } else {
-    background.className = "light"
-    mode.className = "lightmode"
+    if(background) background.className = "light"
+    if(mode) mode.className = "lightmode"
   }
 }
