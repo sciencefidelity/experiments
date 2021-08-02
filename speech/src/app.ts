@@ -1,5 +1,5 @@
 "use strict"
 
-let a: string = "Hello world!"
+const a = "Hello world!"
 
 console.log(a)
