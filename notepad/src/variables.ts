@@ -1,4 +1,6 @@
-export const modeSwitch = document.querySelector<HTMLDivElement>("#modeSwitch")
-export const textLeft = document.querySelector<HTMLDivElement>("#textLeft")
-export const textRight = document.querySelector<HTMLDivElement>("#textRight")
-export const save = document.querySelector<HTMLDivElement>("#save")
+export const modeSwitch = document.querySelector(
+  "#modeSwitch"
+) as HTMLDivElement
+export const textLeft = document.querySelector("#textLeft") as HTMLDivElement
+export const textRight = document.querySelector("#textRight") as HTMLDivElement
+export const save = document.querySelector("#save") as HTMLDivElement
