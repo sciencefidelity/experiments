@@ -1,8 +1,8 @@
 "use strict"
 
-const modeSwitch: HTMLElement | null = document.getElementById("mode")
-const background: HTMLElement | null = document.getElementById("site-main")
-const mode: HTMLElement | null = document.getElementById("mode")
+const modeSwitch = document.getElementById("mode") as HTMLDivElement
+const background = document.getElementById("site-main") as HTMLElement
+const mode = document.getElementById("mode") as HTMLDivElement
 
 if (modeSwitch)
   modeSwitch.onclick = () => {
