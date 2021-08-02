@@ -1,45 +1,49 @@
-let canvas = document.getElementById("canvas")
-let ctx = canvas.getContext("2d")
-let img = new Image()
+const canvas = document.getElementById("canvas") as HTMLCanvasElement
+const ctx = canvas.getContext("2d")
+const img = new Image() as HTMLImageElement
+const blocks = document.getElementById("blocks") as HTMLInputElement
 
-window.onload = firstDraw()
+window.onload = (() => firstDraw())
 
 function firstDraw() {
-  let initialImageURL = "./images/umbrella-lg.jpg"
+  const initialImageURL = "./images/umbrella-lg.jpg"
   draw(initialImageURL)
 }
-function draw(imgURL) {
-  img.crossOrigin = "anonymous"
-  img.src = imgURL
 
-  img.onload = function () {
-    canvas.height = img.height / 4
-    canvas.width = img.width / 4
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
-    pixelate()
+function draw(imgURL: string) {
+  if (ctx) {
+    img.crossOrigin = "anonymous"
+    img.src = imgURL
+
+    img.onload = function () {
+      canvas.height = img.height / 4
+      canvas.width = img.width / 4
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+      pixelate()
+    }
   }
 }
+
 function pixelate() {
-  canvas.height = img.height
-  canvas.width = img.width
+  if (ctx) {
+    canvas.height = img.height
+    canvas.width = img.width
 
-  let size = blocks.value * 0.01,
-    w = canvas.width * size,
-    h = canvas.height * size
+    const size = Number(blocks.value) * 0.01
+    const w = canvas.width * size
+    const h = canvas.height * size
 
-  ctx.drawImage(img, 0, 0, w, h)
-
-  ctx.mozImageSmoothingEnabled = false
-  ctx.imageSmoothingEnabled = false
-  ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height)
+    ctx.drawImage(img, 0, 0, w, h)
+    ctx.imageSmoothingEnabled = false
+    ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height)
+  }
 }
+
 blocks.addEventListener("change", pixelate, false)
 
-window.requestAnimationFrame = (function () {
+window.requestAnimationFrame = (() => {
   return (
     window.requestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
     function (callback) {
       window.setTimeout(callback, 1000 / 60)
     }

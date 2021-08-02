@@ -1,45 +1,48 @@
-let canvas = document.getElementById("canvas"),
-  ctx = canvas.getContext("2d"),
-  img = new Image(),
-  play = false
+const canvas = document.querySelector("#canvas") as HTMLCanvasElement
+const ctx = canvas.getContext("2d")
+const img = new Image() as HTMLImageElement
+let play = false
+const blocks = document.querySelector("#blocks") as HTMLInputElement
+const animate = document.querySelector("#animate") as HTMLInputElement
 
-window.onload = firstDraw()
+window.onload = () => firstDraw()
 
-function firstDraw() {
-  let initialImageURL = "./images/umbrella-lg.jpg"
+const firstDraw = () => {
+  const initialImageURL = "./images/umbrella-lg.jpg"
   draw(initialImageURL)
 }
-function draw(imgURL) {
-  img.crossOrigin = "anonymous"
-  img.src = imgURL
+const draw = (imgURL: string) => {
+  if (ctx) {
+    img.crossOrigin = "anonymous"
+    img.src = imgURL
 
-  img.onload = function () {
-    canvas.height = img.height / 4
-    canvas.width = img.width / 4
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
-    pixelate()
+    img.onload = function () {
+      canvas.height = img.height / 4
+      canvas.width = img.width / 4
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+      // pixelate(v)
+    }
   }
 }
-function pixelate(v) {
-  canvas.height = img.height
-  canvas.width = img.width
 
-  let size = (play ? v : blocks.value) * 0.01,
-    w = canvas.width * size,
-    h = canvas.height * size
+const pixelate = (v: any) => {
+  if (ctx) {
+    canvas.height = img.height
+    canvas.width = img.width
 
-  //  console.log(size)
-  ctx.drawImage(img, 0, 0, w, h)
+    const size = Number((play ? v : blocks.value)) * 0.01
+    const w = canvas.width * size
+    const h = canvas.height * size
 
-  ctx.ImageSmoothingEnabled = false
-  ctx.webkitImageSmoothingEnabled = false
-  ctx.imageSmoothingEnabled = false
-  ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height)
+    ctx.drawImage(img, 0, 0, w, h)
+    ctx.imageSmoothingEnabled = false
+    ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height)
+  }
 }
 
-function toggleAnim() {
-  let v = Math.min(20, parseInt(blocks.value, 10)),
-    dx = 0.01 // "speed"
+const toggleAnim = () => {
+  let v = Math.min(20, parseInt(blocks.value, 10))
+  let dx = 0.01 // "speed"
   play = !play
   animate.value = play ? "stop" : "Animate"
 
@@ -56,11 +59,9 @@ function toggleAnim() {
 blocks.addEventListener("change", pixelate, false)
 animate.addEventListener("click", toggleAnim, false)
 
-window.requestAnimationFrame = (function () {
+window.requestAnimationFrame = (() => {
   return (
     window.requestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
     function (callback) {
       window.setTimeout(callback, 1000 / 60)
     }
