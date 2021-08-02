@@ -1,4 +1,5 @@
 {
+  "apexskier.eslint.config.eslintConfigPath" : ".\/.eslintrc.js",
   "apexskier.typescript.config.isEnabledForJavascript" : "Disable",
   "workspace.art_style" : 1,
   "workspace.color" : 10,

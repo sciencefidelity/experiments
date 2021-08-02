@@ -5,11 +5,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 import "./style.scss"
 
-const app = document.querySelector<HTMLDivElement>("#app")
+const app = document.querySelector("#app") as HTMLDivElement
 
-if (app) {
-  app.innerHTML = `
+app.innerHTML = `
   <h1>Hello Matt!</h1>
   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 `
-}
