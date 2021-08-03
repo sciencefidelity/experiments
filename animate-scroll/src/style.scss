@@ -10,13 +10,32 @@ body {
   height: 400vh;
 }
 
+#container {
+  height: 100vh;
+  width: 100vw;
+  background: yellow;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+}
+
 #box {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 200%;
+  top: 50%;
   left: 50%;
 }
 
 h1 {
   font-size: 7.5rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1,
+h2 {
+  text-align: center;
 }
