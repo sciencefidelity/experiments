@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const tl = gsap.timeline()
+const tl = gsap.timeline({ scrollTrigger: "#box" })
 
 // prettier-ignore
 tl.from("#box", { duration: 1.5, x: 270 })
