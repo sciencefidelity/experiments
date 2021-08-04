@@ -19,7 +19,7 @@ function updateValue(e: Event) {
     output.innerHTML = target.textContent
       .replaceAll(
         /\b(?<![a-zA-Z0-9-_])(?:_(?!\s).+?(?!\s)_)(?![a-zA-Z0-9-_])/gm,
-        `<em>${word.slice(1, (word.length -1))}</em>`
+        `<em>${word.slice(1, word.length - 1)}</em>`
       )
       .replaceAll(/^#\s.+$/g, `<h1>${word.slice(2)}</h1>`)
       .replaceAll(/^##\s.+$/g, `<h2>${word.slice(2)}</h2>`)
@@ -46,7 +46,7 @@ if (loadContent) {
   output.innerHTML = loadContent
     .replaceAll(
       /\b(?<![a-zA-Z0-9-_])(?:_(?!\s).+?(?!\s)_)(?![a-zA-Z0-9-_])/gm,
-      `<em>${word.slice(1, (word.length -1))}</em>`
+      `<em>${word.slice(1, word.length - 1)}</em>`
     )
     .replaceAll(/^#\s.+$/g, `<h1>${word.slice(2)}</h1>`)
     .replaceAll(/^##\s.+$/g, `<h2>${word.slice(2)}</h2>`)
