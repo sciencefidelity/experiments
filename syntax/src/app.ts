@@ -16,8 +16,11 @@ function updateValue(e: Event) {
   localStorage.setItem("content", input.innerHTML)
   if (target.textContent) {
     word = target.textContent
-    console.log(word)
     output.innerHTML = target.textContent
+      .replaceAll(
+        /\b(?<![a-zA-Z0-9-_])(?:_(?!\s).+?(?!\s)_)(?![a-zA-Z0-9-_])/gm,
+        `<em>${word.slice(1, (word.length -1))}</em>`
+      )
       .replaceAll(/^#\s.+$/g, `<h1>${word.slice(2)}</h1>`)
       .replaceAll(/^##\s.+$/g, `<h2>${word.slice(2)}</h2>`)
   }
@@ -26,6 +29,10 @@ function updateValue(e: Event) {
 // copy input text into output
 if (loadContent) {
   input.innerHTML = loadContent
+    .replaceAll(
+      /\b(?<![a-zA-Z0-9-_])(?:_(?!\s).+?(?!\s)_)(?![a-zA-Z0-9-_])/gm,
+      `<span style="color:${purple};font-style:italic">_${word}_</span>`
+    )
     .replaceAll(
       /^#\s.+$/g,
       `<span style="color:${purple};font-weight:bold"># ${word}</span>`
@@ -37,6 +44,10 @@ if (loadContent) {
 }
 if (loadContent) {
   output.innerHTML = loadContent
+    .replaceAll(
+      /\b(?<![a-zA-Z0-9-_])(?:_(?!\s).+?(?!\s)_)(?![a-zA-Z0-9-_])/gm,
+      `<em>${word.slice(1, (word.length -1))}</em>`
+    )
     .replaceAll(/^#\s.+$/g, `<h1>${word.slice(2)}</h1>`)
     .replaceAll(/^##\s.+$/g, `<h2>${word.slice(2)}</h2>`)
 }
@@ -64,4 +75,3 @@ if (loadContent) {
 
 // Heading 2
 // /^\#\#\s.+$/g
-
