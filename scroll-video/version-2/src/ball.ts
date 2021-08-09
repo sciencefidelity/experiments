@@ -20,12 +20,12 @@ img.src = currentFrame(1)
 canvas.width = 1920
 canvas.height = 1080
 img.onload = function () {
-  if (context) context.drawImage(img, 0, 0)
+  context?.drawImage(img, 0, 0)
 }
 
 const updateImage = (index: number) => {
   img.src = currentFrame(index)
-  if (context) context.drawImage(img, 0, 0)
+  context?.drawImage(img, 0, 0)
 }
 
 window.addEventListener("scroll", () => {

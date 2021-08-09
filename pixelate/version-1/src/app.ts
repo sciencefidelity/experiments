@@ -4,7 +4,7 @@ const img1 = new Image()
 const placeholder = document.querySelector("#image1") as HTMLImageElement
 
 img1.onload = function () {
-  if (placeholder) placeholder.remove()
+  placeholder.remove()
 
   const parent = document.querySelector("#container") as HTMLDivElement
   const w = img1.width
@@ -41,4 +41,4 @@ img1.onload = function () {
   parent.append(img2)
 }
 
-if (placeholder) img1.src = placeholder.src
+img1.src = placeholder.src
