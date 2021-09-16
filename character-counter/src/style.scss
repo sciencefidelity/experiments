@@ -16,8 +16,8 @@ $footer: #232425;
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   color: $text;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -41,23 +41,23 @@ footer {
 
 %text {
   font-size: clamp(0.9em, 3.5vw, 1.6em);
-  width: min(64ch, 100%);
   height: 100%;
   margin: auto;
+  width: min(64ch, 100%);
 }
 
 #input {
   @extend %text;
-  padding: 2em 2em;
-  overflow-wrap: break-word;
-  outline: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
   // These lines are not needed for a div.
   display: block;
-  background: transparent;
-  border: none;
-  resize: none;
   font-family: inherit;
-  color: inherit;
+  outline: none;
+  overflow-wrap: break-word;
+  padding: 2em;
+  resize: none;
 }
 
 #output {
