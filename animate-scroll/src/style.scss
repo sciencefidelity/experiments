@@ -3,36 +3,36 @@
 }
 
 body {
-  font-family: "GT Eesti Pro Display", Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'GT Eesti Pro Display', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
   height: calc(800vh + 700vw);
   overflow-x: hidden;
+  width: 100vw;
 }
 
 .container {
   height: 100vh;
-  position: absolute;
   left: 0;
+  position: absolute;
   &--a {
-    background: yellow;
-    width: 100vw;
-    top: 100vh;
+    background: hsl(51, 100%, 50%);
     display: grid;
     place-items: center;
+    top: 100vh;
+    width: 100vw;
   }
   &--b {
-    background: lightgrey;
-    top: 600vh;
+    background: hsl(0, 0%, 83%);
     display: flex;
+    top: 600vh;
   }
   &__photo {
+    display: grid;
+    height: 100vh;
+    place-items: center;
     position: relative;
     width: 100vw;
-    height: 100vh;
-    display: grid;
-    place-items: center;
   }
 }
 
