@@ -46,7 +46,7 @@ footer {
   width: min(64ch, 100%);
 }
 
-#input {
+.input {
   @extend %text;
   background: transparent;
   border: 0;
@@ -60,7 +60,7 @@ footer {
   resize: none;
 }
 
-#output {
+.output {
   @extend %text;
   padding: 0.2em 2em;
 }

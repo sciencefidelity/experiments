@@ -1,5 +1,5 @@
-const input = document.querySelector("#input") as HTMLTextAreaElement
-const output = document.querySelector("#output") as HTMLDivElement
+const input = document.querySelector(".input") as HTMLTextAreaElement
+const output = document.querySelector(".output") as HTMLDivElement
 
 input?.addEventListener("input", function (e) {
   const target = <HTMLTextAreaElement>e.target
