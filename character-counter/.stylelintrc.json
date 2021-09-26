@@ -1,6 +1,7 @@
 {
   "extends": "stylelint-config-sass-guidelines",
   "rules": {
-    "rule-empty-line-before": ["always", { "except": [ "inside-block" ] } ]
+    "rule-empty-line-before": ["always", { "except": [ "inside-block" ] } ],
+    "selector-max-id": 0
   }
 }
