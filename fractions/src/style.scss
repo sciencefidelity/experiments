@@ -58,15 +58,15 @@ body {
 }
 
 #btn {
-  width: 2rem;
-  text-align: center;
-  margin: auto;
   cursor: pointer;
+  margin: auto;
+  text-align: center;
+  width: 2rem;
 }
 
 .spinner {
-  width: 2rem;
   fill: var(--text);
+  width: 2rem;
 }
 
 .spin > section {
@@ -83,23 +83,23 @@ body {
   position: relative;
   width: 100%;
   &::after {
-    content: "";
-    padding-bottom: 100%;
+    content: '';
     display: block;
+    padding-bottom: 100%;
   }
 }
 
 %inner {
-  position: absolute;
   border-radius: 50%;
+  position: absolute;
 }
 
 main {
-  width: 80%;
-  margin: 2rem auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 2rem auto;
+  width: 80%;
   :nth-child(1) {
     @extend %container;
     :nth-child(1) {
