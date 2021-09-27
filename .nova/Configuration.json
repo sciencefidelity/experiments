@@ -10,6 +10,12 @@
   "apexskier.typescript.config.userPreferences.includeCompletionsForModuleExports" : true,
   "apexskier.typescript.config.userPreferences.includePackageJsonAutoImports" : "on",
   "apexskier.typescript.config.userPreferences.quotePreference" : "double",
+  "editor.default_syntax" : "typescript",
+  "index.ignored_file_patterns" : [
+    "node_modules",
+    "*\/node_modules"
+  ],
+  "index.use_scm_ignored_files" : true,
   "workspace.art_style" : 1,
   "workspace.color" : 10,
   "workspace.name" : "Experiments"
