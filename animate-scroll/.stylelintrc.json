@@ -1,6 +1,1 @@
-{
-  "extends": "stylelint-config-sass-guidelines",
-  "rules": {
-    "rule-empty-line-before": ["always", { "except": [ "inside-block" ] } ]
-  }
-}
+../.stylelintrc.json
