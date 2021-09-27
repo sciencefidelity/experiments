@@ -1,15 +1,15 @@
 body {
-  margin: 0;
-  height: 100vh;
   display: grid;
+  height: 100vh;
+  margin: 0;
   place-items: center;
 }
 
 main {
+  aspect-ratio: 3/2;
+  overflow: hidden;
   position: relative;
   width: min(135vh, 100vw);
-  overflow: hidden;
-  aspect-ratio: 3/2;
 }
 
 img {
@@ -17,9 +17,9 @@ img {
 }
 
 %image {
+  height: auto;
   position: absolute;
   width: 100%;
-  height: auto;
 }
 
 #placeholder {
@@ -33,13 +33,11 @@ img {
   @extend %image;
 }
 
-.asyncImage {
+.async-image,
+.full-image {
   transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
 }
 
-.fullImage {
+.full-image {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
 }
