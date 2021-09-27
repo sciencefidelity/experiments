@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "concurrently 'yarn:lint:*'",
     "lint:eslint": "eslint '**/*.{ts,js}'",
     "lint:prettier": "prettier --check '**/*.{ts,js,json,md,yml}'",
-    "lint:styles": "stylelint --ignore-path ../.eslintignore \"**/*scss\"",
-    "fix": "concurrently \"yarn:fix:*\"",
+    "lint:styles": "stylelint --ignore-path ../.eslintignore '**/*scss'",
+    "fix": "concurrently 'yarn:fix:*'",
     "fix:eslint": "eslint --fix '**/*.{ts,js}'",
-    "fix:prettier": "prettier --ignore-path --write '**/*.{ts,js,json,md,yml}'",
-    "fix:styles": "stylelint --ignore-path ../.eslintignore '**/*scss' --fix"
+    "fix:prettier": "prettier --write '**/*.{ts,js,json,md,yml}'",
+    "fix:styles": "stylelint --fix --ignore-path ../.eslintignore '**/*scss'"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
