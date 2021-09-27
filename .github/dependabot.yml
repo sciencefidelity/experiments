@@ -2,11 +2,6 @@ version: 2
 updates:
 
   - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
     directory: "/animate-scroll"
     schedule:
       interval: "monthly"
@@ -22,32 +17,17 @@ updates:
       interval: "monthly"
 
   - package-ecosystem: "npm"
-    directory: "/counter/version-1"
+    directory: "/counter"
     schedule:
       interval: "monthly"
 
   - package-ecosystem: "npm"
-    directory: "/counter/version-2"
+    directory: "/fractions"
     schedule:
       interval: "monthly"
 
   - package-ecosystem: "npm"
-    directory: "/counter/version-3"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
-    directory: "/image-loader/version-1"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
-    directory: "/image-loader/version-2"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
-    directory: "/image-loader/version-3"
+    directory: "/image-loader"
     schedule:
       interval: "monthly"
 
@@ -67,11 +47,6 @@ updates:
       interval: "monthly"
 
   - package-ecosystem: "npm"
-    directory: "/number-game"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
     directory: "/oblique-strategies"
     schedule:
       interval: "monthly"
@@ -82,17 +57,7 @@ updates:
       interval: "monthly"
 
   - package-ecosystem: "npm"
-    directory: "/pixelate/version-1"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
-    directory: "/pixelate/version-2"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
-    directory: "/pixelate/version-3"
+    directory: "/pixelate"
     schedule:
       interval: "monthly"
 
@@ -107,12 +72,7 @@ updates:
       interval: "monthly"
 
   - package-ecosystem: "npm"
-    directory: "/scroll-video/version-1"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
-    directory: "/scroll-video/version-2"
+    directory: "/scroll-video"
     schedule:
       interval: "monthly"
 
@@ -143,5 +103,10 @@ updates:
 
   - package-ecosystem: "npm"
     directory: "/venn"
+    schedule:
+      interval: "monthly"
+
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
       interval: "monthly"

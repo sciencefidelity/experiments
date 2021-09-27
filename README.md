@@ -2,15 +2,15 @@
 
 ## Some in progress projects
 
+- Scroll Based Animations
 - Character Counter
-- Geometric Tunting Circles
+- Geometric Turning Circles
 - Animated Counter
 - Fractions
 - Image Loader
 - Random Map Generator
 - Animated Font
 - Browser Notepad
-- Guess the Number Game
 - Oblique Strategies
 - Intersection Observer
 - Animated Image Pixelator
