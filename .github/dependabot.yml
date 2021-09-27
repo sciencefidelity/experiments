@@ -2,118 +2,146 @@ version: 2
 updates:
 
   - package-ecosystem: "npm"
-  directory: "/"
-  schedule:
-    interval: "monthly"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/animate-scroll"
-  schedule:
-    interval: "monthly"
+    directory: "/animate-scroll"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/character-counter"
-  schedule:
-    interval: "monthly"
+    directory: "/character-counter"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/circles"
-  schedule:
-    interval: "monthly"
+    directory: "/circles"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/counter/version-1"
-  schedule:
-    interval: "monthly"
+    directory: "/counter/version-1"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/counter/version-2"
-  schedule:
-    interval: "monthly"
+    directory: "/counter/version-2"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/counter/version-3"
-  schedule:
-    interval: "monthly"
+    directory: "/counter/version-3"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/image-loader/version-1"
-  schedule:
-    interval: "monthly"
+    directory: "/image-loader/version-1"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/image-loader/version-2"
-  schedule:
-    interval: "monthly"
+    directory: "/image-loader/version-2"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/image-loader/version-3"
-  schedule:
-    interval: "monthly"
+    directory: "/image-loader/version-3"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/maps"
-  schedule:
-    interval: "monthly"
+    directory: "/maps"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/moving-type"
-  schedule:
-    interval: "monthly"
+    directory: "/moving-type"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/notepad"
-  schedule:
-    interval: "monthly"
+    directory: "/notepad"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/number-game"
-  schedule:
-    interval: "monthly"
+    directory: "/number-game"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/oblique-strategies"
-  schedule:
-    interval: "monthly"
+    directory: "/oblique-strategies"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/observer"
-  schedule:
-    interval: "monthly"
+    directory: "/observer"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/pixelate/version-1"
-  schedule:
-    interval: "monthly"
+    directory: "/pixelate/version-1"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/pixelate/version-2"
-  schedule:
-    interval: "monthly"
+    directory: "/pixelate/version-2"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/pixelate/version-3"
-  schedule:
-    interval: "monthly"
+    directory: "/pixelate/version-3"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/rainbow"
-  schedule:
-    interval: "monthly"
+    directory: "/rainbow"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/random-color"
-  schedule:
-    interval: "monthly"
+    directory: "/random-color"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/scroll-video/version-1"
-  schedule:
-    interval: "monthly"
+    directory: "/scroll-video/version-1"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/scroll-video/version-2"
-  schedule:
-    interval: "monthly"
+    directory: "/scroll-video/version-2"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/speech"
-  schedule:
-    interval: "monthly"
+    directory: "/speech"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/squares"
-  schedule:
-    interval: "monthly"
+    directory: "/squares"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/strobe"
-  schedule:
-    interval: "monthly"
+    directory: "/strobe"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/syntax"
-  schedule:
-    interval: "monthly"
+    directory: "/syntax"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/triangle"
-  schedule:
-    interval: "monthly"
+    directory: "/triangle"
+    schedule:
+      interval: "monthly"
+
   - package-ecosystem: "npm"
-  directory: "/venn"
-  schedule:
-    interval: "monthly"
+    directory: "/venn"
+    schedule:
+      interval: "monthly"
