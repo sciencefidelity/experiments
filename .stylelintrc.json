@@ -10,8 +10,8 @@
   "rules": {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
+    "color-no-hex": true,
     "rule-empty-line-before": ["always", { "except": [ "inside-block" ] } ],
-    "selector-max-id": 1,
-    "max-nesting-depth": 4
+    "selector-max-id": 1
   }
 }
