@@ -4,105 +4,105 @@ updates:
   - package-ecosystem: "npm"
     directory: "/animate-scroll"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/character-counter"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/circles"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/counter"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/fractions"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/image-loader"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/maps"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/moving-type"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/notepad"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/oblique-strategies"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/observer"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/pixelate"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/rainbow"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/random-color"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/scroll-video"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/speech"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/squares"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/strobe"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/syntax"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/triangle"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
   - package-ecosystem: "npm"
     directory: "/venn"
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
