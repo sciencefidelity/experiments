@@ -8,6 +8,7 @@
 # backups
 *.bak
 .env
+*.env
 
 # Node
 node_modules/
