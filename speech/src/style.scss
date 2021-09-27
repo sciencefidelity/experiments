@@ -1,22 +1,21 @@
 * {
-  margin: auto;
   box-sizing: border-box;
-  &::after,
-  &::before {
-    box-sizing: border-box;
-  }
+  margin: auto;
 }
+
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
-  padding: 0;
+  background-color: hsl(210, 4%, 11%);
+  color: hsl(0, 0%, 98%);
   margin: 0;
-  background: #1b1c1d;
-  color: #fafafa;
+  padding: 0;
 }
+
 .container {
-  margin: 2rem 2rem;
+  margin: 2rem;
 }

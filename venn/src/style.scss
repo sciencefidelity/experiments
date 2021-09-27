@@ -11,8 +11,8 @@ $time: 0.3s ease-in-out;
 // ********* Base *********************
 
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
   &::after,
   &::before {
     box-sizing: border-box;
@@ -20,19 +20,19 @@ $time: 0.3s ease-in-out;
 }
 
 html {
-  font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
+  color: $white;
+  font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono',
     Menlo, Consolas, monospace;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: $white;
   overflow: hidden;
 }
 
 #site-main {
   display: grid;
+  height: 100vh;
   place-items: center;
   width: 100vw;
-  height: 100vh;
 }
 
 // ********* Mode Switching ***********
@@ -48,11 +48,11 @@ html {
 }
 
 #mode {
-  position: absolute;
-  top: 1.8rem;
-  right: 1.8rem;
-  width: 3rem;
   cursor: pointer;
+  position: absolute;
+  right: 1.8rem;
+  top: 1.8rem;
+  width: 3rem;
 }
 
 .darkmode {
@@ -62,7 +62,7 @@ html {
 
 .lightmode {
   fill: $dark;
-  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
   transform: scaleX(-1);
   transition: fill $time, transform $time, -webkit-transform $time;
 }
@@ -76,31 +76,31 @@ html {
   $blend: normal,
   $op: 1
 ) {
-  position: absolute;
-  width: 60.59%;
+  @extend %after;
+  background: $bg;
   border-radius: 50%;
   bottom: $bottom;
   left: $left;
-  background: $bg;
   mix-blend-mode: $blend;
   opacity: $op;
-  @extend %after;
+  position: absolute;
+  width: 60.59%;
 }
 
 @mixin content($top: 67%, $left: 50%) {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
   color: var(--light);
-  top: $top;
+  font-size: 5rem;
   left: $left;
+  position: absolute;
+  top: $top;
+  transform: translate(-50%, -50%);
 }
 
 .container {
+  @extend %after;
+  max-width: 88vw;
   position: relative;
   width: 90vh;
-  max-width: 88vw;
-  @extend %after;
   :nth-child(1) {
     @include circle($bottom: 39.41%, $left: 19.705%);
   }
@@ -142,23 +142,23 @@ html {
 
 %after {
   &::after {
-    content: "";
-    padding-bottom: 100%;
+    content: '';
     display: block;
+    padding-bottom: 100%;
   }
 }
 
 // Adds a paperlike texture to the screen.
 
 html::after {
-  background: url(../images/noise.jpg);
-  content: "";
-  width: 100%;
+  background: url('../images/noise.jpg');
+  content: '';
   height: 100%;
   left: 0;
-  top: 0;
   opacity: 0.05;
   pointer-events: none;
   position: absolute;
+  top: 0;
+  width: 100%;
   z-index: 201;
 }

@@ -1,10 +1,10 @@
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
 }
 
 html {
-  font-family: ui-serif, "New York", serif;
+  font-family: ui-serif, 'New York', serif;
   font-size: 62.5%;
 }
 
@@ -14,25 +14,25 @@ body {
 
 %text {
   color: hsl(0, 0%, 98%);
-  width: 100vw;
   height: 50vh;
-  padding: 2em 2em;
   outline: none;
   overflow: hidden;
+  padding: 2em;
+  width: 100vw;
 }
 
 #input {
   @extend %text;
+  background: hsl(0, 0%, 7%);
+  font-family: ui-monospace, 'SF Mono', monospace;
   font-size: 1.8em;
   line-height: 1.52;
-  font-family: ui-monospace, "SF Mono", monospace;
-  background: hsl(0, 0%, 7%);
 }
 
 #output {
   @extend %text;
-  font-size: 2.2em;
   background: hsl(0, 0%, 16%);
+  font-size: 2.2em;
 }
 
 .bold {

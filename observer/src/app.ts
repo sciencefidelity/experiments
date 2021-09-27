@@ -1,12 +1,3 @@
-"use strict"
-
-// const red = <HTMLDivElement>document.querySelector("#red")
-// const orange = <HTMLDivElement>document.querySelector("#orange")
-// const yellow = <HTMLDivElement>document.querySelector("#yellow")
-// const green = <HTMLDivElement>document.querySelector("#green")
-// const blue = <HTMLDivElement>document.querySelector("#blue")
-// const indigo = <HTMLDivElement>document.querySelector("#indigo")
-
 let boxElement: HTMLDivElement
 let prevRatio = 0.0
 const increasingColor = "rgba(40, 40, 190, ratio)"

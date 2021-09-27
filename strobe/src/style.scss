@@ -1,20 +1,16 @@
 * {
-  margin: 0;
   box-sizing: border-box;
-  &::after,
-  &::before {
-    box-sizing: border-box;
-  }
+  margin: 0;
 }
 
 body {
-  background: #272829;
+  background-color: hsl(210, 3%, 16%);
 }
 
 #shape {
-  width: 100%;
-  position: relative;
   height: 100vh;
+  position: relative;
+  width: 100%;
 }
 
 .c0 {

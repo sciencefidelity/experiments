@@ -1,14 +1,10 @@
 * {
-  margin: 0;
   box-sizing: border-box;
-  &::after,
-  &::before {
-    box-sizing: border-box;
-  }
+  margin: 0;
 }
 
 body {
-  background: #272829;
+  background: hsl(210, 3%, 16%);
   overflow: hidden;
 }
 
@@ -25,6 +21,6 @@ body {
 #map6,
 #map7,
 #map8 {
-  width: 25vw;
   height: 50vh;
+  width: 25vw;
 }

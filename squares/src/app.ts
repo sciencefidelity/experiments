@@ -1,5 +1,3 @@
-"use strict"
-
 const square0 = document.querySelector(".color-0") as HTMLDivElement
 const square1 = document.querySelector(".color-1") as HTMLDivElement
 const square2 = document.querySelector(".color-2") as HTMLDivElement

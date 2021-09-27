@@ -19,9 +19,9 @@ $colors: (
 @mixin after($pos: relative) {
   position: $pos;
   &::after {
-    content: "";
-    padding-bottom: 100%;
+    content: '';
     display: block;
+    padding-bottom: 100%;
   }
 }
 
@@ -38,10 +38,10 @@ $colors: (
 
 body {
   background: $background;
-  width: 100vw;
-  height: 100vh;
   display: grid;
+  height: 100vh;
   place-items: center;
+  width: 100vw;
 }
 
 // **********  Coloured Squares  *********
@@ -53,14 +53,14 @@ body {
 }
 
 #container {
-  width: min(80vh, 88vw);
   @include after();
+  width: min(80vh, 88vw);
   @for $i from 1 through 10 {
     :nth-child(#{$i}) {
+      @include after($pos: absolute);
       bottom: 0;
       width: (10% * $i);
       z-index: (20 - $i);
-      @include after($pos: absolute);
     }
   }
 }
