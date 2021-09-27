@@ -9,6 +9,7 @@
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
     "color-no-hex": true,
+    "max-nesting-depth": 4,
     "rule-empty-line-before": ["always", { "except": ["inside-block"] }],
     "selector-max-id": 1
   }
