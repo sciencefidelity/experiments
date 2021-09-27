@@ -30,7 +30,7 @@ const pixelate = (v: any) => {
     canvas.height = img.height
     canvas.width = img.width
 
-    const size = Number((play ? v : blocks.value)) * 0.01
+    const size = Number(play ? v : blocks.value) * 0.01
     const w = canvas.width * size
     const h = canvas.height * size
 

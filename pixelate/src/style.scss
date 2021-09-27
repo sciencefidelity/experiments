@@ -1,6 +1,6 @@
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
   &::before,
   &::after {
     box-sizing: border-box;
@@ -8,10 +8,10 @@
 }
 
 body {
-  text-align: center;
   display: grid;
-  place-items: center;
   height: 100vh;
+  place-items: center;
+  text-align: center;
   width: 100vw;
 }
 
@@ -21,11 +21,7 @@ main {
 
 canvas {
   image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: -o-crisp-edges;
   image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
 }
 
 #control {
@@ -33,18 +29,18 @@ canvas {
 }
 
 #crop {
-  position: relative;
   overflow: hidden;
+  position: relative;
   &::after {
-    content: "";
+    content: '';
     display: block;
     padding-bottom: 66.6%;
   }
 }
 
 #canvas {
-  position: absolute;
-  width: 110%;
   left: -5%;
+  position: absolute;
   top: -5%;
+  width: 110%;
 }
