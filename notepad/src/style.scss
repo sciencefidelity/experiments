@@ -1,14 +1,14 @@
 // ********** Colors **************
 
-$txt-lgt: rgba(black, 0.75);
-$bg-lgt-l: white;
-$bg-lgt-r: #f3f3f3;
-$select-lgt: rgba(black, 0.2);
-$txt-dk: rgba(white, 0.75);
-$bg-dk-l: #202426;
-$bg-dk-r: #2f3437;
-$select-dk: rgba(white, 0.25);
-$mode-btn: #6d7980;
+$txt-lgt: hsla(0, 0%, 0%, 0.75);
+$bg-lgt-l: hsl(0, 0%, 100%);
+$bg-lgt-r: hsl(0, 0%, 95%);
+$select-lgt: hsla(0, 0%, 0%, 0.2);
+$txt-dk: hsla(0, 0%, 100%, 0.75);
+$bg-dk-l: hsl(200, 9%, 14%);
+$bg-dk-r: hsl(203, 8%, 20%);
+$select-dk: hsla(0, 0%, 100%, 0.25);
+$mode-btn: hsl(202, 8%, 47%);
 
 // ********** Typography **********
 

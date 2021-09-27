@@ -14,8 +14,8 @@ html {
 }
 
 body {
-  background: #1b1d1c;
-  color: #fafafa;
+  background: hsl(150, 4%, 11%);
+  color: hsl(0, 0%, 98%);
   height: 100vh;
 }
 
@@ -45,8 +45,8 @@ h1 {
   position: fixed;
   bottom: 0;
   margin: 3em calc(50vw - 4.5em);
-  background: #fafafa;
-  color: #1b1d1c;
+  background: hsl(0, 0%, 98%);
+  color: hsl(150, 4%, 11%);
   padding: 1em 1em;
   font-size: 1em;
   text-transform: uppercase;

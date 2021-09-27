@@ -9,11 +9,11 @@ html {
 }
 
 body {
-  background: #121212;
+  background: hsl(0, 0%, 7%);
 }
 
 %text {
-  color: #fafafa;
+  color: hsl(0, 0%, 98%);
   width: 100vw;
   height: 50vh;
   padding: 2em 2em;
@@ -26,13 +26,13 @@ body {
   font-size: 1.8em;
   line-height: 1.52;
   font-family: ui-monospace, "SF Mono", monospace;
-  background: #121212;
+  background: hsl(0, 0%, 7%);
 }
 
 #output {
   @extend %text;
   font-size: 2.2em;
-  background: #282828;
+  background: hsl(0, 0%, 16%);
 }
 
 .bold {

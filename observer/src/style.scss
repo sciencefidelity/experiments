@@ -18,25 +18,25 @@ html {
 //   width: 100vw;
 //   height: 100vh;
 //   &--red {
-//     background: red;
+//     background: hsl(360, 100%, 50%);
 //   }
 //   &--orange {
-//     background: orange;
+//     background: hsl(39, 100%, 50%);
 //   }
 //   &--yellow {
-//     background: yellow;
+//     background: hsl(60, 100%, 50%);
 //   }
 //   &--green {
-//     background: green;
+//     background: hsl(120, 100%, 25%);
 //   }
 //   &--blue {
-//     background: blue;
+//     background: hsl(240, 100%, 50%);
 //   }
 //   &--indego {
 //     background: indego;
 //   }
 //   &--red {
-//     background: red;
+//     background: hsl(360, 100%, 50%);
 //   }
 // }
 //
@@ -56,8 +56,8 @@ body {
 }
 
 #box {
-  background-color: rgba(40, 40, 190, 255);
-  border: 4px solid rgb(20, 20, 120);
+  background-color: hsla(240, 65%, 45%, 0.004);
+  border: 4px solid hsl(240, 71%, 28%);
   transition: background-color 1s, border 1s;
   width: 350px;
   height: 350px;
@@ -68,7 +68,7 @@ body {
 }
 
 .vertical {
-  color: white;
+  color: hsl(0, 0%, 100%);
   font: 32px "Arial";
 }
 
@@ -76,7 +76,7 @@ body {
   width: 350px;
   height: 350px;
   margin-top: 10px;
-  border: 4px solid rgb(20, 20, 120);
+  border: 4px solid hsl(240, 71%, 28%);
   text-align: center;
   padding: 20px;
 }

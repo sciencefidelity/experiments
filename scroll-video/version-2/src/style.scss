@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: hsl(0, 0%, 100%);
   position: relative;
 }
 
@@ -48,18 +48,18 @@ canvas {
   bottom: 1rem;
   mix-blend-mode: difference;
   padding: 0.4rem;
-  background: rgba(white, 0.3);
+  background: hsla(0, 0%, 100%, 0.3);
   width: 2rem;
   height: 2rem;
   border-radius: 3rem;
   transition: background 0.3s;
   z-index: 2;
   &:hover {
-    background: rgba(white, 0.4);
+    background: hsla(0, 0%, 100%, 0.4);
     transition: background 0.3s;
   }
 }
 
 .icon {
-  fill: rgba(black, 1);
+  fill: hsla(0, 0%, 0%, 1);
 }
