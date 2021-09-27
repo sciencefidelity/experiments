@@ -100,65 +100,14 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 2rem auto;
   width: 80%;
-  :nth-child(1) {
+  :nth-child(8) {
     @extend %container;
-    :nth-child(1) {
-      @extend %inner;
-      background: var(--color-0);
-    }
-  }
-  :nth-child(2) {
-    @extend %container;
-    @for $i from 0 through 1 {
+    @for $i from 0 through 7 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{$i * 3});
-        clip-path: polygon(50% 0, 0 0, 0 100%, 50% 100%);
-        transform: rotate(180deg * $i);
-      }
-    }
-  }
-  :nth-child(3) {
-    @extend %container;
-    @for $i from 0 through 2 {
-      :nth-child(#{$i + 1}) {
-        @extend %inner;
-        background: var(--color-#{$i * 3});
-        clip-path: polygon(50% 0, 0 0, 0 79%, 50% 50%);
-        transform: rotate(120deg * $i);
-      }
-    }
-  }
-  :nth-child(4) {
-    @extend %container;
-    @for $i from 0 through 3 {
-      :nth-child(#{$i + 1}) {
-        @extend %inner;
-        background: var(--color-#{($i + 8)});
-        clip-path: polygon(50% 0, 0 0, 0 50%, 50% 50%);
-        transform: rotate(90deg * $i);
-      }
-    }
-  }
-  :nth-child(5) {
-    @extend %container;
-    @for $i from 0 through 4 {
-      :nth-child(#{$i + 1}) {
-        @extend %inner;
-        background: var(--color-#{$i + 13});
-        clip-path: polygon(50% 0, 0 0, 0 34%, 50% 50%);
-        transform: rotate(72deg * $i);
-      }
-    }
-  }
-  :nth-child(6) {
-    @extend %container;
-    @for $i from 0 through 5 {
-      :nth-child(#{$i + 1}) {
-        @extend %inner;
-        background: var(--color-#{$i + 13});
-        clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
-        transform: rotate(60deg * $i);
+        background: var(--color-#{$i * 1});
+        clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+        transform: rotate(45deg * $i);
       }
     }
   }
@@ -173,15 +122,66 @@ main {
       }
     }
   }
-  :nth-child(8) {
+  :nth-child(6) {
     @extend %container;
-    @for $i from 0 through 7 {
+    @for $i from 0 through 5 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{$i * 1});
-        clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
-        transform: rotate(45deg * $i);
+        background: var(--color-#{$i + 13});
+        clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
+        transform: rotate(60deg * $i);
       }
+    }
+  }
+  :nth-child(5) {
+    @extend %container;
+    @for $i from 0 through 4 {
+      :nth-child(#{$i + 1}) {
+        @extend %inner;
+        background: var(--color-#{$i + 13});
+        clip-path: polygon(50% 0, 0 0, 0 34%, 50% 50%);
+        transform: rotate(72deg * $i);
+      }
+    }
+  }
+  :nth-child(4) {
+    @extend %container;
+    @for $i from 0 through 3 {
+      :nth-child(#{$i + 1}) {
+        @extend %inner;
+        background: var(--color-#{($i + 8)});
+        clip-path: polygon(50% 0, 0 0, 0 50%, 50% 50%);
+        transform: rotate(90deg * $i);
+      }
+    }
+  }
+  :nth-child(3) {
+    @extend %container;
+    @for $i from 0 through 2 {
+      :nth-child(#{$i + 1}) {
+        @extend %inner;
+        background: var(--color-#{$i * 3});
+        clip-path: polygon(50% 0, 0 0, 0 79%, 50% 50%);
+        transform: rotate(120deg * $i);
+      }
+    }
+  }
+  :nth-child(2) {
+    @extend %container;
+    @for $i from 0 through 1 {
+      :nth-child(#{$i + 1}) {
+        @extend %inner;
+        background: var(--color-#{$i * 3});
+        clip-path: polygon(50% 0, 0 0, 0 100%, 50% 100%);
+        transform: rotate(180deg * $i);
+      }
+    }
+  }
+  :nth-child(1) {
+    @extend %container;
+    :nth-child(1) {
+      @extend %inner;
+      background: var(--color-0);
     }
   }
 }
