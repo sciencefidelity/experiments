@@ -107,6 +107,6 @@ updates:
       interval: "monthly"
 
   - package-ecosystem: "npm"
-      directory: "/"
-      schedule:
-        interval: "monthly"
+    directory: "/"
+    schedule:
+      interval: "monthly"
