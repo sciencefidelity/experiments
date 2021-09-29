@@ -1,26 +1,16 @@
 name: auto-merge
 
-on: pull_request
+on:
+  pull_request_target:
+    types: [labeled]
 
 jobs:
-  auto-merge:
-    timeout-minutes: 5
-
+  enable-auto-merge:
     runs-on: ubuntu-latest
 
+    # Specifically check that dependabot (or another trusted party) created this pull-request, and that it has been labelled correctly.
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(github.event.pull_request.labels.*.name, 'dependencies')
     steps:
-      # - uses: actions/checkout@v2
-      # - uses: ahmadnassri/action-dependabot-auto-merge@v2
-      #   with:
-      #     github-token: ${{ secrets.GITHUB_TOKEN || github.token }}
-
-      - uses: hmarr/auto-approve-action@v2.0.0
-        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-
-      - uses: ahmadnassri/action-dependabot-auto-merge@v1
-        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
-        with:
-          target: patch
-          github-token: ${{ secrets.GH_TOKEN }}
+    - uses: alexwilson/enable-github-automerge-action@main
+      with:
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
