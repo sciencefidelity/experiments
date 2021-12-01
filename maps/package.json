@@ -19,7 +19,7 @@
     "@types/google.maps": "^3.47.0",
     "concurrently": "^6.4.0",
     "eslint": "^8.3.0",
-    "prettier": "^2.4.1",
+    "prettier": "^2.5.0",
     "sass": "^1.44.0",
     "stylelint": "^14.1.0",
     "stylelint-config-prettier": "^9.0.3",
