@@ -18,7 +18,7 @@
   "devDependencies": {
     "concurrently": "^6.4.0",
     "eslint": "^8.1.0",
-    "prettier": "^2.4.1",
+    "prettier": "^2.5.0",
     "sass": "^1.43.4",
     "stylelint": "^14.0.1",
     "stylelint-config-prettier": "^9.0.3",
