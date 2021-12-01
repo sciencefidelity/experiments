@@ -16,7 +16,7 @@
     "fix:styles": "stylelint --fix --ignore-path ../.eslintignore '**/*scss'"
   },
   "devDependencies": {
-    "@types/google.maps": "^3.46.0",
+    "@types/google.maps": "^3.47.0",
     "concurrently": "^6.4.0",
     "eslint": "^8.3.0",
     "prettier": "^2.4.1",
