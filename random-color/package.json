@@ -16,7 +16,7 @@
     "fix:styles": "stylelint --fix --ignore-path ../.eslintignore '**/*scss'"
   },
   "devDependencies": {
-    "concurrently": "^6.3.0",
+    "concurrently": "^6.4.0",
     "eslint": "^8.1.0",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
