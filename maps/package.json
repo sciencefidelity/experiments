@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@types/google.maps": "^3.47.0",
-    "concurrently": "^6.4.0",
+    "concurrently": "^6.5.1",
     "eslint": "^8.6.0",
     "prettier": "^2.5.1",
     "sass": "^1.45.2",
