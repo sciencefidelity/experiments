@@ -1026,7 +1026,7 @@ lodash.truncate@^4.4.2:
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
 
-lodash@^4.17.15, lodash@^4.17.21:
+lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -1417,13 +1417,14 @@ rxjs@^6.6.3:
   dependencies:
     tslib "^1.9.0"
 
-sass@^1.44.0:
-  version "1.44.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.44.0.tgz#619aa0a2275c097f9af5e6b8fe8a95e3056430fb"
-  integrity sha512-0hLREbHFXGQqls/K8X+koeP+ogFRPF4ZqetVB19b7Cst9Er8cOR0rc6RU7MaI4W1JmUShd1BPgPoeqmmgMMYFw==
+sass@^1.45.2:
+  version "1.45.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.45.2.tgz#130b428c1692201cfa181139835d6fc378a33323"
+  integrity sha512-cKfs+F9AMPAFlbbTXNsbGvg3y58nV0mXA3E94jqaySKcC8Kq3/8983zVKQ0TLMUrHw7hF9Tnd3Bz9z5Xgtrl9g==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
 
 "semver@2 || 3 || 4 || 5":
   version "5.7.1"
@@ -1467,6 +1468,11 @@ slice-ansi@^4.0.0:
     ansi-styles "^4.0.0"
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
+
+"source-map-js@>=0.6.2 <2.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.1.tgz#a1741c131e3c77d048252adfa24e23b908670caf"
+  integrity sha512-4+TN2b3tqOCd/kaGRJ/sTYA0tR0mdXx26ipdolxcwtJVqEnqNYvlCAt1q3ypy4QMlYus+Zh34RNtYLoq2oQ4IA==
 
 source-map-js@^0.6.2:
   version "0.6.2"
@@ -1569,12 +1575,12 @@ stylelint-order@^5.0.0:
     postcss "^8.3.11"
     postcss-sorting "^7.0.1"
 
-stylelint-scss@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-4.0.0.tgz#4901ced92b9c68e37649799a39defbd5f2ac5bcd"
-  integrity sha512-lIRhPqtI6I065EJ6aI4mWKsmQt8Krnu6aF9XSL9s8Nd2f/cDKImST0T9TfjnUul3ReKYWozkG9dlpNTZH2FB9w==
+stylelint-scss@^4.0.0, stylelint-scss@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-4.1.0.tgz#39b808696f8152081163d970449257ff80b5c041"
+  integrity sha512-BNYTo7MMamhFOlcaAWp2dMpjg6hPyM/FFqfDIYzmYVLMmQJqc8lWRIiTqP4UX5bresj9Vo0dKC6odSh43VP2NA==
   dependencies:
-    lodash "^4.17.15"
+    lodash "^4.17.21"
     postcss-media-query-parser "^0.2.3"
     postcss-resolve-nested-selector "^0.1.1"
     postcss-selector-parser "^6.0.6"
@@ -1722,10 +1728,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.2.tgz#8ac1fba9f52256fdb06fb89e4122fa6a346c2998"
-  integrity sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==
+typescript@^4.5.4:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
+  integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
 
 uri-js@^4.2.2:
   version "4.4.1"
