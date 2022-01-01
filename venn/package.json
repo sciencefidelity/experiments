@@ -16,7 +16,7 @@
     "fix:styles": "stylelint --fix --ignore-path ../.eslintignore '**/*scss'"
   },
   "devDependencies": {
-    "concurrently": "^6.4.0",
+    "concurrently": "^6.5.1",
     "eslint": "^8.3.0",
     "prettier": "^2.5.0",
     "sass": "^1.44.0",
@@ -24,8 +24,8 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended": "^6.0.0",
     "stylelint-config-sass-guidelines": "^9.0.0",
-    "stylelint-scss": "^4.0.0",
-    "typescript": "^4.5.2",
+    "stylelint-scss": "^4.1.0",
+    "typescript": "^4.5.4",
     "vite": "^2.6.14"
   }
 }
