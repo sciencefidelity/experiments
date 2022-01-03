@@ -2,6 +2,9 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const horizontalImages = document.querySelector(".container--b") as HTMLElement
+const year = document.getElementById("year") as HTMLHeadingElement
+
+year.appendChild(document.createTextNode(new Date().getFullYear().toString()))
 
 gsap.registerPlugin(ScrollTrigger)
 

@@ -3,9 +3,9 @@ package.json
 package-lock.json
 yarn.lock
 
-dist/
-node_modules/
-.nova/
+dist
+node_modules
+.nova
 
 *.scss
 *.css
