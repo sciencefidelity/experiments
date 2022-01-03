@@ -14,30 +14,30 @@ html {
 }
 
 body {
-  background: hsl(150, 4%, 11%);
-  color: hsl(0, 0%, 98%);
   overflow: hidden;
+  color: hsl(0, 0%, 98%);
+  background: hsl(150, 4%, 11%);
 }
 
 h1 {
   display: inline-block;
+  width: 22%;
   font-size: 2.5rem;
   font-weight: 700;
-  width: 22%;
 }
 
 #count {
-  margin: 45vh auto 9rem;
   max-width: 88%;
+  margin: 45vh auto 9rem;
   text-align: center;
 }
 
 #btn {
-  background: hsl(0, 0%, 98%);
-  color: hsl(150, 4%, 11%);
-  cursor: pointer;
-  font-size: 1em;
-  margin: 0 calc(50vw - 4.5em);
   padding: 1em;
+  margin: 0 calc(50vw - 4.5em);
+  font-size: 1em;
+  color: hsl(150, 4%, 11%);
   text-transform: uppercase;
+  cursor: pointer;
+  background: hsl(0, 0%, 98%);
 }

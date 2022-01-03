@@ -24,3 +24,5 @@ btn.onclick = () => {
     updateCount()
   })
 }
+
+export {}
