@@ -12,3 +12,5 @@ input?.addEventListener("input", function (e) {
     output.innerHTML = `${lgn} characters`
   }
 })
+
+export {}
