@@ -4,8 +4,8 @@
 }
 
 body {
-  background: hsl(210, 3%, 16%);
   overflow: hidden;
+  background: hsl(210, 3%, 16%);
 }
 
 #site-main {
@@ -21,6 +21,6 @@ body {
 #map6,
 #map7,
 #map8 {
-  height: 50vh;
   width: 25vw;
+  height: 50vh;
 }
