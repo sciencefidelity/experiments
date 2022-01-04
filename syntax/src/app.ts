@@ -75,3 +75,5 @@ if (loadContent) {
 
 // Heading 2
 // /^\#\#\s.+$/g
+
+export {}
