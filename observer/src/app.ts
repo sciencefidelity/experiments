@@ -5,9 +5,8 @@ const decreasingColor = "rgba(190, 40, 40, ratio)"
 
 window.addEventListener(
   "load",
-  event => {
+  _event => {
     boxElement = document.querySelector("#box") as HTMLDivElement
-
     createObserver()
   },
   false
@@ -37,8 +36,11 @@ function buildThresholdList() {
   return thresholds
 }
 
-function handleIntersect(entries: any, _observer: any) {
-  entries.forEach((entry: any) => {
+function handleIntersect(
+  entries: IntersectionObserverEntry[],
+  _observer: IntersectionObserver
+) {
+  entries.forEach((entry: IntersectionObserverEntry) => {
     if (entry.intersectionRatio > prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace(
         "ratio",
@@ -54,3 +56,5 @@ function handleIntersect(entries: any, _observer: any) {
     prevRatio = entry.intersectionRatio
   })
 }
+
+export {}
