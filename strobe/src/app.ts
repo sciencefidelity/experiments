@@ -14,3 +14,5 @@ const colorChange = () => {
 }
 
 setInterval(colorChange, 2000)
+
+export {}
