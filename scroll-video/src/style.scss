@@ -7,10 +7,10 @@ html {
 }
 
 canvas {
-  left: 50%;
   position: fixed;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
+  left: 50%;
   z-index: -2;
+  width: 100vw;
+  transform: translate(-50%, -50%);
 }

@@ -41,3 +41,5 @@ window.addEventListener("scroll", () => {
 })
 
 preloadImages()
+
+export {}
