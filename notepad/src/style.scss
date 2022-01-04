@@ -1,13 +1,13 @@
 // ********** Colors **************
 
-$txt-lgt: hsla(0, 0%, 0%, 0.75);
+$txt-lgt: hsla(0, 0%, 0%, 75%);
 $bg-lgt-l: hsl(0, 0%, 100%);
 $bg-lgt-r: hsl(0, 0%, 95%);
-$select-lgt: hsla(0, 0%, 0%, 0.2);
-$txt-dk: hsla(0, 0%, 100%, 0.75);
+$select-lgt: hsla(0, 0%, 0%, 20%);
+$txt-dk: hsla(0, 0%, 100%, 75%);
 $bg-dk-l: hsl(200, 9%, 14%);
 $bg-dk-r: hsl(203, 8%, 20%);
-$select-dk: hsla(0, 0%, 100%, 0.25);
+$select-dk: hsla(0, 0%, 100%, 25%);
 $mode-btn: hsl(202, 8%, 47%);
 
 // ********** Typography **********
@@ -20,22 +20,40 @@ $mode-btn: hsl(202, 8%, 47%);
 }
 
 @mixin serif {
-  font-family: ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino,
-    'URW Palladio L', serif;
+  font-family:
+    ui-serif,
+    'Iowan Old Style',
+    'Palatino Linotype',
+    Palatino,
+    'URW Palladio L',
+    serif;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 
 @mixin sans {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 
 @mixin monospace {
-  font-family: MonoLisa, ui-monospace, Menlo, Monaco, Consolas,
-    'Liberation Mono', monospace;
+  font-family:
+    MonoLisa,
+    ui-monospace,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    monospace;
   font-size: 1.05rem;
   line-height: 1.6;
 }
@@ -60,10 +78,10 @@ body {
 // ********** Text areas **********
 
 .wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: visible;
-  position: relative;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -76,14 +94,15 @@ body {
   $sel-bg: $select-lgt
 ) {
   @include monospace;
-  background: $bg;
-  color: $clr;
+
+  width: 100%;
   min-height: 100vh;
   padding: 1.25rem 1.875rem 35vh;
-  width: 100%;
+  color: $clr;
+  background: $bg;
   &::selection {
-    background: $sel-bg;
     color: $sel-clr;
+    background: $sel-bg;
   }
   &:focus {
     outline: 0;
@@ -127,12 +146,12 @@ body {
 // ********** Control icons *******
 
 @mixin icon($right: 1rem) {
-  bottom: 1rem;
-  color: $mode-btn;
-  cursor: pointer;
-  height: 2rem;
   position: absolute;
   right: $right;
+  bottom: 1rem;
+  height: 2rem;
+  color: $mode-btn;
+  cursor: pointer;
 }
 
 .fa-adjust {
