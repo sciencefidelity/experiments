@@ -102,3 +102,5 @@ function initMap(): void {
 }
 
 document.head.appendChild(googleScript)
+
+export {}

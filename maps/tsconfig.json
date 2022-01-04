@@ -1,21 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "esnext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node",
     "strict": true,
     "allowJs": true,
     "checkJs": false,
-    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
+    "isolatedModules": true,
     "esModuleInterop": true,
-    "types": ["vite/client", "google.maps"],
+    "sourceMap": true,
     "noEmit": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "paths": { "@/*": ["./src"] },
+    "types": ["jest", "node", "testing-library__jest-dom", "vite/client"]
   },
-  "include": ["./src"]
+  "include": ["./src", "types", "./jest.config.ts", "./jest-setup.ts"],
+  "exclude": ["node_modules"]
 }
