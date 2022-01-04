@@ -4033,6 +4033,11 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+vite-plugin-html-env@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-html-env/-/vite-plugin-html-env-1.0.3.tgz#fe59eea62294ba150e6d0abcf9978ace597573c9"
+  integrity sha512-1sxw4cjnq8vwIN3NA4PVNAn5b78a5ctJAM56tF0ooAZ62ome6ZHyHzVB9aP0/N/JyabRo2kh0hP4ilCMAvjT2A==
+
 vite@^2.7.10:
   version "2.7.10"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.7.10.tgz#d12c4c10e56a0ecf7890cb529c15996c6111218f"
