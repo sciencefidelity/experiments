@@ -134,3 +134,5 @@ const text = document.querySelector("#strategy") as HTMLParagraphElement
 window.onload = () => {
   text.innerHTML = strategies[i]
 }
+
+export {}

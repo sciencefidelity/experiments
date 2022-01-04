@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,11 +12,11 @@ html {
 }
 
 body {
-  background: hsl(46, 22%, 85%);
-  color: hsl(0, 0%, 0%);
-  font-size: 2rem;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  color: hsl(0, 0%, 0%);
+  background: hsl(46, 22%, 85%);
 }
 
 .container {
@@ -25,11 +25,11 @@ body {
 }
 
 #strategy {
-  align-items: center;
   display: flex;
-  height: 100%;
+  align-items: center;
   justify-content: center;
-  line-height: 1.4;
-  margin: 0;
+  height: 100%;
   padding: 0;
+  margin: 0;
+  line-height: 1.4;
 }
