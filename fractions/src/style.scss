@@ -58,15 +58,15 @@ body {
 }
 
 #btn {
-  cursor: pointer;
+  width: 2rem;
   margin: auto;
   text-align: center;
-  width: 2rem;
+  cursor: pointer;
 }
 
 .spinner {
-  fill: var(--text);
   width: 2rem;
+  fill: var(--text);
 }
 
 .spin > section {
@@ -83,30 +83,31 @@ body {
   position: relative;
   width: 100%;
   &::after {
-    content: '';
     display: block;
     padding-bottom: 100%;
+    content: '';
   }
 }
 
 %inner {
-  border-radius: 50%;
   position: absolute;
+  border-radius: 50%;
 }
 
 main {
   display: grid;
-  gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 2rem auto;
+  gap: 1rem;
   width: 80%;
+  margin: 2rem auto;
   :nth-child(8) {
     @extend %container;
     @for $i from 0 through 7 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{$i * 1});
+
         clip-path: polygon(50% 0, 0 0, 0 0%, 50% 50%);
+        background: var(--color-#{$i * 1});
         transform: rotate(45deg * $i);
       }
     }
@@ -116,8 +117,9 @@ main {
     @for $i from 0 through 6 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{$i + 19});
+
         clip-path: polygon(50% 0, 0 0, 0 10.5%, 50% 50%);
+        background: var(--color-#{$i + 19});
         transform: rotate(51.43deg * $i);
       }
     }
@@ -127,8 +129,9 @@ main {
     @for $i from 0 through 5 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{$i + 13});
+
         clip-path: polygon(50% 0, 0 0, 0 21.3%, 50% 50%);
+        background: var(--color-#{$i + 13});
         transform: rotate(60deg * $i);
       }
     }
@@ -138,8 +141,9 @@ main {
     @for $i from 0 through 4 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{$i + 13});
+
         clip-path: polygon(50% 0, 0 0, 0 34%, 50% 50%);
+        background: var(--color-#{$i + 13});
         transform: rotate(72deg * $i);
       }
     }
@@ -149,8 +153,9 @@ main {
     @for $i from 0 through 3 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{($i + 8)});
+
         clip-path: polygon(50% 0, 0 0, 0 50%, 50% 50%);
+        background: var(--color-#{($i + 8)});
         transform: rotate(90deg * $i);
       }
     }
@@ -160,8 +165,9 @@ main {
     @for $i from 0 through 2 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{$i * 3});
+
         clip-path: polygon(50% 0, 0 0, 0 79%, 50% 50%);
+        background: var(--color-#{$i * 3});
         transform: rotate(120deg * $i);
       }
     }
@@ -171,8 +177,9 @@ main {
     @for $i from 0 through 1 {
       :nth-child(#{$i + 1}) {
         @extend %inner;
-        background: var(--color-#{$i * 3});
+
         clip-path: polygon(50% 0, 0 0, 0 100%, 50% 100%);
+        background: var(--color-#{$i * 3});
         transform: rotate(180deg * $i);
       }
     }
@@ -181,6 +188,7 @@ main {
     @extend %container;
     :nth-child(1) {
       @extend %inner;
+
       background: var(--color-0);
     }
   }

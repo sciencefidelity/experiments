@@ -8,3 +8,5 @@ btn.onclick = () => {
     turntable.className = "stop"
   }
 }
+
+export {}
