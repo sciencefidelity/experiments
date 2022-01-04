@@ -9,10 +9,10 @@
 
 body {
   display: grid;
-  height: 100vh;
   place-items: center;
-  text-align: center;
   width: 100vw;
+  height: 100vh;
+  text-align: center;
 }
 
 main {
@@ -29,18 +29,18 @@ canvas {
 }
 
 #crop {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   &::after {
-    content: '';
     display: block;
     padding-bottom: 66.6%;
+    content: '';
   }
 }
 
 #canvas {
-  left: -5%;
   position: absolute;
   top: -5%;
+  left: -5%;
   width: 110%;
 }

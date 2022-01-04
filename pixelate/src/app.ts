@@ -25,7 +25,7 @@ const draw = (imgURL: string) => {
   }
 }
 
-const pixelate = (v: any) => {
+const pixelate = (v: number): void => {
   if (ctx) {
     canvas.height = img.height
     canvas.width = img.width
@@ -49,6 +49,7 @@ const toggleAnim = () => {
   const anim = () => {
     v += dx
     if (v <= 1 || v > 20) dx = -dx
+    console.log(v)
     pixelate(v)
     if (play) requestAnimationFrame(anim)
   }
@@ -67,3 +68,5 @@ window.requestAnimationFrame = (() => {
     }
   )
 })()
+
+export {}
