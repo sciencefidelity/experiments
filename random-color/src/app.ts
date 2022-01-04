@@ -26,3 +26,5 @@ const colorB = (b: number) => {
   b = Number((Math.random() * 255).toFixed(0))
   return b
 }
+
+export {}
