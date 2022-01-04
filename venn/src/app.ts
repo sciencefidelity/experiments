@@ -11,3 +11,5 @@ modeSwitch.onclick = () => {
     mode.className = "lightmode"
   }
 }
+
+export {}
