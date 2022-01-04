@@ -25,7 +25,7 @@ const draw = (imgURL: string) => {
   }
 }
 
-const pixelate = (v: number): void => {
+const pixelate = (v: any) => {
   if (ctx) {
     canvas.height = img.height
     canvas.width = img.width
