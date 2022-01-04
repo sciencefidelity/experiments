@@ -20,7 +20,7 @@ function splitToDigit(n: number) {
 // counter timed to change the color number of each square
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const colorChange = setInterval(() => {
+const _colorChange = setInterval(() => {
   if (i === 10) {
     i = 0
   }
@@ -36,3 +36,5 @@ const colorChange = setInterval(() => {
   square9.className = `color-${splitToDigit(i + 9)}`
   i++
 }, 50)
+
+export {}
