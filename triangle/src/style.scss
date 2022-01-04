@@ -31,35 +31,35 @@ body {
 
 #site-main {
   display: grid;
-  height: 100vh;
   place-items: center;
   width: 100vw;
+  height: 100vh;
 }
 
 // ********* Triangle Layers **********
 
 #container {
-  font-size: min(5vh, 4vw);
   position: relative;
   width: 20em;
+  font-size: min(5vh, 4vw);
   &::after {
-    content: '';
     display: block;
     padding-bottom: 86.66%;
+    content: '';
   }
   @for $i from 1 through 10 {
     :nth-child(#{$i}) {
-      border-bottom: ((1.732em) * $i) solid var(--color-#{$i});
-      border-left: (1em * $i) solid transparent;
-      border-right: (1em * $i) solid transparent;
-      box-shadow: 0 0.03em 0 0 rgba(hsl(0, 0%, 0%), 0.2);
-      height: 0;
-      left: 50%;
       position: absolute;
       top: 0;
-      transform: translateX(-50%);
-      width: 0;
+      left: 50%;
       z-index: (10 - $i);
+      width: 0;
+      height: 0;
+      border-right: (1em * $i) solid transparent;
+      border-bottom: ((1.732em) * $i) solid var(--color-#{$i});
+      border-left: (1em * $i) solid transparent;
+      box-shadow: 0 0.03em 0 0 rgba(hsl(0, 0%, 0%), 0.2);
+      transform: translateX(-50%);
     }
   }
 }
