@@ -1,15 +1,15 @@
 body {
   display: grid;
+  place-items: center;
   height: 100vh;
   margin: 0;
-  place-items: center;
 }
 
 main {
-  aspect-ratio: 3/2;
-  overflow: hidden;
   position: relative;
   width: min(135vh, 100vw);
+  aspect-ratio: 3/2;
+  overflow: hidden;
 }
 
 img {
@@ -17,16 +17,17 @@ img {
 }
 
 %image {
-  height: auto;
   position: absolute;
   width: 100%;
+  height: auto;
 }
 
 #placeholder {
   @extend %image;
+
+  opacity: 1;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
-  opacity: 1;
 }
 
 #main-image {

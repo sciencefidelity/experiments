@@ -15,3 +15,5 @@ Array.from(objects).map(item => {
       : (item.style.backgroundImage = `url(${item.dataset.src})`)
   }
 })
+
+export {}
