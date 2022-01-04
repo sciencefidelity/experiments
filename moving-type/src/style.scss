@@ -9,44 +9,45 @@ $sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 // ********** Fonts ********************
 
 @font-face {
-  font-display: swap;
   font-family: Recursive;
-  font-optical-sizing: auto;
   font-size: normal;
   font-weight: normal;
-  src: url('../fonts/recursive.woff2') format('woff supports variations'),
+  font-optical-sizing: auto;
+  src:
+    url('../fonts/recursive.woff2') format('woff supports variations'),
     url('../fonts/recursive.woff2') format('woff2-variations');
+  font-display: swap;
 }
 
 // ********** Animation ****************
 
 @keyframes grape {
   0% {
-    color: $melon;
     font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 300, 'slnt' 0;
+    color: $melon;
   }
   50% {
-    color: $grape;
     font-variation-settings: 'MONO' 1, 'CASL' 1, 'wght' 1000, 'slnt' 0;
+    color: $grape;
   }
   100% {
-    color: $melon;
     font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 300, 'slnt' 0;
+    color: $melon;
   }
 }
 
 @keyframes melon {
   0% {
-    color: $grape;
     font-variation-settings: 'MONO' 1, 'CASL' 1, 'wght' 1000, 'slnt' 0;
+    color: $grape;
   }
   50% {
-    color: $melon;
     font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 300, 'slnt' 0;
+    color: $melon;
   }
   100% {
-    color: $grape;
     font-variation-settings: 'MONO' 1, 'CASL' 1, 'wght' 1000, 'slnt' 0;
+    color: $grape;
   }
 }
 
@@ -68,14 +69,14 @@ html {
 }
 
 body {
-  background: $bg;
   overflow: hidden;
+  background: $bg;
 }
 
 main {
   display: grid;
-  height: 100vh;
   place-items: center;
+  height: 100vh;
 }
 
 // ********** Font Variations **********
@@ -90,21 +91,27 @@ main {
 
 #graph {
   @extend %vari;
+
   color: $graph;
   @for $i from 1 through 10 {
     :nth-child(#{$i}) {
-      font-variation-settings: 'MONO' 1, 'CASL' ($i - 1) * 0.11,
-        'wght' (($i - 1) * 78) + 300, 'slnt' ($i - 1) * -1.67;
+      font-variation-settings:
+        'MONO' 1,
+        'CASL' ($i - 1) * 0.11,
+        'wght' (($i - 1) * 78) + 300,
+        'slnt' ($i - 1) * -1.67;
     }
   }
 }
 
 #grape {
   @extend %vari;
+
   animation: grape 15s infinite;
 }
 
 #melon {
   @extend %vari;
+
   animation: melon 15s infinite;
 }
