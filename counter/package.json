@@ -1,19 +1,24 @@
 {
   "name": "counter",
   "version": "0.1.0",
+  "author": "Matt Cook <matt@sciencefidelity.co.uk>",
   "license": "UNLICENSED",
+  "private": true,
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite --host",
     "build": "tsc && vite build",
-    "serve": "vite preview",
+    "serve": "vite preview --host",
+    "clean": "rm -rf dist",
     "lint": "concurrently 'yarn:lint:*'",
-    "lint:eslint": "eslint '**/*.{ts,js}'",
-    "lint:prettier": "prettier --check '**/*.{ts,js,json,md,yml}'",
-    "lint:styles": "stylelint --ignore-path ../.eslintignore '**/*scss'",
+    "lint:js": "eslint '**/*.{ts,js}'",
+    "lint:format": "prettier --check '**/*.{ts,js,json,md,yml}'",
+    "lint:styles": "stylelint --ignore-path .eslintignore '**/*.scss'",
     "fix": "concurrently 'yarn:fix:*'",
-    "fix:eslint": "eslint --fix '**/*.{ts,js}'",
-    "fix:prettier": "prettier --write '**/*.{ts,js,json,md,yml}'",
-    "fix:styles": "stylelint --fix --ignore-path ../.eslintignore '**/*scss'"
+    "fix:js": "eslint --fix '**/*.{ts,js}'",
+    "fix:format": "prettier --write '**/*.{ts,js,json,md,yml}'",
+    "fix:styles": "stylelint --fix --ignore-path ../.eslintignore '**/*.scss'",
+    "test": "jest --watchAll --verbose",
+    "coverage": "jest --coverage"
   },
   "devDependencies": {
     "@testing-library/dom": "^8.11.1",
