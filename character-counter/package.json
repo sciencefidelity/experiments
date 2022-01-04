@@ -16,7 +16,7 @@
     "fix": "concurrently 'yarn:fix:*'",
     "fix:js": "eslint --fix '**/*.{ts,js}'",
     "fix:format": "prettier --write '**/*.{ts,js,json,md,yml}'",
-    "fix:styles": "stylelint --fix --ignore-path ../.eslintignore '**/*.scss'",
+    "fix:styles": "stylelint --fix --ignore-path .eslintignore '**/*.scss'",
     "test": "jest --watchAll --verbose",
     "coverage": "jest --coverage"
   },
