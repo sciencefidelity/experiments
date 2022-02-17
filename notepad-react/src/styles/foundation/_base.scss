@@ -9,7 +9,6 @@
 
 html {
   font-size: 62.5%;
-  background-color: var(--dark-blue);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,9 +17,5 @@ body {
   margin: auto;
   font-size: calc(10px + 2vmin);
   color: var(--grey-050);
-  background-color: var(--dark-blue);
-}
-
-a {
-  color: var(--light-blue);
+  background-color: var(--grey-850);
 }
