@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from "react"
 
-const Experiment = () => {
+const Home = () => {
   const [text, setText] = useState("")
   const [characterCount, setCharacterCount] = useState(0)
   const [wordCount, setWordCount] = useState(0)
@@ -25,4 +25,4 @@ const Experiment = () => {
     </>
   )
 }
-export default Experiment
+export default Home
