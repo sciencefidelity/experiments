@@ -1,0 +1,49 @@
+header,
+footer {
+  width: 100vw;
+  padding: 2rem 0;
+  color: var(--light-blue);
+  text-align: center;
+}
+
+header {
+  border-bottom: 1px solid var(--light-blue);
+}
+
+footer {
+  border-top: 1px solid var(--light-blue);
+}
+
+nav {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+  text-align: center;
+  background-color: var(--light-blue);
+  a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      padding: 0 2rem;
+    }
+  }
+}
+
+.parent {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
+  height: 100vh;
+}
