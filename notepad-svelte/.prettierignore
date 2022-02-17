@@ -1,0 +1,11 @@
+package.json
+package-lock.json
+yarn.lock
+dist
+generated
+node_modules
+.nova
+.vscode
+*.scss
+*.css
+*.css.map
