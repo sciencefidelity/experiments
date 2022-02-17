@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.inline {
+  display: inline;
+}
+
+.textbox {
+  height: 47.5vh;
+  width: 100vw;
+  border: 1px solid grey;
+}
