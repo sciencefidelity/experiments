@@ -1,5 +1,9 @@
-const a = "Hello world!"
+const canvas = document.querySelector("#canvas") as HTMLDivElement
 
-console.log(a)
+const triangles = 10
 
-export {}
+for (let i = 0; i < triangles; i++) {
+  const triangle = document.createElement("div")
+
+  canvas.appendChild(triangle)
+}
