@@ -1,5 +1,3 @@
-// **********  Variables  ****************
-
 $background: hsl(40, 13%, 62%);
 $colors: (
   color-0: hsl(129, 44%, 33%),
@@ -14,8 +12,6 @@ $colors: (
   color-9: hsl(233, 100%, 47%)
 );
 
-// **********  Mixins  *******************
-
 @mixin after($pos: relative) {
   position: $pos;
   &::after {
@@ -24,8 +20,6 @@ $colors: (
     content: '';
   }
 }
-
-// **********  Base  *********************
 
 * {
   box-sizing: border-box;
@@ -44,15 +38,13 @@ body {
   background: $background;
 }
 
-// **********  Coloured Squares  *********
+// @each $x, $color in $colors {
+//   .#{$x} {
+//     background: $color;
+//   }
+// }
 
-@each $x, $color in $colors {
-  .#{$x} {
-    background: $color;
-  }
-}
-
-#container {
+#canvas {
   @include after();
 
   width: min(80vh, 88vw);
