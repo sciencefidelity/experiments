@@ -39,21 +39,21 @@ const Home: FC = () => {
       <div>
         <input
           id="range"
-          name="hueMin"
-          type="range"
-          min="0"
-          max="360"
-          defaultValue="0"
-          onInput={recalculateHueMin}
-        />
-        <input
-          id="range"
           name="hueMax"
           type="range"
           min="0"
           max="360"
           defaultValue="360"
           onInput={recalculateHueMax}
+        />
+        <input
+          id="range"
+          name="hueMin"
+          type="range"
+          min="0"
+          max="360"
+          defaultValue="0"
+          onInput={recalculateHueMin}
         />
         <input
           id="range"
