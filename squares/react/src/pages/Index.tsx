@@ -4,23 +4,48 @@ const Home: FC = () => {
   const [ hueMax, setHueMax ] = useState(360)
   const [ saturation, setSaturaton ] = useState(50)
   const [ lightness, setLightness ] = useState(50)
+  const [ animateButtonValue, setAnimateButtonValue] = useState("animate")
+  const [ playAnimation, setPlayAnimation ] = useState(true)
+  // const [ reverse, setReverse ] = useState(1)
   const squares = 10
   const arr = Array.from(Array(squares).keys())
-  const recalculateHueMin = (e: FormEvent<HTMLInputElement>) => {
+  const changeHueMin = (e: FormEvent<HTMLInputElement>) => {
     setHueMin(parseInt(e.currentTarget.value))
   }
-  const recalculateHueMax = (e: FormEvent<HTMLInputElement>) => {
+  const changeHueMax = (e: FormEvent<HTMLInputElement>) => {
     setHueMax(parseInt(e.currentTarget.value))
   }
-  const recalculateSaturation = (e: FormEvent<HTMLInputElement>) => {
+  const changeSaturation = (e: FormEvent<HTMLInputElement>) => {
     setSaturaton(parseInt(e.currentTarget.value))
   }
-  const recalculateLightness = (e: FormEvent<HTMLInputElement>) => {
+  const changeLightness = (e: FormEvent<HTMLInputElement>) => {
     setLightness(parseInt(e.currentTarget.value))
   }
-  const H = hueMax
-  const S = saturation
-  const L = lightness
+  const h = (e: number) => ((hueMax / squares) * e) - hueMin
+  const s = `${saturation}%`
+  const l = `${lightness}%`
+  // const toggleReverse = () => {
+  //   setReverse(-reverse)
+  // }
+  const toggleAnim = () => {
+    let v = Math.min(1, hueMax) + hueMin
+    const dx = 1 // "speed"
+    if (playAnimation === true) {
+      setPlayAnimation(false)
+      setAnimateButtonValue("stop")
+    }
+    if (playAnimation === false) {
+      setPlayAnimation(true)
+      setAnimateButtonValue("animate")
+    }
+    const anim = () => {
+      v += dx
+      if (v > 360) v = 1
+      setHueMin(Math.round(v))
+      if (playAnimation) requestAnimationFrame(anim)
+    }
+    if (playAnimation === true) anim()
+  }
   return (
     <>
       <div className="canvas">
@@ -30,8 +55,7 @@ const Home: FC = () => {
             className={`color-${e.toString()}`}
             style={{
               width: `${10 * (e + 1)}%`,
-              backgroundColor:
-                `hsl(${((H / squares) * e) - hueMin}, ${S}%, ${L}%)`
+              backgroundColor: `hsl(${h(e)}, ${s}, ${l})`
             }}
           ></div>
         )}
@@ -44,7 +68,7 @@ const Home: FC = () => {
           min="0"
           max="360"
           defaultValue="360"
-          onInput={recalculateHueMax}
+          onInput={changeHueMax}
         />
         <input
           id="range"
@@ -53,7 +77,7 @@ const Home: FC = () => {
           min="0"
           max="360"
           defaultValue="0"
-          onInput={recalculateHueMin}
+          onInput={changeHueMin}
         />
         <input
           id="range"
@@ -61,7 +85,7 @@ const Home: FC = () => {
           min="0"
           max="100"
           defaultValue="50"
-          onInput={recalculateSaturation}
+          onInput={changeSaturation}
         />
         <input
           id="range"
@@ -69,8 +93,10 @@ const Home: FC = () => {
           min="0"
           max="100"
           defaultValue="50"
-          onInput={recalculateLightness}
+          onInput={changeLightness}
         />
+        <input id="animate" type="button" value={animateButtonValue} onClick={toggleAnim} />
+        {/* <input id="animate" type="button" value="reverse" onClick={toggleReverse} /> */}
       </div>
     </>
   )
