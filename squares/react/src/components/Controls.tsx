@@ -16,48 +16,46 @@ export const Controls: FC<Props> = ({
   changeHueMin,
   changeSaturation,
   toggleAnimation
-}) => {
-  return (
-    <div>
-      <input
-        id="range"
-        name="hueMax"
-        type="range"
-        min="0"
-        max="360"
-        defaultValue="360"
-        onInput={changeHueMax}
-      />
-      <input
-        id="range"
-        name="hueMin"
-        type="range"
-        min="0"
-        max="360"
-        defaultValue="0"
-        onInput={changeHueMin}
-      />
-      <input
-        id="range"
-        type="range"
-        min="0"
-        max="100"
-        defaultValue="50"
-        onInput={changeSaturation}
-      />
-      <input
-        id="range"
-        type="range"
-        min="0"
-        max="100"
-        defaultValue="50"
-        onInput={changeLightness}
-      />
-      <input id="animate"
-        type="button"
-        value={animateButtonValue}
-        onClick={toggleAnimation}
-      />
-    </div>
-  )
-}
+}) => (
+  <div>
+    <input
+      id="range"
+      name="hueMax"
+      type="range"
+      min="0"
+      max="360"
+      defaultValue="360"
+      onInput={changeHueMax}
+    />
+    <input
+      id="range"
+      name="hueMin"
+      type="range"
+      min="0"
+      max="360"
+      defaultValue="0"
+      onInput={changeHueMin}
+    />
+    <input
+      id="range"
+      type="range"
+      min="0"
+      max="100"
+      defaultValue="50"
+      onInput={changeSaturation}
+    />
+    <input
+      id="range"
+      type="range"
+      min="0"
+      max="100"
+      defaultValue="50"
+      onInput={changeLightness}
+    />
+    <input id="animate"
+      type="button"
+      value={animateButtonValue}
+      onClick={toggleAnimation}
+    />
+  </div>
+)
