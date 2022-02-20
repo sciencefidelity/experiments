@@ -15,7 +15,6 @@ export const Squares: FC<props> = ({
   saturation,
   squares
 }) => {
-  console.log("render: Squares")
   const arr = Array.from(Array(squares).keys())
   const h = (e: number) => ((hueMax / squares) * e) - hueMin
   const s = `${saturation}%`

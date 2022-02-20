@@ -23,7 +23,6 @@ const Home: FC = () => {
   const changeLightness = (e: FormEvent<HTMLInputElement>) => {
     setLightness(parseInt(e.currentTarget.value))
   }
-  console.log("render: Index")
   const toggleAnim = () => {
     let v = Math.min(1, hueMax) + hueMin
     const dx = 1 // "speed"
