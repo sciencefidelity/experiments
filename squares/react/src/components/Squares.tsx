@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 
-interface props {
+interface Props {
   lightness: number
   hueMax: number
   hueMin: number
@@ -8,7 +8,7 @@ interface props {
   squares: number
 }
 
-export const Squares: FC<props> = ({
+export const Squares: FC<Props> = ({
   lightness,
   hueMax,
   hueMin,

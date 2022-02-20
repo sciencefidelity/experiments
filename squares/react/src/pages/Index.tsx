@@ -1,5 +1,6 @@
-import React, { FC, useState, useEffect, FormEvent } from "react"
+import React, { FC, useState, FormEvent } from "react"
 import { Squares } from "components/Squares"
+import { Controls } from "components/Controls"
 
 const Home: FC = () => {
   const [ hueMin, setHueMin ] = useState(0)
@@ -23,7 +24,7 @@ const Home: FC = () => {
   const changeLightness = (e: FormEvent<HTMLInputElement>) => {
     setLightness(parseInt(e.currentTarget.value))
   }
-  const toggleAnim = () => {
+  const toggleAnimation = () => {
     let v = Math.min(1, hueMax) + hueMin
     const dx = 1 // "speed"
     if (playAnimation === true) {
@@ -51,47 +52,14 @@ const Home: FC = () => {
         saturation={saturation}
         squares={squares}
       />
-      <div>
-        <input
-          id="range"
-          name="hueMax"
-          type="range"
-          min="0"
-          max="360"
-          defaultValue="360"
-          onInput={changeHueMax}
-        />
-        <input
-          id="range"
-          name="hueMin"
-          type="range"
-          min="0"
-          max="360"
-          defaultValue="0"
-          onInput={changeHueMin}
-        />
-        <input
-          id="range"
-          type="range"
-          min="0"
-          max="100"
-          defaultValue="50"
-          onInput={changeSaturation}
-        />
-        <input
-          id="range"
-          type="range"
-          min="0"
-          max="100"
-          defaultValue="50"
-          onInput={changeLightness}
-        />
-        <input id="animate"
-          type="button"
-          value={animateButtonValue}
-          onClick={toggleAnim}
-        />
-      </div>
+      <Controls
+        animateButtonValue={animateButtonValue}
+        changeLightness={changeLightness}
+        changeHueMax={changeHueMax}
+        changeHueMin={changeHueMin}
+        changeSaturation={changeSaturation}
+        toggleAnimation={toggleAnimation}
+      />
     </>
   )
 }
