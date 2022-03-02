@@ -1,6 +1,6 @@
 const counterContainer = document.querySelector(".counter") as HTMLDivElement
 const counter = document.querySelector(".counter") as HTMLDivElement
-const speed = 205
+const speed = 2000
 const options = {
   rootMargin: "-80px"
 }
@@ -32,7 +32,6 @@ const counting = () => {
       counter.innerText = target.toString()
       clearTimeout(timerId)
     }
-    console.log("counted")
   }
   updateCount()
 }
