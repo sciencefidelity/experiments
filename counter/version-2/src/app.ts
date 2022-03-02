@@ -23,9 +23,8 @@ const counting = () => {
   counter.innerText = count.toString()
   const updateCount = () => {
     const target = parseInt(counter.getAttribute("data-target") ?? "0")
-    const inc = target / speed
     if (count < target) {
-      count = count + inc
+      count = count + (target / speed)
       counter.innerText = Math.floor(count).toString()
       timerId = setTimeout(updateCount, 100)
     } else {
