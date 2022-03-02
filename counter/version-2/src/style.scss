@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: hsl(0, 0%, 98%);
+  background: hsl(150, 4%, 11%);
+}
+
+.counters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  height: 500vh;
+}
+
+.counters {
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+.counter {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  flex-basis: 25%;
+  // display: flex;
+  margin: auto;
+  line-height: 10rem;
+  height: 10rem;
+}
