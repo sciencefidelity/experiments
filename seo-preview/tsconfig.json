@@ -10,7 +10,7 @@
     "checkJs": false,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "esModuleInterop": true,
     "sourceMap": true,
     "noEmit": true,
