@@ -1,23 +1,22 @@
-import "sanitize.css/sanitize.css"
-import "sanitize.css/assets.css"
-import "sanitize.css/reduce-motion.css"
-import "sanitize.css/typography.css"
-import "@/style.scss"
+const url1 = "https://coast.blog"
+const url2 = "https://coast.blog/design"
+const url3 = "https://coast.blog/blog/design"
 
-const counter = document.querySelector("#counter") as HTMLSpanElement
-let seconds = 0
-
-export const add = (a: number, b: number): number => {
-  return a + b
+const googleize = (url: string): string => {
+  const arr = url.split(/(?<!\/)\/(?!\/)/g)
+  return arr[0] + (arr.length > 1 ? " › " + arr[arr.length - 1] : "")
 }
 
-export const timer = (): void => {
-  setInterval(() => {
-    seconds += 1
-    if (counter) {
-      counter.textContent = seconds.toString()
-    }
-  }, 1000)
-}
+// const googleize = (url) => {
+//   const arr = url.split(/(?<!\/)\/(?!\/)/g)
+//   return (
+//     {arr.length === 0 && <div>{arr[0]}</div>}
+//     {arr.length > 0 &&
+//       <div>{arr[0]}<span>{" › " + arr[arr.length - 1]}</span></div>
+//     }
+//   )
+// }
 
-timer()
+console.log(googleize(url1)) // https://coast.blog
+console.log(googleize(url2)) // https://coast.blog › design
+console.log(googleize(url3)) // https://coast.blog › design
