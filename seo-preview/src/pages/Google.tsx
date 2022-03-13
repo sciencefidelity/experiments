@@ -1,8 +1,7 @@
 import React from "react"
 import Layout from "components/Layout"
-import GoogleLogo from "components/GoogleLogo"
-import SearchIcon from "components/SearchIcon"
-import s from "pages/Google.module.scss"
+import { GoogleLogo, SearchIcon } from "components/GoogleIcons"
+import s from "styles/Google.module.scss"
 import u from "styles/utils.module.scss"
 
 const Google = () => {

@@ -1,45 +1,4 @@
-body {
-  background-color: hsl(180, 5%, 96%);
-}
-
-html {
-  font-size: 62.5%;
-  letter-spacing: 0.2px;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.w-60 {
-  width: 60%;
-}
-
-.ma3 {
-  margin: 1.2rem;
-}
-
-.mt2 {
-  margin-top: 0.8rem;
-}
-
-.mb2 {
-  margin-bottom: 0.8rem;
-}
-
-.ml2 {
-  margin-left: 0.8rem;
-}
-
-.og-container {
+.ogContainer {
   width: 476px;
   margin-bottom: 2.4rem;
   background: hsl(0, 0%, 100%);
@@ -47,38 +6,38 @@ html {
   border-radius: 3px;
 }
 
-.social-icon {
+.socialIcon {
   width: 40px;
   height: 40px;
   margin-right: 8px;
 }
 
-.social-og-title {
+.socialOgTitle {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.38;
   color: hsl(220, 46%, 41%);
 }
 
-.social-og-time {
+.socialOgTime {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.34;
   color: hsl(216, 7%, 41%);
 }
 
-.social-og-desc {
+.socialOgDesc {
   display: inline-block;
   height: 10px;
   background: hsl(216, 13%, 92%);
   border-radius: 5px;
 }
 
-.social-og-preview {
+.socialOgPreview {
   background: hsl(220, 13%, 96%);
 }
 
-.social-og-preview-image {
+.socialOgPreviewImage {
   width: 100%;
   height: 247px;
   background-position: 50%;
@@ -86,19 +45,19 @@ html {
   border-top: 1px solid hsl(216, 8%, 88%);
 }
 
-.social-og-preview-bookmark {
+.socialOgPreviewBookmark {
   padding: 10px 12px 8px;
   border-bottom: 1px solid hsl(216, 8%, 88%);
 }
 
-.social-og-preview-content {
+.socialOgPreviewContent {
   height: 69px;
   padding: 0 1px 0 4px;
   margin: 0 -1px 0 -4px;
   overflow: hidden;
 }
 
-.social-og-preview-meta {
+.socialOgPreviewMeta {
   overflow: hidden;
   font-size: 12px;
   line-height: 16px;
@@ -108,7 +67,7 @@ html {
   white-space: nowrap;
 }
 
-.social-og-preview-title {
+.socialOgPreviewTitle {
   max-height: 110px;
   padding-top: 2px;
   margin: 3px 0 0;
@@ -120,7 +79,7 @@ html {
   word-wrap: break-word;
 }
 
-.social-og-preview-desc {
+.socialOgPreviewDesc {
   max-height: 20px;
   margin-top: 3px;
   overflow: hidden;
@@ -133,13 +92,13 @@ html {
   white-space: nowrap;
 }
 
-.social-og-reactions {
+.socialOgReactions {
   display: flex;
   align-items: center;
   margin: 12px;
 }
 
-.social-og-likes {
+.socialOgLikes {
   display: flex;
   flex-grow: 1;
   overflow: hidden;
@@ -148,12 +107,12 @@ html {
   color: hsl(214, 8%, 41%);
 }
 
-.social-og-likes svg {
+.socialOgLikes svg {
   width: 20px;
   height: 20px;
 }
 
-.social-og-comments {
+.socialOgComments {
   display: flex;
   flex-shrink: 0;
   font-size: 13px;

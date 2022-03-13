@@ -1,38 +1,52 @@
 import React, { FC } from "react"
-import PropTypes from "prop-types"
-import type { RouteComponentProps } from "@reach/router"
-import { capitalize } from "lib/utils"
 import Layout from "components/Layout"
-import styles from "styles/About.module.scss"
+import { FacebookLogo, HeartIcon, ThumbIcon } from "components/FacebookIcons"
+import s from "styles/Facebook.module.scss"
+import u from "styles/Utils.module.scss"
 
-interface Props extends RouteComponentProps {
-  title: string
-}
-
-const About: FC<Props> = ({ title }) => {
+const Facebook: FC = () => {
   return (
     <Layout>
-      <div className={styles[title]}>
-        <h1>{capitalize(title)}</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. In iaculis
-          nunc sed augue lacus. Sit amet est placerat in egestas erat imperdiet
-          sed. Et pharetra pharetra massa massa ultricies mi. Nibh sed pulvinar
-          proin gravida. Ornare massa eget egestas purus viverra accumsan in.
-          Euismod nisi porta lorem mollis aliquam ut porttitor leo. Augue lacus
-          viverra vitae congue eu consequat. Habitant morbi tristique senectus
-          et netus et. Euismod in pellentesque massa placerat duis ultricies
-          lacus sed. Auctor neque vitae tempus quam. Elementum facilisis leo vel
-          fringilla est ullamcorper eget.
-        </p>
+      <div className={s.ogContainer}>
+        <div className={`${u.flex} ${u.ma3} ${u.mb2}`}>
+          <span>
+            <FacebookLogo />
+          </span>
+          <div>
+            <div className={s.socialOgTitle}>Ghost</div>
+            <div className={s.socialOgTime}>12 hrs</div>
+          </div>
+        </div>
+        <div className={`${u.flex} ${u.flexColumn} ${u.ma3} ${u.mt2}`}>
+          <span className={`${s.socialOgDesc} ${u.w100} ${u.mb2}`}></span>
+          <span className={`${s.socialOgDesc} ${u.w60}`}></span>
+        </div>
+        <div className={s.socialOgPreview}>
+          <div
+            className={s.socialOgPreviewImage}
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1647164926512-2cca88470829?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8YWxsfDE0fHx8fHx8Mnx8MTY0NzE4Nzc1Mg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000')"
+            }}
+          ></div>
+          <div className={s.socialOgPreviewBookmark}>
+            <div className={s.socialOgPreviewContent}>
+              <div className={s.socialOgPreviewMeta}>coast.blog</div>
+              <div className={s.socialOgPreviewTitle}>Customizing your brand and design settings - Coast</div>
+              <div className={s.socialOgPreviewDesc}>How to tweak a few settings in Ghost to transform your site from a generic template to a custom brand with style and personality.</div>
+            </div>
+          </div>
+        </div>
+        <div className={s.socialOgReactions}>
+          <span className={s.socialOgLikes}>
+            <ThumbIcon />
+            <HeartIcon />
+            182
+          </span>
+          <span className={s.socialOgComments}>7 comments</span>
+          <span className={`${s.socialOgComments} ${u.ml2}`}>2 shares</span>
+        </div>
       </div>
     </Layout>
   )
 }
-
-About.propTypes = {
-  title: PropTypes.string.isRequired
-}
-
-export default About
+export default Facebook

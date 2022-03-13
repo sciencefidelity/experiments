@@ -15,50 +15,50 @@ const Twitter: FC = () => {
   return (
     <Layout>
       <div>
-        <div className="twitter-container">
-          <div className="flex ma4">
+        <div className={s.twitterContainer}>
+          <div className={`${u.flex} ${u.ma4}`}>
             <span>
               <TwitterLogo />
             </span>
-            <div className="w-100">
-              <span className="social-og-title">Ghost</span>
-              <span className="social-og-time">12 hrs</span>
-              <div className="flex flex-column mt2 mb3">
-                <span className="social-og-desc w-100 mb2"></span>
-                <span className="social-og-desc w-60"></span>
+            <div className={u.w100}>
+              <span className={s.socialOgTitle}>Ghost</span>
+              <span className={s.socialOgTime}>12 hrs</span>
+              <div className={`${u.flex} ${s.flexColumn} ${u.mt2} ${u.mb3}`}>
+                <span className={`${s.socialOgDesc} ${u.w100} ${u.mb2}`}></span>
+                <span className={`${s.socialOgDesc} ${u.w60}`}></span>
               </div>
-              <div className="social-twitter-post-preview">
+              <div className={s.socialTwitterPostPreview}>
                 <div
-                  className="social-twitter-preview-image"
+                  className={s.socialTwitterPreviewImage}
                   style={{
                     backgroundImage: "url('https://images.unsplash.com/photo-1647119126202-d13a4263d40c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8YWxsfDEyfHx8fHx8Mnx8MTY0NzE4Nzc1Mg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000')"
                   }}
                 ></div>
-                <div className="social-twitter-preview-content">
-                  <div className="social-twitter-preview-title">
+                <div className={s.socialTwitterPreviewContent}>
+                  <div className={s.socialTwitterPreviewTitle}>
                     Customizing your brand and design settings - Coast
                   </div>
-                  <div className="social-twitter-preview-desc">How to tweak a few settings in Ghost to transform your site from a generic template to a custom brand with style and personality.</div>
-                  <div className="social-twitter-preview-meta">
+                  <div className={s.socialTwitterPreviewDesc}>How to tweak a few settings in Ghost to transform your site from a generic template to a custom brand with style and personality.</div>
+                  <div className={s.socialTwitterPreviewMeta}>
                     <LinkIcon />
                     https://coast.blog/design
                   </div>
                 </div>
               </div>
-              <div className="social-twitter-reactions">
-                <div className="flex items-center">
+              <div className={s.socialTwitterReactions}>
+                <div className={`${u.flex} ${s.itemsCenter}`}>
                   <CommentIcon />
                   2
                 </div>
-                <div className="flex items-center">
+                <div className={`${u.flex} ${s.itemsCenter}`}>
                   <RetweetIcon />
                   11
                 </div>
-                <div className="flex items-center">
+                <div className={`${u.flex} ${s.itemsCenter}`}>
                   <LikeIcon />
                   32
                 </div>
-                <div className="flex items-center">
+                <div className={`${u.flex} ${s.itemsCenter}`}>
                   <ShareIcon />
                 </div>
               </div>
