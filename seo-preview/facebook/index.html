@@ -5,26 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="description" content="TODO" />
-    <title>Google Search Preview</title>
+    <title>Facebook Card Preview</title>
     <link href="/src/style.scss" rel="stylesheet" />
-<!--     <script type="module" src="./src/main.ts" defer></script> -->
   </head>
   <body>
-    <div class="settings-menu settings-menu-pane settings-menu-pane-wide">
-      <div class="settings-menu-content">
-        <div class="seo-container">
-          <div class="seo-preview flex">
-            <div class="flex mb7">
-              <svg fill="none" viewBox="0 0 92 31"><path d="M39.15 15.898c0 4.303-3.378 7.473-7.525 7.473s-7.526-3.17-7.526-7.473c0-4.334 3.38-7.474 7.526-7.474 4.147 0 7.526 3.14 7.526 7.474zm-3.294 0c0-2.69-1.958-4.529-4.231-4.529-2.273 0-4.231 1.84-4.231 4.529 0 2.662 1.958 4.528 4.231 4.528 2.273 0 4.231-1.87 4.231-4.528z" fill="#EA4335"></path><path d="M55.386 15.898c0 4.303-3.379 7.473-7.526 7.473-4.146 0-7.526-3.17-7.526-7.473 0-4.33 3.38-7.474 7.526-7.474 4.147 0 7.526 3.14 7.526 7.474zm-3.294 0c0-2.69-1.959-4.529-4.232-4.529s-4.231 1.84-4.231 4.529c0 2.662 1.958 4.528 4.231 4.528 2.273 0 4.232-1.87 4.232-4.528z" fill="#FBBC05"></path><path d="M70.945 8.875v13.418c0 5.52-3.267 7.774-7.13 7.774-3.636 0-5.825-2.423-6.65-4.404l2.868-1.19c.511 1.217 1.763 2.652 3.779 2.652 2.472 0 4.004-1.52 4.004-4.38V21.67h-.115c-.737.906-2.158 1.698-3.95 1.698-3.751 0-7.188-3.255-7.188-7.443 0-4.22 3.437-7.501 7.188-7.501 1.789 0 3.21.792 3.95 1.671h.115V8.88h3.129v-.004zm-2.895 7.05c0-2.632-1.763-4.556-4.005-4.556-2.273 0-4.177 1.924-4.177 4.556 0 2.604 1.904 4.501 4.177 4.501 2.242 0 4.005-1.897 4.005-4.501z" fill="#4285F4"></path><path d="M76.103 1.01v21.903H72.89V1.011h3.213z" fill="#34A853"></path><path d="M88.624 18.357l2.558 1.699c-.826 1.216-2.815 3.312-6.251 3.312-4.262 0-7.445-3.282-7.445-7.474 0-4.444 3.21-7.473 7.076-7.473 3.893 0 5.798 3.086 6.42 4.754l.341.85-10.028 4.137c.768 1.5 1.962 2.264 3.636 2.264 1.678 0 2.841-.822 3.693-2.069zm-7.87-2.688l6.703-2.774c-.368-.933-1.478-1.583-2.783-1.583-1.674 0-4.005 1.472-3.92 4.357z" fill="#EA4335"></path><path d="M11.936 13.953v-3.17h10.726c.105.552.159 1.206.159 1.914 0 2.378-.653 5.32-2.757 7.416-2.046 2.123-4.66 3.255-8.124 3.255-6.42 0-11.818-5.21-11.818-11.605C.122 5.368 5.52.158 11.94.158c3.551 0 6.081 1.389 7.982 3.198l-2.246 2.237c-1.363-1.273-3.21-2.264-5.74-2.264-4.688 0-8.354 3.764-8.354 8.434s3.666 8.434 8.354 8.434c3.041 0 4.773-1.216 5.882-2.322.9-.896 1.492-2.176 1.725-3.925l-7.607.003z" fill="#4285F4"></path></svg>
-              <div class="seo-search-bar flex"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div>
-            </div>
-            <div class="seo-preview-link">https://coast.blog<span class="seo-preview-link__subdirectory"> › design</span></div>
-            <div class="seo-preview-title">Customizing your brand and design settings - Coast</div>
-            <div class="seo-preview-desc">07 Mar 2022 — How to tweak a few settings in Ghost to transform your site from a generic template to a custom brand with style and personality.</div>
+    <div class="og-container">
+      <div class="flex ma3 mb2">
+        <span>
+          <svg fill="none" viewBox="0 0 40 40" class="social-icon">
+            <path d="M20 40.004c11.046 0 20-8.955 20-20 0-11.046-8.954-20-20-20s-20 8.954-20 20c0 11.045 8.954 20 20 20z" fill="#1977F3"></path>
+            <path d="M27.785 25.785l.886-5.782h-5.546V16.25c0-1.58.773-3.125 3.26-3.125h2.522V8.204s-2.29-.39-4.477-.39c-4.568 0-7.555 2.767-7.555 7.781v4.408h-5.08v5.782h5.08v13.976a20.08 20.08 0 003.125.242c1.063 0 2.107-.085 3.125-.242V25.785h4.66z" fill="#fff"></path>
+          </svg>
+        </span>
+        <div>
+          <div class="social-og-title">Ghost</div>
+          <div class="social-og-time">12 hrs</div>
+        </div>
+      </div>
+      <div class="flex flex-column ma3 mt2">
+        <span class="social-og-desc w-100 mb2"></span>
+        <span class="social-og-desc w-60"></span>
+      </div>
+      <div class="social-og-preview">
+        <div
+          class="social-og-preview-image"
+          style="background-image: url(https://images.unsplash.com/photo-1647164926512-2cca88470829?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8YWxsfDE0fHx8fHx8Mnx8MTY0NzE4Nzc1Mg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000);"
+        ></div>
+        <div class="social-og-preview-bookmark">
+          <div class="social-og-preview-content">
+            <div class="social-og-preview-meta">coast.blog</div>
+            <div class="social-og-preview-title">Customizing your brand and design settings - Coast</div>
+            <div class="social-og-preview-desc">How to tweak a few settings in Ghost to transform your site from a generic template to a custom brand with style and personality.</div>
           </div>
         </div>
       </div>
+      <div class="social-og-reactions">
+        <span class="social-og-likes">
+          <svg fill="none" viewBox="0 0 30 30" class="z-999">
+            <path d="M15 27c6.627 0 12-5.373 12-12S21.627 3 15 3 3 8.373 3 15s5.373 12 12 12z" fill="#5E92FF"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 15c0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15C0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15zm-3 0c0 6.627-5.373 12-12 12S3 21.627 3 15 8.373 3 15 3s12 5.373 12 12z" fill="#fff"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.246 14.078h2.13c.17 0 .304.135.304.305v6.13c0 .17-.134.304-.304.304h-2.13a.31.31 0 01-.313-.305v-6.13a.31.31 0 01.313-.304zm3.687 5.88h6.506a.869.869 0 00.867-.868.887.887 0 00-.554-.806h.16c.457 0 .833-.501.833-.957a.838.838 0 00-.832-.842h-.161v-.071h.465a.844.844 0 00.841-.832.846.846 0 00-.841-.841h-.465v-.072h.465a.844.844 0 00.841-.832.846.846 0 00-.841-.841h-3.642c-.027-.01-.027-.036 0-.09.045-.09.143-.268.295-.537.152-.268.34-.617.439-1.065.098-.447.09-.993.009-1.423-.072-.42-.224-.733-.412-.93a.954.954 0 00-.653-.296c-.233-.008-.475.054-.645.206-.17.161-.259.403-.304.716-.036.322-.009.716-.018.958-.018.241-.062.34-.214.456-.161.116-.421.268-.663.474a5.221 5.221 0 00-.698.797c-.376.483-1.315 1.7-1.315 2.219v4.94c0 .295.242.537.537.537z" fill="#FEFEFE"></path>
+          </svg>
+          <svg fill="none" viewBox="0 0 30 30" class="nl1">
+            <path d="M15 27c6.627 0 12-5.373 12-12S21.627 3 15 3 3 8.373 3 15s5.373 12 12 12z" fill="#FF4F67"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 15c0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15C0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15zm-3 0c0 6.627-5.373 12-12 12S3 21.627 3 15 8.373 3 15 3s12 5.373 12 12z" fill="#fff"></path>
+            <path d="M14.5 11.441C15.434 9.811 16.375 9 18.25 9 20.317 9 22 11.49 22 13.28c0 3.252-4.484 6.777-7.5 8.72-2.713-1.678-7.5-5.468-7.5-8.72C7 11.49 8.684 9 10.75 9c1.875 0 2.809.811 3.75 2.441z" fill="#FEFEFE"></path>
+          </svg>
+          182
+        </span>
+        <span class="social-og-comments">7 comments</span>
+        <span class="social-og-comments ml2">2 shares</span>
+      </div>
     </div>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
   </body>
 </html>
