@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .w100 {
   width: 100%;
 }
@@ -40,4 +44,10 @@
 
 .ml2 {
   margin-left: 0.8rem;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
 }

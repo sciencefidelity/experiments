@@ -19,38 +19,32 @@
   text-rendering: optimizelegibility;
 }
 
-.socialIcon {
-  width: 40px;
-  height: 40px;
-  margin-right: 8px;
-}
-
-.socialOgTitle {
+.ogTitle {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.38;
   color: hsl(220, 46%, 41%);
 }
 
-.socialOgTime {
+.ogTime {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.34;
   color: hsl(216, 7%, 41%);
 }
 
-.socialOgDesc {
+.ogDesc {
   display: inline-block;
   height: 10px;
   background: hsl(216, 13%, 92%);
   border-radius: 5px;
 }
 
-.socialOgPreview {
+.ogPreview {
   background: hsl(220, 13%, 96%);
 }
 
-.socialOgPreviewImage {
+.ogPreviewImage {
   width: 100%;
   height: 247px;
   background-position: 50%;
@@ -58,19 +52,19 @@
   border-top: 1px solid hsl(216, 8%, 88%);
 }
 
-.socialOgPreviewBookmark {
+.ogPreviewBookmark {
   padding: 10px 12px 8px;
   border-bottom: 1px solid hsl(216, 8%, 88%);
 }
 
-.socialOgPreviewContent {
+.ogPreviewContent {
   height: 69px;
   padding: 0 1px 0 4px;
   margin: 0 -1px 0 -4px;
   overflow: hidden;
 }
 
-.socialOgPreviewMeta {
+.ogPreviewMeta {
   overflow: hidden;
   font-size: 12px;
   line-height: 16px;
@@ -80,7 +74,7 @@
   white-space: nowrap;
 }
 
-.socialOgPreviewTitle {
+.ogPreviewTitle {
   max-height: 110px;
   padding-top: 2px;
   margin: 3px 0 0;
@@ -92,7 +86,7 @@
   word-wrap: break-word;
 }
 
-.socialOgPreviewDesc {
+.ogPreviewDesc {
   max-height: 20px;
   margin-top: 3px;
   overflow: hidden;
@@ -105,13 +99,13 @@
   white-space: nowrap;
 }
 
-.socialOgReactions {
+.ogReactions {
   display: flex;
   align-items: center;
   margin: 12px;
 }
 
-.socialOgLikes {
+.ogLikes {
   display: flex;
   flex-grow: 1;
   overflow: hidden;
@@ -120,12 +114,12 @@
   color: hsl(214, 8%, 41%);
 }
 
-.socialOgLikes svg {
+.ogLikes svg {
   width: 20px;
   height: 20px;
 }
 
-.socialOgComments {
+.ogComments {
   display: flex;
   flex-shrink: 0;
   font-size: 13px;

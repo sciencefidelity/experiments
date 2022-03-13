@@ -1,4 +1,5 @@
 import React from "react"
+import u from "styles/Utils.module.scss"
 
 export const CommentIcon = () => (
   <svg viewBox="0 0 24 24">
@@ -35,7 +36,7 @@ export const ShareIcon = () => (
 )
 
 export const TwitterLogo = () => (
-  <svg fill="none" viewBox="0 0 40 40" className="social-icon">
+  <svg fill="none" viewBox="0 0 40 40" className={u.socialIcon}>
     <circle cx="20" cy="20" r="20" fill="#51B1EF"></circle>
     <path d="M30.905 14.268a8.63 8.63 0 01-2.49.686 4.36 4.36 0 001.902-2.403 8.602 8.602 0 01-2.753 1.054c-3.512-3.488-8.463.13-7.396 3.969a12.284 12.284 0 01-8.942-4.543c-1.228 2.093-.428 4.667 1.343 5.798a4.31 4.31 0 01-1.965-.544v.055a4.35 4.35 0 003.48 4.263 4.569 4.569 0 01-1.964.074 4.367 4.367 0 004.053 3.023c-1.918 1.46-4.146 2.062-6.42 1.798 9.793 5.767 19.029-1.783 18.998-10.417 0-.187-.004-.374-.012-.561a9 9 0 002.166-2.248" fill="#fff"></path>
   </svg>
