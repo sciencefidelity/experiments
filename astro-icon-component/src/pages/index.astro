@@ -1,0 +1,37 @@
+---
+import BaseLayout from "layouts/BaseLayout.astro"
+import Icon from "components/Icon.astro"
+const icons = [
+  "broken-time",
+  "cctv",
+  "earthquake",
+  "eye",
+  "invader",
+  "oil-spill",
+  "sputnik",
+  "towers"
+]
+const width = "120px"
+---
+<BaseLayout>
+  <div class="container grid">
+    {icons.map(icon =>
+      <div>
+        <Icon name={icon} {width} height={width} />
+      </div>
+    )}
+  </div>
+</BaseLayout>
+
+<style define:vars={{ width }}>
+  .container {
+    margin: 4rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, var(--width));
+    gap: 4rem;
+  }
+</style>
+
