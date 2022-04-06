@@ -1,0 +1,19 @@
+$background: hsl(0, 0%, 100%);
+$foreground: hsl(266, 54%, 36%);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: calc(10px + 2vmin);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.canvas {
+  width: 90vw;
+  border: 1px solid black;
+  height: 30rem;
+  margin: 2rem auto;
+}
