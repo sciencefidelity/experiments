@@ -1,19 +1,31 @@
-$background: hsl(0, 0%, 100%);
-$foreground: hsl(266, 54%, 36%);
-
-html {
-  font-size: 62.5%;
+:root {
+  --foreground: hsl(0, 0%, 0%);
+  --line-color: hsl(0, 0%, 75%);
 }
 
 body {
-  font-size: calc(10px + 2vmin);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.canvas {
+#canvas {
   width: 90vw;
-  border: 1px solid black;
-  height: 30rem;
+  border: 1px solid var(--foreground);
+  height: 400px;
   margin: 2rem auto;
+  box-sizing: content-box;
+}
+
+// .line {
+//   width: 100%;
+//   background-color: var(--line-color);
+//   height: 1px;
+//   margin-top: 40px;
+// }
+
+.line {
+  width: 100%;
+  border-bottom: 1px solid var(--line-color);
+  height: 40px;
+  // margin-top: 40px;
 }
