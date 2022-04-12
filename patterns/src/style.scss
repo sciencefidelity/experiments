@@ -160,6 +160,20 @@ body {
   // opacity: 0.8;
 }
 
+#repeating-circles {
+  background-image:
+    repeating-radial-gradient(var(--pattern) 0 0.2%, transparent 0.2% 2%);
+    // background-position: center;
+    // background-size: 410px 410px;
+}
+
+#radial {
+  background-image:
+    radial-gradient(transparent 21%, var(--pattern) 21% 24%, transparent 26%);
+    background-position: center;
+    background-size: 21px 21px;
+}
+
 #zigzag {
   background-image:
     linear-gradient(135deg, var(--pattern) 25%, transparent 25%),
