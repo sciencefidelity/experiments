@@ -1,20 +1,14 @@
-import { useCallback, useEffect, useState } from "react"
+import { FC, useState } from "react"
+
+interface ImageProps {
+  src: string
+  fallback: string
+  index: number
+}
 
 const App = () => {
-  const [loaded, setLoaded] = useState(false)
-  const onLoad = useCallback(() => {
-    setLoaded(true)
-  }, [])
-  useEffect(() => {
-    let ignore = false
-    if (!ignore) {
-      setLoaded(true)
-    }
-    return () => {
-      ignore = true
-    }
-  }, [loaded, onLoad])
-  
+  const [count, setCount] = useState(0)
+
   const imageUrl = "https://picsum.photos/600/800"
   const fallbackUrl = "https://picsum.photos/6/8"
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -24,26 +18,14 @@ const App = () => {
   return (
     <div>
       {arr.map((num, idx) => (
-        <div
-          key={num}
-          className="box"
-        >
-          <img
-            src={`${fallbackUrl}?${alphabet[num]}`}
-            className="placeholder"
-            alt=""
-            loading={idx === 0 ? "eager" : "lazy"}
-            width={600}
-            height={800}
-          />
-          <img
+        <div key={num} className="box">
+          <button className="btn" onClick={() => setCount(count => (count = count + 1))}>
+            Count: {count}
+          </button>
+          <Image 
             src={`${imageUrl}?${alphabet[num]}`}
-            className={`image ${loaded ? "loaded" : null}`}
-            alt=""
-            loading="lazy"
-            onLoad={onLoad}
-            width={600}
-            height={800}
+            fallback={`${fallbackUrl}?${alphabet[num]}`}
+            index={idx}
           />
         </div>
       ))}
@@ -51,3 +33,32 @@ const App = () => {
   )
 }
 export default App
+
+const Image: FC<ImageProps> = ({ src, index, fallback }) => {
+  const [loaded, setLoaded] = useState(false)
+  function onLoad() {
+    setLoaded(true)
+  }
+
+  return (
+    <>
+      <img
+        src={fallback}
+        className="placeholder"
+        alt=""
+        loading="eager"
+        width={600}
+        height={800}
+      />
+      <img
+        src={src}
+        className={`image ${loaded ? "loaded" : ""}`}
+        alt=""
+        loading={index === 0 ? "eager" : "lazy"}
+        onLoad={onLoad}
+        width={600}
+        height={800}
+      />
+    </>
+  )
+}
