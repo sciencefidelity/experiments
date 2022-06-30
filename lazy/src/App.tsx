@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 const App = () => {
   const [loaded, setLoaded] = useState(false)
@@ -36,7 +36,6 @@ const App = () => {
             className="placeholder"
             alt=""
             loading="eager"
-            onLoad={handleOnLoad}
             width={1200}
             height={800}
           />
