@@ -1,8 +1,8 @@
 import { FC, useState } from "react"
 
 interface ImageProps {
-  src: string
-  fallback: string
+  imageUrl: string
+  fallbackUrl: string
   index: number
 }
 
@@ -12,19 +12,18 @@ const App = () => {
   const imageUrl = "https://picsum.photos/600/800"
   const fallbackUrl = "https://picsum.photos/6/8"
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  // const arr = [1]
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
   return (
     <div>
+      <button className="btn" onClick={() => setCount(count => (count = count + 1))}>
+        Count: {count}
+      </button>
       {arr.map((num, idx) => (
         <div key={num} className="box">
-          <button className="btn" onClick={() => setCount(count => (count = count + 1))}>
-            Count: {count}
-          </button>
           <Image 
-            src={`${imageUrl}?${alphabet[num]}`}
-            fallback={`${fallbackUrl}?${alphabet[num]}`}
+            imageUrl={`${imageUrl}?${alphabet[num]}`}
+            fallbackUrl={`${fallbackUrl}?${alphabet[num]}`}
             index={idx}
           />
         </div>
@@ -34,7 +33,7 @@ const App = () => {
 }
 export default App
 
-const Image: FC<ImageProps> = ({ src, index, fallback }) => {
+const Image: FC<ImageProps> = ({ imageUrl, index, fallbackUrl }) => {
   const [loaded, setLoaded] = useState(false)
   function onLoad() {
     setLoaded(true)
@@ -43,7 +42,7 @@ const Image: FC<ImageProps> = ({ src, index, fallback }) => {
   return (
     <>
       <img
-        src={fallback}
+        src={fallbackUrl}
         className="placeholder"
         alt=""
         loading="eager"
@@ -51,7 +50,7 @@ const Image: FC<ImageProps> = ({ src, index, fallback }) => {
         height={800}
       />
       <img
-        src={src}
+        src={imageUrl}
         className={`image ${loaded ? "loaded" : ""}`}
         alt=""
         loading={index === 0 ? "eager" : "lazy"}
