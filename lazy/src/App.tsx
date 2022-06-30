@@ -11,7 +11,8 @@ const App = () => {
 
   const imageUrl = "https://picsum.photos/600/800"
   const fallbackUrl = "https://picsum.photos/6/8"
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  const length = 10
+  const arr = Array.from(Array(length).keys())
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
   return (
