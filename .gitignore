@@ -1,22 +1,23 @@
-# system
-.DS_store
+node_modules
 
-# generated
-*.css
-*.css.map
+# Output
+.output
+.vercel
+/.svelte-kit
+/build
 
-# backups
-*.bak
+# OS
+.DS_Store
+Thumbs.db
+.direnv
+bak
+
+# Env
 .env
-*.env
-
-# Node
-node_modules/
-.cache/
-build/
-*.log
+.env.*
+!.env.example
+!.env.test
 
 # Vite
-dist
-dist-ssr
-*.local
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
