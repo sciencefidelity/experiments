@@ -2,11 +2,11 @@
 	<title>Triangle</title>
 </svelte:head>
 
-<main id="canvas">
+<section class="triangle">
 	{#each Array(10) as _}
 		<div></div>
 	{/each}
-</main>
+</section>
 
 <style lang="scss">
 	:root {
@@ -23,24 +23,7 @@
 		--color-10: hsl(241, 67%, 51%);
 	}
 
-	:global(*) {
-		box-sizing: border-box;
-		margin: 0;
-		&::after,
-		&::before {
-			box-sizing: border-box;
-		}
-	}
-
-	:global(body) {
-		background: var(--background);
-		display: grid;
-		place-items: center;
-		width: 100vw;
-		height: 100vh;
-	}
-
-	#canvas {
+	.triangle {
 		position: relative;
 		width: 20em;
 		font-size: min(5vh, 4vw);

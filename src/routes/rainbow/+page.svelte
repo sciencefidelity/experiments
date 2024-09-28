@@ -2,7 +2,7 @@
 	<title>Rainbow</title>
 </svelte:head>
 
-<div id="rainbow"><div></div></div>
+<section class="rainbow"><div></div></section>
 
 <style lang="scss">
 	$background: hsl(40, 13%, 62%);
@@ -23,24 +23,7 @@
 		}
 	}
 
-	:global(*) {
-		box-sizing: border-box;
-		margin: 0;
-		&::after,
-		&::before {
-			box-sizing: border-box;
-		}
-	}
-
-	:global(body) {
-		display: grid;
-		place-items: center;
-		width: 100vw;
-		height: 100vh;
-		background: $background;
-	}
-
-	#rainbow {
+	.rainbow {
 		@include after($padding: 50%);
 
 		position: relative;
@@ -63,18 +46,5 @@
 				$inset 3em $color-6,
 				$inset 3.5em $color-7;
 		}
-	}
-
-	:global(html::after) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -100;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
-		content: '';
-		background: url('/images/noise.jpg');
-		opacity: 0.05;
 	}
 </style>

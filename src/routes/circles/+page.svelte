@@ -2,17 +2,17 @@
 	<title>Circles</title>
 </svelte:head>
 
-<main id="site-main">
+<section class="circles">
 	{#each Array.from(Array(6).keys()) as i}
-		<div id="layer-{i + 1}">
+		<div class="layer-{i + 1}">
 			{#each Array(i + 1) as _j}
 				<div></div>
 			{/each}
 		</div>
 	{/each}
-</main>
+</section>
 
-<style lang="scss" global>
+<style lang="scss">
 	@charset 'utf-8';
 
 	$background: hsl(40, 13%, 62%);
@@ -24,23 +24,7 @@
 	$bright6: hsl(335, 78%, 57%);
 	$cutout: 0.02em 0.05em 0.02em 0.02em rgba(hsl(0, 0%, 0%), 0.15);
 
-	:global(*) {
-		box-sizing: border-box;
-		margin: 0;
-		&::before,
-		&::after {
-			box-sizing: border-box;
-		}
-	}
-
-	:global(body) {
-		display: grid;
-		place-items: center;
-		height: 100vh;
-		background: $background;
-	}
-
-	#site-main {
+	.circles {
 		position: relative;
 		width: min(80vh, 88vw);
 		&::after {
@@ -75,7 +59,7 @@
 		}
 	}
 
-	#layer-1 {
+	.layer-1 {
 		@extend %layers;
 
 		background: $bright1;
@@ -83,36 +67,23 @@
 		box-shadow: $cutout;
 	}
 
-	#layer-2 {
+	.layer-2 {
 		@include circle();
 	}
 
-	#layer-3 {
+	.layer-3 {
 		@include circle($num: 2, $width: 33.33%, $color: $bright3);
 	}
 
-	#layer-4 {
+	.layer-4 {
 		@include circle($num: 3, $width: 25%, $color: $bright4);
 	}
 
-	#layer-5 {
+	.layer-5 {
 		@include circle($num: 4, $width: 20%, $color: $bright5);
 	}
 
-	#layer-6 {
+	.layer-6 {
 		@include circle($num: 5, $width: 16.66%, $color: $bright6);
-	}
-
-	:global(html::after) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 201;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
-		content: '';
-		background: url('/images/noise.jpg');
-		opacity: 0.05;
 	}
 </style>

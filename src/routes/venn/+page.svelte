@@ -10,7 +10,7 @@
 	<title>Venn Diagram</title>
 </svelte:head>
 
-<section id="site-main" class:dark={isDarkMode} class:light={!isDarkMode}>
+<section class="venn" class:dark={isDarkMode} class:light={!isDarkMode}>
 	<button
 		id="mode"
 		class:darkmode={isDarkMode}
@@ -38,33 +38,19 @@
 
 <style lang="scss">
 	$dark: hsl(238, 24%, 23%);
-	$light: hsl(12, 24%, 88%);
+	$light: hsl(40, 13%, 62%);
 	$green: hsl(140, 60%, 50%);
 	$blue: hsl(204, 100%, 50%);
 	$red: hsl(360, 100%, 60%);
 	$white: hsl(0, 0%, 100%);
+	$text: hsl(40, 13%, 82%);
 	$time: 0.3s ease-in-out;
 
-	:global(*) {
-		box-sizing: border-box;
-		margin: 0;
-		&::after,
-		&::before {
-			box-sizing: border-box;
-		}
-	}
-
-	:global(html) {
-		overflow: hidden;
-		color: $white;
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-	}
-
-	#site-main {
-		font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas,
-			monospace;
+	.venn {
+		font-family: monospace;
+		color: $text;
 		display: grid;
+		position: relative;
 		place-items: center;
 		width: 100vw;
 		height: 100vh;
@@ -174,18 +160,5 @@
 			padding-bottom: 100%;
 			content: '';
 		}
-	}
-
-	:global(html::after) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 201;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
-		content: '';
-		background: url('/images/noise.jpg');
-		opacity: 0.05;
 	}
 </style>

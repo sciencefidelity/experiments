@@ -44,9 +44,9 @@
 	<title>Random Map Generator</title>
 </svelte:head>
 
-<section id="site-main">
+<section class="maps">
 	{#each Array.from(Array(MAP_COUNT).keys()) as i}
-		<div id="map{i}" bind:this={elements[i]}></div>
+		<div class="map{i}" bind:this={elements[i]}></div>
 	{/each}
 </section>
 
@@ -55,30 +55,25 @@
 		--ocean: #aadaff;
 	}
 
-	:global(*) {
-		box-sizing: border-box;
-		margin: 0;
+	.maps {
+		display: flex;
+		flex-wrap: wrap;
+		/* grid-template-columns: 1fr 1fr 1fr 1fr; */
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.5rem;
 	}
 
-	:global(body) {
-		overflow: hidden;
-		background: hsl(210, 3%, 16%);
-	}
-
-	#site-main {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-
-	#map0,
-	#map1,
-	#map2,
-	#map3,
-	#map4,
-	#map5,
-	#map6,
-	#map7 {
-		width: 25vw;
-		height: 50vh;
+	.map0,
+	.map1,
+	.map2,
+	.map3,
+	.map4,
+	.map5,
+	.map6,
+	.map7 {
+		width: 20rem;
+		height: 20rem;
+		border: 1px solid hsl(0, 0%, 10%);
 	}
 </style>

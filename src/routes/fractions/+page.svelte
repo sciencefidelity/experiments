@@ -1,33 +1,16 @@
-<script lang="ts">
-	let isSpinning = false;
-
-	function onClick() {
-		isSpinning = !isSpinning;
-	}
-</script>
-
 <svelte:head>
 	<title>Fractions</title>
 </svelte:head>
 
-<main class:stop={!isSpinning} class:spin={isSpinning}>
+<section class="fractions">
 	{#each Array.from(Array(8).keys()) as i}
-		<section>
+		<div>
 			{#each Array(i + 1) as _}
 				<div></div>
 			{/each}
-		</section>
+		</div>
 	{/each}
-</main>
-<div class="btn">
-	<button on:click={onClick} aria-label="start spinning">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="spinner">
-			<path
-				d="M371 133a168 168 0 00-278 82c-1 5-6 9-12 9H24c-7 0-13-7-12-14A248 248 0 01427 77l36-36c15-15 41-4 41 17v134c0 13-11 24-24 24H346c-21 0-32-26-17-41l42-42zM32 296h134c21 0 32 26 17 41l-42 42a168 168 0 00278-82c1-5 6-9 12-9h57c7 0 13 7 12 14A248 248 0 0185 435l-36 36c-15 15-41 4-41-17V320c0-13 11-24 24-24z"
-			/>
-		</svg>
-	</button>
-</div>
+</section>
 
 <style lang="scss">
 	:root {
@@ -61,54 +44,6 @@
 		--color-25: hsl(290, 53%, 46%);
 	}
 
-	@keyframes turntable {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
-
-	:global(*) {
-		box-sizing: border-box;
-		margin: 0;
-		&::after,
-		&::before {
-			box-sizing: border-box;
-		}
-	}
-
-	:global(body) {
-		background: var(--bg);
-	}
-
-	.btn {
-		cursor: pointer;
-		width: 2rem;
-		margin: auto;
-		text-align: center;
-		cursor: pointer;
-		button {
-			background-color: transparent;
-			border: none;
-			outline: none;
-		}
-	}
-
-	.spinner {
-		width: 2rem;
-		fill: var(--text);
-	}
-
-	.spin > section {
-		animation: turntable 1s linear infinite;
-	}
-
-	.stop > section {
-		animation: none;
-	}
-
 	%container {
 		position: relative;
 		width: 100%;
@@ -124,7 +59,7 @@
 		border-radius: 50%;
 	}
 
-	main {
+	.fractions {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 1rem;

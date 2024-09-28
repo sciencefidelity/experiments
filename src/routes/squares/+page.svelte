@@ -57,7 +57,6 @@
 </div>
 
 <style lang="scss">
-	$background: hsl(40, 13%, 62%);
 	$colors: (
 		color-0: hsl(129, 44%, 33%),
 		color-1: hsl(120, 62%, 49%),
@@ -78,23 +77,6 @@
 			padding-bottom: 100%;
 			content: '';
 		}
-	}
-
-	:global(*) {
-		box-sizing: border-box;
-		margin: 0;
-		&::after,
-		&::before {
-			box-sizing: border-box;
-		}
-	}
-
-	:global(body) {
-		display: grid;
-		place-items: center;
-		width: 100vw;
-		height: 100vh;
-		background: $background;
 	}
 
 	@each $x, $color in $colors {

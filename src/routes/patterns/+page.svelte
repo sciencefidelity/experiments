@@ -2,7 +2,7 @@
 	<title>Patterns</title>
 </svelte:head>
 
-<div class="container">
+<section class="patterns">
 	<div id="dots" class="box"><button class="btn">Register</button></div>
 	<div id="circles" class="box"><button class="btn">Register</button></div>
 	<div id="lines" class="box"><button class="btn">Register</button></div>
@@ -18,27 +18,22 @@
 	<div id="zigzag" class="box"><button class="btn">Register</button></div>
 	<div id="isometric-3d" class="box"><button class="btn">Register</button></div>
 	<div id="target" class="box"><button class="btn">Register</button></div>
-</div>
+</section>
 
 <style lang="scss">
 	:root {
-		--foreground: hsl(0, 0%, 0%);
-		--pattern: hsl(0, 0%, 75%);
+		--pattern-foreground: hsl(0, 0%, 0%);
+		--pattern-pattern: hsl(0, 0%, 75%);
 		--pattern-light: hsla(0, 0%, 75%, 50%);
-		--background: hsl(60, 15%, 95%);
+		--pattern-background: hsl(60, 15%, 95%);
 	}
 
-	:global(body) {
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-
-	.container {
+	.patterns {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem;
 		justify-content: center;
-		margin: 2rem 0;
+		margin: 2rem;
 	}
 
 	.box {
@@ -48,14 +43,14 @@
 		place-items: center;
 		width: 410px;
 		height: 410px;
-		background-color: var(--background);
+		background-color: var(--pattern-background);
 		background-repeat: repeat;
-		border: 1px solid var(--foreground);
+		border: 1px solid var(--pattern-foreground);
 	}
 
 	#dots {
-		background-image: radial-gradient(var(--pattern) 12%, transparent 12%),
-			radial-gradient(var(--pattern) 12%, transparent 12%);
+		background-image: radial-gradient(var(--pattern-pattern) 12%, transparent 12%),
+			radial-gradient(var(--pattern-pattern) 12%, transparent 12%);
 		background-position:
 			0 0,
 			10px 10px;
@@ -63,8 +58,8 @@
 	}
 
 	#circles {
-		background-image: radial-gradient(var(--pattern) 9%, transparent 9%),
-			radial-gradient(var(--pattern) 9%, transparent 9%);
+		background-image: radial-gradient(var(--pattern-pattern) 9%, transparent 9%),
+			radial-gradient(var(--pattern-pattern) 9%, transparent 9%);
 		background-position: center;
 		// background-position: 0 0, 16px 16px;
 		background-size: 32px 32px;
@@ -74,12 +69,12 @@
 		background-image: linear-gradient(
 			0deg,
 			transparent 49%,
-			var(--pattern) 49%,
-			var(--pattern) 50%,
+			var(--pattern-pattern) 49%,
+			var(--pattern-pattern) 50%,
 			transparent 50%,
 			transparent 99%,
-			var(--pattern) 99%,
-			var(--pattern) 100%
+			var(--pattern-pattern) 99%,
+			var(--pattern-pattern) 100%
 		);
 		background-position: center;
 		background-size: 62px 62px;
@@ -89,12 +84,12 @@
 		background-image: linear-gradient(
 			90deg,
 			transparent 49%,
-			var(--pattern) 49%,
-			var(--pattern) 50%,
+			var(--pattern-pattern) 49%,
+			var(--pattern-pattern) 50%,
 			transparent 50%,
 			transparent 99%,
-			var(--pattern) 99%,
-			var(--pattern) 100%
+			var(--pattern-pattern) 99%,
+			var(--pattern-pattern) 100%
 		);
 		background-position: center;
 		background-size: 62px 62px;
@@ -104,22 +99,22 @@
 		background-image: linear-gradient(
 				0deg,
 				transparent 49%,
-				var(--pattern) 49%,
-				var(--pattern) 50%,
+				var(--pattern-pattern) 49%,
+				var(--pattern-pattern) 50%,
 				transparent 50%,
 				transparent 99%,
-				var(--pattern) 99%,
-				var(--pattern) 100%
+				var(--pattern-pattern) 99%,
+				var(--pattern-pattern) 100%
 			),
 			linear-gradient(
 				90deg,
 				transparent 49%,
-				var(--pattern) 49%,
-				var(--pattern) 50%,
+				var(--pattern-pattern) 49%,
+				var(--pattern-pattern) 50%,
 				transparent 50%,
 				transparent 99%,
-				var(--pattern) 99%,
-				var(--pattern) 100%
+				var(--pattern-pattern) 99%,
+				var(--pattern-pattern) 100%
 			);
 		background-position: center;
 		background-size: 62px 62px;
@@ -129,22 +124,22 @@
 		background-image: linear-gradient(
 				0deg,
 				transparent 49.5%,
-				var(--pattern) 49.5%,
-				var(--pattern) 50%,
+				var(--pattern-pattern) 49.5%,
+				var(--pattern-pattern) 50%,
 				transparent 50%,
 				transparent 99.5%,
-				var(--pattern) 99.5%,
-				var(--pattern) 100%
+				var(--pattern-pattern) 99.5%,
+				var(--pattern-pattern) 100%
 			),
 			linear-gradient(
 				90deg,
 				transparent 49.5%,
-				var(--pattern) 49.5%,
-				var(--pattern) 50%,
+				var(--pattern-pattern) 49.5%,
+				var(--pattern-pattern) 50%,
 				transparent 50%,
 				transparent 99.5%,
-				var(--pattern) 99.5%,
-				var(--pattern) 100%
+				var(--pattern-pattern) 99.5%,
+				var(--pattern-pattern) 100%
 			);
 		background-position: center;
 		background-size: 120px 120px;
@@ -154,32 +149,32 @@
 		background-image: linear-gradient(
 				45deg,
 				transparent 49%,
-				var(--pattern) 49%,
-				var(--pattern) 50%,
+				var(--pattern-pattern) 49%,
+				var(--pattern-pattern) 50%,
 				transparent 50%,
 				transparent 99%,
-				var(--pattern) 99%,
-				var(--pattern) 100%
+				var(--pattern-pattern) 99%,
+				var(--pattern-pattern) 100%
 			),
 			linear-gradient(
 				-45deg,
 				transparent 49%,
-				var(--pattern) 49%,
-				var(--pattern) 50%,
+				var(--pattern-pattern) 49%,
+				var(--pattern-pattern) 50%,
 				transparent 50%,
 				transparent 99%,
-				var(--pattern) 99%,
-				var(--pattern) 100%
+				var(--pattern-pattern) 99%,
+				var(--pattern-pattern) 100%
 			);
 		background-position: center;
 		background-size: 21px 21px;
 	}
 
 	#textbook {
-		background-image: linear-gradient(var(--pattern) 2px, transparent 2px),
-			linear-gradient(90deg, var(--pattern) 2px, transparent 2px),
-			linear-gradient(var(--pattern) 1px, transparent 1px),
-			linear-gradient(90deg, var(--pattern) 1px, transparent 1px);
+		background-image: linear-gradient(var(--pattern-pattern) 2px, transparent 2px),
+			linear-gradient(90deg, var(--pattern-pattern) 2px, transparent 2px),
+			linear-gradient(var(--pattern-pattern) 1px, transparent 1px),
+			linear-gradient(90deg, var(--pattern-pattern) 1px, transparent 1px);
 		background-position: center;
 		background-size:
 			100px 100px,
@@ -190,27 +185,31 @@
 	}
 
 	#target {
-		background-image: repeating-radial-gradient(var(--pattern), 1px, transparent 30px);
+		background-image: repeating-radial-gradient(var(--pattern-pattern), 1px, transparent 30px);
 		// opacity: 0.8;
 	}
 
 	#repeating-circles {
-		background-image: repeating-radial-gradient(var(--pattern) 0 0.2%, transparent 0.2% 2%);
+		background-image: repeating-radial-gradient(var(--pattern-pattern) 0 0.2%, transparent 0.2% 2%);
 		// background-position: center;
 		// background-size: 410px 410px;
 	}
 
 	#radial {
-		background-image: radial-gradient(transparent 21%, var(--pattern) 21% 24%, transparent 26%);
+		background-image: radial-gradient(
+			transparent 21%,
+			var(--pattern-pattern) 21% 24%,
+			transparent 26%
+		);
 		background-position: center;
 		background-size: 21px 21px;
 	}
 
 	#zigzag {
-		background-image: linear-gradient(135deg, var(--pattern) 25%, transparent 25%),
-			linear-gradient(225deg, var(--pattern) 25%, transparent 25%),
-			linear-gradient(45deg, var(--pattern) 25%, transparent 25%),
-			linear-gradient(315deg, var(--pattern) 25%, transparent 25%);
+		background-image: linear-gradient(135deg, var(--pattern-pattern) 25%, transparent 25%),
+			linear-gradient(225deg, var(--pattern-pattern) 25%, transparent 25%),
+			linear-gradient(45deg, var(--pattern-pattern) 25%, transparent 25%),
+			linear-gradient(315deg, var(--pattern-pattern) 25%, transparent 25%);
 		background-position:
 			20px 0,
 			20px 0,
@@ -229,35 +228,35 @@
 	#isometric-3d {
 		background-image: linear-gradient(
 				30deg,
-				var(--pattern) 12%,
+				var(--pattern-pattern) 12%,
 				transparent 12.5%,
 				transparent 87%,
-				var(--pattern) 87.5%,
-				var(--pattern)
+				var(--pattern-pattern) 87.5%,
+				var(--pattern-pattern)
 			),
 			linear-gradient(
 				150deg,
-				var(--pattern) 12%,
+				var(--pattern-pattern) 12%,
 				transparent 12.5%,
 				transparent 87%,
-				var(--pattern) 87.5%,
-				var(--pattern)
+				var(--pattern-pattern) 87.5%,
+				var(--pattern-pattern)
 			),
 			linear-gradient(
 				30deg,
-				var(--pattern) 12%,
+				var(--pattern-pattern) 12%,
 				transparent 12.5%,
 				transparent 87%,
-				var(--pattern) 87.5%,
-				var(--pattern)
+				var(--pattern-pattern) 87.5%,
+				var(--pattern-pattern)
 			),
 			linear-gradient(
 				150deg,
-				var(--pattern) 12%,
+				var(--pattern-pattern) 12%,
 				transparent 12.5%,
 				transparent 87%,
-				var(--pattern) 87.5%,
-				var(--pattern)
+				var(--pattern-pattern) 87.5%,
+				var(--pattern-pattern)
 			),
 			linear-gradient(
 				60deg,
@@ -291,22 +290,22 @@
 			radial-gradient(
 				circle,
 				transparent 20%,
-				var(--background) 20%,
-				var(--background) 80%,
+				var(--pattern-background) 20%,
+				var(--pattern-background) 80%,
 				transparent 80%,
 				transparent
 			),
 			radial-gradient(
 					circle,
 					transparent 20%,
-					var(--background) 20%,
-					var(--background) 80%,
+					var(--pattern-background) 20%,
+					var(--pattern-background) 80%,
 					transparent 80%,
 					transparent
 				)
 				25px 25px,
-			linear-gradient(var(--pattern) 1px, transparent 1px) 0 -1px,
-			linear-gradient(90deg, var(--pattern) 1px, var(--background) 1px) -1px 0;
+			linear-gradient(var(--pattern-pattern) 1px, transparent 1px) 0 -1px,
+			linear-gradient(90deg, var(--pattern-pattern) 1px, var(--pattern-background) 1px) -1px 0;
 		background-size:
 			50px 50px,
 			50px 50px,
@@ -322,7 +321,7 @@
 		// text-transform: lowercase;
 		cursor: pointer;
 		background: hsl(0, 100%, 100%);
-		border: 2px solid var(--foreground);
+		border: 2px solid var(--pattern-foreground);
 		border-radius: 999px;
 	}
 </style>
