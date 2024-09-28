@@ -1,6 +1,10 @@
 {
 	"name": "experiments",
-	"version": "0.0.1",
+	"version": "0.1.0",
+	"license": "UNLICENSED",
+	"description": "Creative stuff",
+	"repository": "https://github.com/sciencefidelity/experiments",
+	"author": "Matt Cook <matt@sciencefidelity.co.uk>",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

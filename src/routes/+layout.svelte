@@ -26,6 +26,17 @@
 		--background: hsl(40, 13%, 62%);
 	}
 
+	@font-face {
+		font-family: Recursive;
+		font-size: normal;
+		font-weight: normal;
+		font-optical-sizing: auto;
+		src:
+			url('/fonts/recursive.woff2') format('woff supports variations'),
+			url('/fonts/recursive.woff2') format('woff2-variations');
+		font-display: swap;
+	}
+
 	* {
 		box-sizing: border-box;
 		margin: 0;
