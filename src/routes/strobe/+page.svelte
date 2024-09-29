@@ -1,16 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let i = 0;
-
 	onMount(() => setInterval(colorChange, 2000));
 
-	const colorChange = () => {
+	let i = 0;
+
+	function colorChange() {
 		i++;
-		if (i === 6) {
-			i = 0;
-		}
-	};
+		if (i === 6) i = 0;
+	}
 </script>
 
 <svelte:head>
@@ -35,26 +33,26 @@
 	}
 
 	.c0 {
-		background: hsl(120, 100%, 25%);
-	}
-
-	.c1 {
 		background: hsl(48, 95%, 52%);
 	}
 
-	.c2 {
+	.c1 {
 		background: hsl(19, 94%, 56%);
 	}
 
-	.c3 {
+	.c2 {
 		background: hsl(354, 81%, 56%);
 	}
 
-	.c4 {
+	.c3 {
 		background: hsl(271, 54%, 39%);
 	}
 
-	.c5 {
+	.c4 {
 		background: hsl(188, 58%, 53%);
+	}
+
+	.c5 {
+		background: hsl(120, 100%, 25%);
 	}
 </style>

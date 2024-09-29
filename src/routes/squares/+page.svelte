@@ -5,22 +5,28 @@
 	let saturation = 50;
 	let lightness = 50;
 	let isPlayingAnimation = false;
-	$: buttonText = isPlayingAnimation ? 'stop' : 'animate';
 
-	const h = (e: number) => (hueMax / SQUARES) * e - hueMin;
-	const changeHueMin = (e: Event) => {
+	function h(e: number) {
+		return (hueMax / SQUARES) * e - hueMin;
+	}
+
+	function changeHueMin(e: Event) {
 		hueMin = parseInt((e.currentTarget as HTMLInputElement).value);
-	};
-	const changeHueMax = (e: Event) => {
+	}
+
+	function changeHueMax(e: Event) {
 		hueMax = parseInt((e.currentTarget as HTMLInputElement).value);
-	};
-	const changeSaturation = (e: Event) => {
+	}
+
+	function changeSaturation(e: Event) {
 		saturation = parseInt((e.currentTarget as HTMLInputElement).value);
-	};
-	const changeLightness = (e: Event) => {
+	}
+
+	function changeLightness(e: Event) {
 		lightness = parseInt((e.currentTarget as HTMLInputElement).value);
-	};
-	const toggleAnimation = () => {
+	}
+
+	function toggleAnimation() {
 		let v = Math.min(1, hueMax) + hueMin;
 		const dx = 1; // "speed"
 		isPlayingAnimation = !isPlayingAnimation;
@@ -31,7 +37,9 @@
 			if (isPlayingAnimation) requestAnimationFrame(anim);
 		};
 		if (isPlayingAnimation) anim();
-	};
+	}
+
+	$: buttonText = isPlayingAnimation ? 'stop' : 'animate';
 </script>
 
 <svelte:head>

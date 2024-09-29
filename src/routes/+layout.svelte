@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Header from '$lib/Header.svelte';
+
 	const modules = import.meta.glob('./**/*.svelte');
 	let paths = [];
 
@@ -8,15 +10,7 @@
 	}
 </script>
 
-<header>
-	<ul>
-		{#each paths as path}
-			<li>
-				<a href="/{path}">{path}</a>
-			</li>
-		{/each}
-	</ul>
-</header>
+<Header {paths} />
 <main>
 	<slot />
 </main>
@@ -68,29 +62,9 @@
 		background-color: var(--background);
 	}
 
-	header {
-		display: grid;
-		place-items: center;
-		height: 2.5rem;
-		border-bottom: 1px solid hsl(0, 0%, 10%);
-	}
-
 	main {
 		display: grid;
 		height: calc(100vh - 2.5rem - 1px);
 		place-items: center;
-	}
-
-	ul {
-		padding: 0;
-	}
-
-	li {
-		display: inline;
-		padding-inline: 0.75rem;
-		font-family: monospace;
-		a {
-			color: hsl(0, 0%, 10%);
-		}
 	}
 </style>

@@ -2,21 +2,22 @@
 	import { PUBLIC_GOOGLE_API_KEY } from '$env/static/public';
 	import { onMount } from 'svelte';
 
-	const zoom = 10;
+	const MAP_COUNT = 8;
+	const ZOOM = 10;
 	const lat: number[] = [];
 	const lng: number[] = [];
-	const MAP_COUNT = 8;
 	let elements: HTMLDivElement[] = [];
 
-	onMount(() => loadMaps());
+	onMount(() => {
+		for (let i = 0; i < 8; i++) {
+			lat.push(Number(rand(-84, 84).toFixed(3)));
+			lng.push(Number(rand(-180, 180).toFixed(3)));
+		}
+		loadMaps();
+	});
 
 	function rand(min: number, max: number) {
 		return ((Math.pow(10, 14) * Math.random() * Math.random()) % (max - min + 1)) + min;
-	}
-
-	for (let i = 0; i < 8; i++) {
-		lat.push(Number(rand(-84, 84).toFixed(3)));
-		lng.push(Number(rand(-180, 180).toFixed(3)));
 	}
 
 	async function loadMaps() {
@@ -32,7 +33,7 @@
 		for (let i = 0; i < MAP_COUNT; i++) {
 			new Map(elements[i], {
 				center: { lat: lat[i], lng: lng[i] },
-				zoom,
+				zoom: ZOOM,
 				mapId: 'mapid',
 				disableDefaultUI: true
 			});
