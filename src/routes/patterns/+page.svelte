@@ -6,7 +6,7 @@
 		'lines-vertical',
 		'squares',
 		'cubes',
-		'diagonal',
+		// 'diagonal', // TODO: fixme!
 		'textbook',
 		'cross',
 		'isometric',
