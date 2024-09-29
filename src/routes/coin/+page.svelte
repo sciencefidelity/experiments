@@ -3,69 +3,74 @@
 
 	onMount(() => preloadImages());
 
+	const FRAME_COUNT = 602;
 	let canvas: HTMLCanvasElement;
-	const frameCount = 602;
-	const currentFrame = (index: number) => {
-		return `/videos/coin/frame-${index.toString().padStart(6, '0')}.jpg.webp`;
-	};
-
-	document.body.style.height = `${frameCount * 3}vh`;
-
-	const preloadImages = () => {
-		for (let i = 1; i < frameCount; i++) {
-			const img = new Image();
-			img.src = currentFrame(i);
-		}
-	};
-
-	$: context = canvas && canvas.getContext('2d');
-	$: if (canvas) {
-		canvas.width = 1920;
-		canvas.height = 1080;
-	}
+	let context: CanvasRenderingContext2D | null = null;
 
 	const img = new Image();
 	img.onload = function () {
 		context?.drawImage(img, 0, 0);
 	};
 	img.src = currentFrame(1);
-	const updateImage = (index: number) => {
+
+	function currentFrame(index: number) {
+		return `/videos/coin/frame-${index.toString().padStart(6, '0')}.jpg.webp`;
+	}
+
+	function preloadImages() {
+		for (let i = 1; i < FRAME_COUNT; i++) {
+			const img = new Image();
+			img.src = currentFrame(i);
+		}
+	}
+
+	function updateImage(index: number) {
 		img.src = currentFrame(index);
 		context && context?.drawImage(img, 0, 0);
-	};
+	}
 
-	let scrollY = 0;
-	let innerWidth = 0;
-
-	function onScroll() {
-		const scrollFraction = scrollY / innerWidth;
-		const frameIndex = Math.min(frameCount - 1, Math.ceil(scrollFraction * frameCount));
+	function onScroll(e: Event) {
+		let scrollY = (e.target as HTMLDivElement).scrollTop;
+		let innerHeight = FRAME_COUNT * 8.5;
+		const scrollFraction = scrollY / innerHeight;
+		const frameIndex = Math.min(FRAME_COUNT - 1, Math.ceil(scrollFraction * FRAME_COUNT));
 
 		requestAnimationFrame(() => updateImage(frameIndex + 1));
+	}
+
+	$: if (canvas) {
+		context = canvas.getContext('2d');
+		canvas.width = 1920;
+		canvas.height = 1080;
 	}
 </script>
 
 <svelte:head>
 	<title>Coin</title>
 </svelte:head>
-<svelte:window bind:scrollY bind:innerWidth on:scroll={onScroll} />
 
-<section class="coin-container">
-	<canvas id="coin" bind:this={canvas}></canvas>
+<section class="coin-wrapper" on:scroll={onScroll}>
+	<div class="coin-container" style:height="{FRAME_COUNT * 10}px">
+		<canvas class="coin" bind:this={canvas}></canvas>
+	</div>
 </section>
 
 <style>
-	.coin-container {
-		height: 100%;
+	.coin-wrapper {
+		height: calc(100vh - 56px);
+		width: 100vw;
+		overflow: hidden auto;
 	}
 
-	#coin {
+	.coin {
 		position: fixed;
-		top: 50%;
+		top: calc(50% + 20px);
 		left: 50%;
 		z-index: -2;
 		width: 90vw;
 		border: 1px solid hsl(0, 0%, 10%);
+		border-radius: 1rem;
 		transform: translate(-50%, -50%);
+		opacity: 0.9;
 	}
 </style>
