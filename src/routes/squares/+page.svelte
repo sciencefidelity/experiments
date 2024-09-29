@@ -104,6 +104,7 @@
 		text-align: center;
 		margin-top: 0.75rem;
 		button {
+			font-family: monospace;
 			background-color: gray;
 			border: none;
 			padding: 0.5rem 1rem;

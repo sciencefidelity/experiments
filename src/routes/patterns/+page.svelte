@@ -1,23 +1,31 @@
+<script lang="ts">
+	let patterns = [
+		'dots',
+		'circles',
+		'lines',
+		'lines-vertical',
+		'squares',
+		'cubes',
+		'diagonal',
+		'textbook',
+		'cross',
+		'isometric',
+		'radial',
+		'repeating-circles',
+		'zigzag',
+		'isometric-3d',
+		'target'
+	];
+</script>
+
 <svelte:head>
 	<title>Patterns</title>
 </svelte:head>
 
 <section class="patterns">
-	<div id="dots" class="box"><button class="btn">Register</button></div>
-	<div id="circles" class="box"><button class="btn">Register</button></div>
-	<div id="lines" class="box"><button class="btn">Register</button></div>
-	<div id="lines-vertical" class="box"><button class="btn">Register</button></div>
-	<div id="squares" class="box"><button class="btn">Register</button></div>
-	<div id="cubes" class="box"><button class="btn">Register</button></div>
-	<div id="diagonal" class="box"><button class="btn">Register</button></div>
-	<div id="textbook" class="box"><button class="btn">Register</button></div>
-	<div id="cross" class="box"><button class="btn">Register</button></div>
-	<div id="isometric" class="box"><button class="btn">Register</button></div>
-	<div id="radial" class="box"><button class="btn">Register</button></div>
-	<div id="repeating-circles" class="box"><button class="btn">Register</button></div>
-	<div id="zigzag" class="box"><button class="btn">Register</button></div>
-	<div id="isometric-3d" class="box"><button class="btn">Register</button></div>
-	<div id="target" class="box"><button class="btn">Register</button></div>
+	{#each patterns as pattern}
+		<div id={pattern} class="box"><button class="btn">{pattern}</button></div>
+	{/each}
 </section>
 
 <style lang="scss">
@@ -29,20 +37,23 @@
 	}
 
 	.patterns {
+		background-color: var(--pattern-background);
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem;
 		justify-content: center;
-		margin: 2rem;
+		padding: 2rem;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		gap: 0.5rem;
+		padding: 0.5rem;
 	}
 
 	.box {
-		// margin: 2rem auto;
 		display: grid;
-		flex: 0 1 410px;
 		place-items: center;
-		width: 410px;
-		height: 410px;
+		aspect-ratio: 1/1;
 		background-color: var(--pattern-background);
 		background-repeat: repeat;
 		border: 1px solid var(--pattern-foreground);
@@ -61,7 +72,6 @@
 		background-image: radial-gradient(var(--pattern-pattern) 9%, transparent 9%),
 			radial-gradient(var(--pattern-pattern) 9%, transparent 9%);
 		background-position: center;
-		// background-position: 0 0, 16px 16px;
 		background-size: 32px 32px;
 	}
 
@@ -186,13 +196,10 @@
 
 	#target {
 		background-image: repeating-radial-gradient(var(--pattern-pattern), 1px, transparent 30px);
-		// opacity: 0.8;
 	}
 
 	#repeating-circles {
 		background-image: repeating-radial-gradient(var(--pattern-pattern) 0 0.2%, transparent 0.2% 2%);
-		// background-position: center;
-		// background-size: 410px 410px;
 	}
 
 	#radial {
@@ -216,7 +223,6 @@
 			0 0,
 			0 0;
 		background-size: 40px 80px;
-		// opacity: 0.8;
 	}
 
 	#isometric {
@@ -282,7 +288,6 @@
 			0 0,
 			10px 18px;
 		background-size: 20px 35px;
-		// opacity: 0.8;
 	}
 
 	#cross {
@@ -311,14 +316,13 @@
 			50px 50px,
 			25px 25px,
 			25px 25px;
-		// opacity: 0.8;
 	}
 
 	.btn {
 		width: 150px;
 		height: 50px;
-		font-size: 1.5rem;
-		// text-transform: lowercase;
+		font-size: 1rem;
+		font-family: monospace;
 		cursor: pointer;
 		background: hsl(0, 100%, 100%);
 		border: 2px solid var(--pattern-foreground);

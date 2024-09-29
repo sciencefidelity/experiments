@@ -1,16 +1,14 @@
 <script lang="ts">
 	import { PUBLIC_GOOGLE_API_KEY } from '$env/static/public';
-	import { Loader } from '@googlemaps/js-api-loader';
 	import { onMount } from 'svelte';
 
-	const apiKey = PUBLIC_GOOGLE_API_KEY;
 	const zoom = 10;
 	const lat: number[] = [];
 	const lng: number[] = [];
 	const MAP_COUNT = 8;
 	let elements: HTMLDivElement[] = [];
 
-	onMount(() => start());
+	onMount(() => loadMaps());
 
 	function rand(min: number, max: number) {
 		return ((Math.pow(10, 14) * Math.random() * Math.random()) % (max - min + 1)) + min;
@@ -21,14 +19,16 @@
 		lng.push(Number(rand(-180, 180).toFixed(3)));
 	}
 
-	async function start() {
+	async function loadMaps() {
+		const pkg = await import('@googlemaps/js-api-loader');
+		const { Loader } = pkg;
 		const loader = new Loader({
-			apiKey: apiKey,
+			apiKey: PUBLIC_GOOGLE_API_KEY,
 			version: 'weekly',
 			libraries: ['maps']
 		});
-		let { Map } = await loader.importLibrary('maps');
 
+		let { Map } = await loader.importLibrary('maps');
 		for (let i = 0; i < MAP_COUNT; i++) {
 			new Map(elements[i], {
 				center: { lat: lat[i], lng: lng[i] },
@@ -56,10 +56,9 @@
 	}
 
 	.maps {
-		display: flex;
-		flex-wrap: wrap;
-		/* grid-template-columns: 1fr 1fr 1fr 1fr; */
-		justify-content: center;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 		gap: 0.5rem;
 		padding: 0.5rem;
 	}
@@ -72,8 +71,7 @@
 	.map5,
 	.map6,
 	.map7 {
-		width: 20rem;
-		height: 20rem;
+		aspect-ratio: 1/1;
 		border: 1px solid hsl(0, 0%, 10%);
 	}
 </style>
