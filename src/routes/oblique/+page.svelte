@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { strategies } from '$lib/data';
+	import strategies from '$lib/oblique.json';
 
 	function rand(min: number, max: number) {
 		return (Math.floor(Math.pow(10, 14) * Math.random() * Math.random()) % (max - min + 1)) + min;
