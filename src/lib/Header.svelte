@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let paths: string[];
+	type Props = { paths: string[] };
+
+	const { paths }: Props = $props();
 </script>
 
 <header>
@@ -15,7 +17,6 @@
 <style>
 	header {
 		place-items: center;
-		/* height: 2.5rem; */
 		padding: 0.5rem;
 		border-bottom: 1px solid hsl(0, 0%, 10%);
 	}
