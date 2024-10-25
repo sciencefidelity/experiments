@@ -15,7 +15,7 @@
 </svelte:head>
 
 <section class="colour" style="background-color: {colour};">
-	<button on:click={generateRandomColour} aria-label="change colour">
+	<button onclick={generateRandomColour} aria-label="change colour">
 		<p>{colour};</p>
 	</button>
 </section>

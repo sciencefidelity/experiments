@@ -6,12 +6,7 @@
 	const FRAME_COUNT = 602;
 	let canvas: HTMLCanvasElement;
 	let context: CanvasRenderingContext2D | null = null;
-
 	const img = new Image();
-	img.onload = function () {
-		context?.drawImage(img, 0, 0);
-	};
-	img.src = currentFrame(1);
 
 	function currentFrame(index: number) {
 		return `/videos/coin/frame-${index.toString().padStart(6, '0')}.jpg.webp`;
@@ -38,18 +33,23 @@
 		requestAnimationFrame(() => updateImage(frameIndex + 1));
 	}
 
-	$: if (canvas) {
+	$effect(() => {
+		img.onload = function () {
+			context?.drawImage(img, 0, 0);
+		};
+		img.src = currentFrame(1);
+
 		context = canvas.getContext('2d');
 		canvas.width = 1920;
 		canvas.height = 1080;
-	}
+	});
 </script>
 
 <svelte:head>
 	<title>Coin</title>
 </svelte:head>
 
-<section class="coin-wrapper" on:scroll={onScroll}>
+<section class="coin-wrapper" onscroll={onScroll}>
 	<div class="coin-container" style:height="{FRAME_COUNT * 10}px">
 		<canvas class="coin" bind:this={canvas}></canvas>
 	</div>

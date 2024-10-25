@@ -5,25 +5,25 @@
 
 	let canvas: HTMLCanvasElement;
 	let context: CanvasRenderingContext2D | null = null;
-	let isAnimating = false;
 	let animate: HTMLInputElement;
-	let blocks = 50;
-
+	let isAnimating = $state(false);
+	let blocks = $state(50);
 	const img = new Image();
-	img.onload = function () {
-		context?.drawImage(img, 0, 0);
-	};
-	img.src = '/images/umbrella-lg.jpg';
+
+	$effect(() => {
+		img.onload = function () {
+			context?.drawImage(img, 0, 0);
+		};
+		img.src = '/images/umbrella-lg.jpg';
+
+		context = canvas.getContext('2d');
+		canvas.width = 1000;
+		canvas.height = 666;
+	});
 
 	function preloadImage() {
 		const img = new Image();
 		img.src = '/images/umbrella-lg.jpg';
-	}
-
-	$: if (canvas) {
-		context = canvas.getContext('2d');
-		canvas.width = 1000;
-		canvas.height = 666;
 	}
 
 	function pixelate(v: number) {
@@ -66,13 +66,13 @@
 <div class="pixelate-container">
 	<canvas class="pixelate" bind:this={canvas}></canvas>
 	<div class="control">
-		<input class="blocks" type="range" min="1" max="50" value={blocks} on:input={updateBlocks} />
+		<input class="blocks" type="range" min="1" max="50" value={blocks} oninput={updateBlocks} />
 		<input
 			class="animate"
 			type="button"
 			value={isAnimating ? 'stop' : 'animate'}
 			bind:this={animate}
-			on:click={toggleAnim}
+			onclick={toggleAnim}
 		/>
 	</div>
 </div>
@@ -85,7 +85,7 @@
 	.pixelate {
 		image-rendering: optimizeSpeed;
 		image-rendering: crisp-edges;
-		width: 90vw;
+		width: min(130vh, 90vw);
 		border: 1px solid hsl(0, 0%, 10%);
 		border-radius: 1rem;
 	}

@@ -9,7 +9,7 @@
 	let elements: HTMLDivElement[] = [];
 
 	onMount(() => {
-		for (let i = 0; i < 8; i++) {
+		for (let i = 0; i < MAP_COUNT; i++) {
 			lat.push(Number(rand(-84, 84).toFixed(3)));
 			lng.push(Number(rand(-180, 180).toFixed(3)));
 		}

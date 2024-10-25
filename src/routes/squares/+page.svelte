@@ -1,9 +1,9 @@
 <script lang="ts">
 	const SQUARES = 10;
-	let hueMin = 0;
-	let hueMax = 360;
-	let saturation = 50;
-	let lightness = 50;
+	let hueMin = $state(0);
+	let hueMax = $state(360);
+	let saturation = $state(50);
+	let lightness = $state(50);
 	let isPlayingAnimation = false;
 
 	function h(e: number) {
@@ -39,7 +39,7 @@
 		if (isPlayingAnimation) anim();
 	}
 
-	$: buttonText = isPlayingAnimation ? 'stop' : 'animate';
+	const buttonText = $state(isPlayingAnimation ? 'stop' : 'animate');
 </script>
 
 <svelte:head>
@@ -55,12 +55,12 @@
 	{/each}
 </section>
 <div>
-	<input type="range" min="0" max="360" value={hueMax} on:input={changeHueMax} />
-	<input type="range" min="0" max="360" value={hueMin} on:input={changeHueMin} />
-	<input type="range" min="0" max="100" value={saturation} on:input={changeSaturation} />
-	<input type="range" min="0" max="100" value={lightness} on:input={changeLightness} />
+	<input type="range" min="0" max="360" value={hueMax} oninput={changeHueMax} />
+	<input type="range" min="0" max="360" value={hueMin} oninput={changeHueMin} />
+	<input type="range" min="0" max="100" value={saturation} oninput={changeSaturation} />
+	<input type="range" min="0" max="100" value={lightness} oninput={changeLightness} />
 	<div class="animate">
-		<button on:click={toggleAnimation}>{buttonText}</button>
+		<button onclick={toggleAnimation}>{buttonText}</button>
 	</div>
 </div>
 
